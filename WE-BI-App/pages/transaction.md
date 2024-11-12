@@ -72,3 +72,31 @@ LIMIT 5;
     <Column id=ITEM title='Menu Item' />
     <Column id=TOTAL_NET_SALES fmt=usd2 contentType=colorscale scaleColor=blue/>
 </DataTable>
+
+```hourly_transactions
+select
+    DATE,
+    EXTRACT(hour FROM strptime(TIME, '%I:%M:%S %p')) AS HOUR,
+    COUNT(DISTINCT TRANSACTION_ID) AS TRANSACTIONS
+from ${sales}
+where DATE >= '2024-09-01' AND DATE < '2024-11-01'
+group by
+    DATE,
+    HOUR
+```
+
+```sum_transactions
+select
+    LPAD(CAST(HOUR AS VARCHAR), 2, '0') || ':00' AS HOUR_LABEL,
+    SUM(TRANSACTIONS) AS TRANSACTIONS
+from ${hourly_transactions}
+group by HOUR_LABEL
+order by HOUR_LABEL
+```
+
+<LineChart
+data={sum_transactions}
+x=HOUR_LABEL
+y=TRANSACTIONS
+xFmt=H:MM 
+/>
