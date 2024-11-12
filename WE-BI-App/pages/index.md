@@ -1,4 +1,6 @@
-<img src="../static/logo.png" alt="logo" class="my-4 size-24" />
+<!-- <img src="../static/logo.png" alt="logo" class="my-4 size-24" > -->
+
+![WE Logo](logo.png)
 
 ```sales
 select
