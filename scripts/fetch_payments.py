@@ -18,20 +18,38 @@ headers = {
 }
 
 def fetch_payment_data(start_date, end_date):
-    response = req.get(
-        PAYMENTS_API_URL,
-        headers=headers,
+
+    payments = []
+    cursor = None
+
+    while True:
         params={
             "begin_time": f"{start_date}T00:00:00Z",
             "end_time": f"{end_date}T23:59:59Z",
-            "sort_order": "ASC"
+            "sort_order": "ASC",
+            "limit" : 100,
         }
-    )
-    if response.status_code == 200:
-        return pd.json_normalize(response.json().get("payments", []))
-    else:
-        print(f"Error: {response.status_code} - {response.text}")
-        return pd.DataFrame()
+        if cursor:
+            params["cursor"] = cursor
+
+        response = req.get(
+        PAYMENTS_API_URL,
+        headers=headers,
+        params=params
+        )
+        if response.status_code == 200:
+            response_data = response.json()
+            payments.extend(response_data.get("payments", [])) #collect results
+
+            #Check if there's another page of results
+            cursor = response_data.get("cursor")
+            if not cursor:
+                break #exit loops if no more pages
+        else:
+            print(f"Error: {response.status_code} - {response.text}")
+            break
+            
+    return pd.DataFrame(payments)
     
 # start_date = "2024-01-01"
 # end_date = "2024-01-30"

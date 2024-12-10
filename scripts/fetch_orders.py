@@ -62,17 +62,18 @@ def fetch_order_data(order_ids):
         else:
             print(f"Error fetching order {order_id}: {response.status_code} - {response.text}")
         time.sleep(0.1) # avoid rate limit
-
+    #log missing orders
     if missing_orders:
-        with open("./data/missing_orders.txt", "w") as file:
+        missing_orders_path = "./data/missing_orders.txt"
+        with open(missing_orders_path, "w") as file:
             file.write("\n".join(missing_orders))
-        print("Missing orders IDs logged to '../data/missing_orders.txt'.")
+        print(f"Missing orders IDs logged to: {missing_orders_path}")
     return pd.DataFrame(order_details), pd.DataFrame(order_summaries)
 
 # Test usage ----- TO DO----- may remove
 if __name__ == "__main__":
     start_date = "2024-02-01"
-    end_date = "2024-03-01"
+    end_date = "2024-02-01"
 
     output_dir = "./data"
     os.makedirs(output_dir, exist_ok=True)
@@ -92,4 +93,4 @@ if __name__ == "__main__":
     print(f"Orders data saved to: {orders_details_path}")
 
     order_summaries.to_csv(orders_summaries_path, index=False)
-    print(f"Order summaries saved to: ./data/order_summaries.csv")
+    print(f"Order summaries saved to: {orders_summaries_path}")
