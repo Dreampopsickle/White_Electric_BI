@@ -6,4 +6,6 @@ to open:
 - cd WE-BI-App
 - npm install
 - npm run sources
-- npm run dev 
+- npm run dev
+
+conda activate we_eda

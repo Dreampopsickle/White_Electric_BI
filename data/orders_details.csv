@@ -1,0 +1,177 @@
+order_id,items_id,item_name,quantity,base_price,gross_sales,total_money,discount_applied
+n2MkKx5C1EtCzyfutXIp4UveV,c9ef71cd-4350-4e8d-baf7-767d2e7c254e,Espresso,2,2.75,7.0,7.56,0.0
+B7UeyqOGLSaYV4Mf9ukyOSweV,29984cf9-1c24-4f35-80c7-0d5e69318f80,Bagel + Chive CC,1,5.0,9.5,10.25,0.0
+B7UeyqOGLSaYV4Mf9ukyOSweV,8a87e244-062f-4014-a256-7f3bd779da64,Espresso,1,2.75,5.5,5.95,0.0
+n6aqqz09HxHUrk2yPyJla71eV,376fbf64-ba93-4839-8df6-8cd4973b8e88,Iced Chai Latte,1,5.0,5.0,5.4,0.0
+tDFeGDIazeRp3o5l4w19Cz5eV,f9a18648-3706-42c1-9c6a-044f6af808aa,Iced Matcha,1,6.5,8.0,8.64,0.0
+tDFeGDIazeRp3o5l4w19Cz5eV,6ba407df-666f-42ed-ba61-2fccf854d1bf,Knead Donut,1,4.5,4.5,4.86,0.0
+h5t3qUk8NEtEvksXK6QLGHleV,ae0517de-560e-4d05-b37c-ec9fa7a193c3,Latte,1,4.75,4.75,5.13,0.0
+h5t3qUk8NEtEvksXK6QLGHleV,3e87889f-03df-4717-8cba-ec31dc048ecb,"Iced Tea (Black, Red Berry, or Green Mint)",1,4.5,4.5,4.86,0.0
+h5t3qUk8NEtEvksXK6QLGHleV,423e3034-2d6a-415f-9687-7b9fd1a1ca74,Avo Toast,1,10.0,10.0,10.8,0.0
+h5t3qUk8NEtEvksXK6QLGHleV,91a14f7f-f10b-425c-82f4-48fd1587bdba,Bagel + Cream Cheese,1,4.0,4.0,4.32,0.0
+PqipdMHLQ3EEB1ejjtVTAOheV,a87ce145-cba7-4167-8391-146feb325a6d,Hot Choc,1,4.5,5.5,5.94,0.0
+PqipdMHLQ3EEB1ejjtVTAOheV,0c37c06b-e8ec-44a5-8684-f95057a7467c,Cookie,2,3.5,7.0,7.56,0.0
+VlWl5cfOV9NCBEJkPfcwaIxeV,4a6559bb-2f83-44fd-998f-46cad8511b16,Knead Donut,1,4.5,4.5,4.86,0.0
+VlWl5cfOV9NCBEJkPfcwaIxeV,99b95e49-2612-4f45-bfd2-176254018d66,Iced Buzzo Latte,1,6.25,6.25,6.75,0.0
+1xy4XQcBgLo6J73nVISGQ8eeV,42b157be-2e8e-4216-b61c-3f2a305c2d74,Coffee,1,3.75,3.75,4.05,0.0
+1xy4XQcBgLo6J73nVISGQ8eeV,c3598bfb-9477-48ff-b101-423c4a5b38a8,Bagel + Cream Cheese,1,4.0,4.0,4.32,0.0
+fW6IHgUfHg1KLdsrLEvLofreV,6db53a14-9960-466c-a842-7d0e6c7dc083,Avo Toast,1,10.0,10.0,10.8,0.0
+fW6IHgUfHg1KLdsrLEvLofreV,e6384cef-c8b0-450f-bae7-365d46ec4b01,Coffee,1,2.75,2.75,2.97,0.0
+VjTGC0p5Eb7sfWYhXCfr7V6eV,74dba9a5-a175-49c3-a741-89e799035d5c,Chai Latte,1,4.75,5.25,5.67,0.0
+VjTGC0p5Eb7sfWYhXCfr7V6eV,5aa307f1-c201-4115-a248-7c28a8101fa6,Bagel + Cream Cheese,1,4.0,4.0,4.32,0.0
+DQ203cqfxIjgLpFpeIiC4m3eV,8dc7deaf-0416-4be5-971b-57bc418f66a8,Choc Croissant,1,4.0,4.0,4.32,0.0
+DQ203cqfxIjgLpFpeIiC4m3eV,b2946974-916e-4011-9298-b21073a9a729,Bagel + Cream Cheese,1,4.0,4.0,4.32,0.0
+DQ203cqfxIjgLpFpeIiC4m3eV,53007ed7-5a1c-439c-8bd2-97d37fd25f01,Bagel + Cream Cheese,1,4.0,4.0,4.32,0.0
+ZD2aJXeA5teWAdkrLM0ahp8eV,629c35af-b74a-40d3-8847-6b0ee9daad15,Iced Chai Latte,1,5.75,6.25,6.75,0.0
+ZD2aJXeA5teWAdkrLM0ahp8eV,6e63d3be-856d-4c98-875f-549eb7dcc783,Knead Donut,1,4.5,4.5,4.86,0.0
+3y6U95j2OzT2hjYwGzJkjtheV,c07d73ce-774e-47eb-826d-0dc8706a39ef,Iced Chai Latte,1,5.75,5.75,6.21,0.0
+HigT4NU4hUs2swRueZsvYlheV,82e4c6ae-7aca-4213-bf51-85b61e6a1b89,Mocha,1,5.25,5.25,5.67,0.0
+Ntiya6PK6sIT6AjQkgIufJkeV,212750c8-19f1-4774-9bac-29fc64e33b3f,Caramello,1,5.5,5.5,5.94,0.0
+Bno3xVFEO99wBEFE2iiMcLleV,aeae0f1c-2a5d-43a3-9eb7-ad14ef09d088,Coffee Milk,1,4.6,4.6,4.96,0.0
+Bno3xVFEO99wBEFE2iiMcLleV,8cb37364-a23c-452b-a3c1-ef79adef4ebb,Coffee,1,2.75,2.75,2.97,0.0
+vkhaPeFwxySxkQhl6KrK3K9eV,b6549f99-0869-4475-9c0a-2d844207a15e,Bagel + Cream Cheese,1,4.0,4.0,4.32,0.0
+vkhaPeFwxySxkQhl6KrK3K9eV,9c935184-1ee5-4728-b295-bacc33a2f439,Iced Caramello,1,6.25,6.25,6.75,0.0
+vkhaPeFwxySxkQhl6KrK3K9eV,70282eb8-f923-44f1-b7b7-ac9cc2622fe7,Cookie,1,3.5,3.5,3.78,0.0
+vkhaPeFwxySxkQhl6KrK3K9eV,dabebfd3-801f-4497-8420-b1b9c4c21d8c,Winter Specials '23-24 ICED,1,6.75,6.75,7.29,0.0
+X49Y9pycTyysm12Lh9M4GTleV,dad3f488-e099-4a96-96f4-3a3f2c8b57eb,Winter Specials '23-24 ICED,1,7.75,8.25,8.91,0.0
+3m2LkrzNzZZcF4Be7MFWna7eV,1a068c8b-4167-450a-b3d0-3160819e92b8,Latte,1,5.25,6.75,7.29,0.0
+Tsky1wUWCKaHAtIpiMZGrKAfV,577f3c60-4b1d-42ce-b823-f46235ca94c5,Bagel + Cream Cheese,1,4.0,4.0,4.32,0.0
+DCXK0INgKx7XJaZYsbQrGFxeV,11633ac9-432c-4905-a70b-c6c8a0e7490a,Iced Matcha,1,5.5,6.0,6.48,0.0
+DCXK0INgKx7XJaZYsbQrGFxeV,bd794beb-5438-47f5-a3cd-7ab327f4781e,Croissant,1,3.5,3.5,3.77,0.0
+DCXK0INgKx7XJaZYsbQrGFxeV,8335ed2c-a455-4fe9-827a-e982389fdfe6,Knead Donut,1,4.5,4.5,4.87,0.0
+DCXK0INgKx7XJaZYsbQrGFxeV,d466e515-39cb-4161-b243-50f49cdda2d8,Hot Choc,1,4.0,5.0,5.4,0.0
+DYo1IC8sMCPpBLDsZPcTpSzeV,BFC802DD-EC5C-4154-B2E8-18D632D276E0,Bagel + Cream Cheese,1,4.0,4.0,4.32,0.0
+DYo1IC8sMCPpBLDsZPcTpSzeV,0e2fdf24-660c-4980-84dd-2df8b0323d74,Iced White Lightning,1,6.25,6.25,6.75,0.0
+1Tre6fhr3AiD9POak1Caji7eV,d14a0bf6-0445-4516-a1c8-923bedffffd1,Mocha,1,5.25,5.25,5.67,0.0
+1Tre6fhr3AiD9POak1Caji7eV,32fbae98-5c81-4f41-a22d-95fdf511395f,Egg + Cheese,1,5.0,7.0,7.56,0.0
+1vrFjucXDTRwaNmRYDGS3zjeV,6b81fb47-6b40-4e06-9bdf-10185430ac5d,Bagels,1,2.2,8.2,8.86,0.0
+1vrFjucXDTRwaNmRYDGS3zjeV,d8feca6a-07dd-485f-b0c6-0b328e16d867,PecanBun,1,4.75,4.75,5.13,0.0
+TwYhWbitf6H0E5G3J4pKT67eV,c8bf920a-81f1-4f56-aa46-f656051f07f8,Bottled Water,1,2.0,2.0,2.16,0.0
+TwYhWbitf6H0E5G3J4pKT67eV,a1f65e1e-9fb4-4449-b26c-268d6f1c79e2,Candy Bar,1,2.25,2.25,2.43,0.0
+pz0Tzt9veE4gKvcbITwhrvweV,d2a430a7-0cc8-4546-a6b7-18748130c8db,Hot Choc,1,4.5,5.5,5.94,0.0
+Ly9qYAv2qMqGYyXiiRpPrnyeV,7a70855f-6cbc-4250-a088-7c3aaea22581,Bagel + Butter/EB,1,3.5,3.5,3.78,0.0
+jgmIxioOFsqR4WZPmJ5TeGmeV,a35ec728-2b61-4ef6-9241-e42148b0e604,Egg + Cheese,1,5.0,7.0,7.56,0.0
+NN2AgUAHPQAM16UnmE6kXi8eV,898cce2c-0dcc-415c-b36a-8d9254de7120,Iced Coffee,1,4.0,4.0,4.32,0.0
+rG3e4SvrNaF5VQ8QeoGrr7ueV,b3fdd5a4-cc0b-4690-972f-99f4e48908e3,Iced Coffee,1,4.75,5.75,6.21,0.0
+rG3e4SvrNaF5VQ8QeoGrr7ueV,4ef24d3a-a07d-4951-b87c-ff20cd24d1c0,Bagel + Chive CC,2,5.0,10.0,10.8,0.0
+9vJb89CXjjtuaZzr7UMl7YAfV,04265437-d54e-4fbb-8f7b-3479038aac72,Bagel + Cream Cheese,1,4.0,4.0,4.32,0.0
+VPxkDwaaVh9Vgj4NWm9TnnweV,61a981ee-1030-4736-906d-4f4495b5c62b,Hibiscus Sprtz,1,4.0,4.0,4.32,0.0
+NHfURXTLfPuCZjbiCxpF7l3eV,56d0ae7d-978e-4c9a-996d-d0891fd94265,Egg + Cheese,1,5.0,7.0,7.56,0.0
+NHfURXTLfPuCZjbiCxpF7l3eV,be6bc734-a9da-4dcf-9fce-5357d331eab0,Iced Matcha,1,6.5,8.5,9.18,0.0
+j8mnIWD1Myi2rnsGf6kB79ieV,f70611d2-e6f4-4d69-9fbb-28f5ba38fc33,Iced Chai Latte,1,5.75,6.25,6.75,0.0
+j8mnIWD1Myi2rnsGf6kB79ieV,6f7f6634-4379-435f-9099-062a00be930f,Choc Croissant,1,4.0,4.0,4.32,0.0
+9N6i9OXupgGj6lu0xv2l3t9eV,42ba345c-79a3-49f8-8786-d93410cca037,Caramello,1,6.25,6.25,6.75,0.0
+BPOCckgaRqYTkGKv1AwJCF9eV,7220cffe-0170-41fd-adc9-c12c5a465e04,Egg + Cheese,1,5.0,7.0,7.56,0.0
+P8X3lo4jkw2C5dnusWCfaNoeV,1a20bf38-1eaa-46d1-b3ac-30c2d855ce8e,Knead Donut,1,4.5,4.5,4.86,0.0
+1LbQu3TNHGCP4VbV1mmNqXteV,57c1ba3c-7dde-4efb-adb3-134ce89d3ee4,Hot Choc,1,5.0,6.0,6.48,0.0
+1LbQu3TNHGCP4VbV1mmNqXteV,35ac542b-c4b6-46fc-bfbf-3d4f406163a3,CC + Avo,1,7.0,7.0,7.56,0.0
+72TmWWEepoVJV84rmvaXQtveV,a7dbdd0b-a052-47f6-8405-41b2e6ab3b9b,Coffee,1,3.75,3.75,4.05,0.0
+72TmWWEepoVJV84rmvaXQtveV,901a72c4-6e2b-4796-9bd5-0542a05f9aed,Knead Donut,1,4.5,4.5,4.86,0.0
+TiXiJ3HCOPhqJ71hBzY9JhleV,f22d3556-5d94-4177-8a40-2c845ace30db,Bagel + Cream Cheese,1,4.0,4.0,4.32,0.0
+dl0fm60SImlYdWaoz0PgVkgeV,3c13a3ce-917b-4146-8d2c-d79ba7ea557a,Maple Latte,1,6.25,6.25,6.75,0.0
+dl0fm60SImlYdWaoz0PgVkgeV,730635e1-1633-4c06-9592-a930099e58b9,Coffee Beans,1,15.0,15.0,16.2,0.0
+dl0fm60SImlYdWaoz0PgVkgeV,e0115df5-49ea-4432-b022-2b806dc4bdba,Matcha Latte,1,5.5,6.0,6.48,0.0
+nwbrxBJOeoQI8JaJaNRfGOreV,3700fa31-37da-4a48-97b7-0c49c3de683e,Coffee,1,3.75,3.75,4.05,0.0
+74MYPdakYLcOYSrux5QDnUoeV,f6b7f9f9-1f74-4da7-bc73-293e910463d4,Knead Donut,2,4.5,9.0,9.72,0.0
+74MYPdakYLcOYSrux5QDnUoeV,1bf02a1c-281c-4a2d-9de0-78222d295814,Cookie,1,3.5,3.5,3.78,0.0
+74MYPdakYLcOYSrux5QDnUoeV,52cc455c-2a7a-4ebe-92fc-8b00857daa47,Coffee,1,3.25,3.25,3.51,0.0
+lvjlgH4SyV8XvrJciC0QgqgeV,2d36a848-5101-4b80-a962-b50434914922,Lavender Latte,1,6.25,6.25,6.75,0.0
+lvjlgH4SyV8XvrJciC0QgqgeV,e5f0d192-9418-40d1-9c7e-262422ba1ebe,Cinnamon Bun,1,5.5,5.5,5.94,0.0
+jUOJOctxbM5QyLOyDEkuk38eV,3959e7ac-4d69-4817-b517-a0e85084df17,Choc Croissant,1,4.0,4.0,4.32,0.0
+jUOJOctxbM5QyLOyDEkuk38eV,194f60af-8c28-442f-88ec-fe48d7fae225,Egg + Cheese,1,5.0,5.0,5.4,0.0
+jUOJOctxbM5QyLOyDEkuk38eV,039ecc08-6ced-4c37-bdc4-840d683838f8,Iced Lavender Latte,1,7.25,7.75,8.37,0.0
+jUOJOctxbM5QyLOyDEkuk38eV,5fa0a1c0-a366-497f-b87d-d75f2cb6b44f,Coffee,1,3.75,3.75,4.05,0.0
+Ds8Ara2NVDDDDPSoarAHXpneV,34d700a1-de53-4152-a4eb-04b9db74f96d,Coffee,1,3.25,3.25,3.51,0.0
+fEB2G0N90HhoxSsxrDJDds6eV,627825b2-ae8d-4db2-a3f4-9d0723dceb8c,Latte,1,5.25,6.75,7.29,0.0
+fEB2G0N90HhoxSsxrDJDds6eV,2bb63314-6cab-4878-9b09-3d5300fb4784,Egg + Cheese,1,5.0,5.0,5.4,0.0
+5DaMjJsWXtlIZrZZ40NOXgyeV,db3e6343-4e98-403f-ab4b-f696d4459f4a,1/2 Gal Iced Coffee,1,14.0,14.0,15.12,0.0
+ZBFciBgJR4QCyV6gUYKuZh0eV,ec13e9b4-f83f-491f-bac7-d2ef990e45f3,Egg + Cheese,1,5.0,7.0,7.56,0.0
+NBStK891NZDYcSdmhCFMmOheV,cdd015fc-a8ab-4ccf-8c7c-29f5ca82afb8,Cookie,1,3.5,3.5,3.78,0.0
+BDWTHnGJ5oG5hjaMxhA49oieV,2c5fb0bb-7af6-4084-a87a-35e0d7a2a567,Egg + Cheese,1,5.0,7.0,7.56,0.0
+BDWTHnGJ5oG5hjaMxhA49oieV,10e855cf-5f0c-470e-9eb6-eeca62dd2711,Almond Croissant,1,4.0,4.0,4.32,0.0
+DOGOTFSCYwdmxGGYR3tcNPTK885YY,o8EVV7AdnZBZFI9evx7D7C,Egg and Cheese Sandwich,1,5.0,8.0,8.56,0.0
+Nbn3fDI6VdGdCvcRfyy2poueV,bb182b21-e1cf-4a9e-9226-dc58ac53d95b,Iced White Lightning,1,7.25,7.25,7.83,0.0
+ny47UW1CUnb0W2SfzViakJ9eV,b5d0e943-3f79-4a5a-b642-1d202638336c,Caramello,1,6.25,7.75,8.37,0.0
+ny47UW1CUnb0W2SfzViakJ9eV,bd0aa9c1-8422-4533-884e-2d560730af9f,Chai Latte,1,4.25,6.75,7.29,0.0
+ny47UW1CUnb0W2SfzViakJ9eV,85cfd25d-ddb3-4dc9-b8de-16315ae35bd8,Tea,1,4.0,4.0,4.32,0.0
+XQVAGdoEpsizRYol6s5Wej4eV,381ae27c-370b-4f0f-9779-9ecae9f9dce6,Latte,1,5.25,5.25,5.67,0.0
+XQVAGdoEpsizRYol6s5Wej4eV,204ef9ed-3b0a-4a3b-b201-9fc482623978,Knead Donut,1,4.5,4.5,4.86,0.0
+hvsZGApAQonxILZoFeJj9HgeV,a8c23679-1174-4cc9-bf71-1c17727e8a46,Iced Coffee,1,4.75,4.75,5.13,0.0
+RDCBSLsTq0eK0v6w881eLs1eV,3de08417-d8d9-4778-a017-895391e88a6a,"Iced Tea (Black, Red Berry, or Green Mint)",1,4.5,4.5,4.86,0.0
+N9mkogrL3bwas8NdZPPdfYweV,d1d3fa3c-1c01-4d85-be0a-681a81c2176e,Americano,1,5.0,5.0,5.4,0.0
+N9mkogrL3bwas8NdZPPdfYweV,05b4097d-e964-4f60-b260-7a7a38faf5b6,Bagel + Cream Cheese,1,4.0,4.0,4.32,0.0
+N9mkogrL3bwas8NdZPPdfYweV,492a20de-ea7a-4a3f-b4f3-c2c8d51bd543,Muffin,1,4.0,4.0,4.32,0.0
+T8ztnH2I4BzcTVilsmo6jMlOtebZY,Dm1ws9A9u0aGYcWRhijAa,Egg and Cheese Sandwich,1,5.0,5.75,6.15,0.0
+h5xzXmLt3UNlSaTTdWbP6KveV,f2b37b1c-c123-4a5e-b493-777e9bfd6cab,Coffee,1,2.75,2.75,2.97,0.0
+JFh34OdAWl4xIhFigQvpDf5eV,f96d0705-0714-476a-b7f8-3d896e0b5583,Coffee,1,2.75,2.75,2.97,0.0
+JFh34OdAWl4xIhFigQvpDf5eV,b1a7c388-94a4-4a05-a60f-9ba67d69ce00,Bagel + Cream Cheese,1,4.0,4.0,4.32,0.0
+PcPJ0sw9H4VioiB7WL6gB6reV,e91417b8-59f0-4831-96ec-0ede0bb158d0,Bagel + Cream Cheese,1,4.0,4.0,4.32,0.0
+PcPJ0sw9H4VioiB7WL6gB6reV,df67fcfa-8352-400d-aa56-1f05c511df37,Coffee,1,2.75,2.75,2.97,0.0
+ZhVeNE9eECtQOr1w2iFMBogeV,3d6442fd-c6e7-4ec8-8f94-524d325ae420,Iced Coffee,1,4.75,4.75,5.13,0.0
+bmZnNAhVITnSxi21PaHdcFfeV,880db55f-a032-44a9-b7ce-e5d2b3f39c9c,Espresso,1,2.75,2.75,2.97,0.0
+bmZnNAhVITnSxi21PaHdcFfeV,d20a9cb7-5026-45d8-bd52-715e09afe14d,Knead Donut,1,4.5,4.5,4.86,0.0
+bmZnNAhVITnSxi21PaHdcFfeV,89c3dbd8-e83d-4342-97ba-f801952bb020,Coffee,1,2.75,2.75,2.97,0.0
+fyMWhSC2sXVIbjg6g0NRj8xeV,3cc0e6be-4b53-460f-999c-311e8563d8fb,Chai Latte,1,4.25,4.75,5.13,0.0
+fyMWhSC2sXVIbjg6g0NRj8xeV,09d1b88b-bb2c-4f10-84cc-d849bb24e9fe,Coffee,1,2.75,2.75,2.97,0.0
+fyMWhSC2sXVIbjg6g0NRj8xeV,3000f0f6-9029-478d-b429-bf1eb569c1d1,Bagel + Cream Cheese,1,4.0,6.0,6.48,0.0
+Fxq4ccMIb0IgQXZ8TKNy2d3eV,fd4c508f-ec71-4c99-ae4c-35915d380ebc,Bagel + Cream Cheese,1,4.0,4.0,4.32,0.0
+Fxq4ccMIb0IgQXZ8TKNy2d3eV,ecb1a68a-5671-40db-bbdb-493cd8675a58,Iced Coffee,1,4.0,4.0,4.32,0.0
+1J89aKRa5qwXGbwowmoFE3teV,bb1bfb6d-9e83-4ba7-8cd2-a58b4b934f80,Egg + Cheese,1,5.0,7.5,8.1,0.0
+1J89aKRa5qwXGbwowmoFE3teV,3c799ff3-2843-416b-899c-80a7cff4c516,Coffee,1,3.25,3.25,3.51,0.0
+ZJnR5bALkOLNawzZMwwP9t6eV,11bb9cad-9e12-4f72-8914-1d30204896b8,Avocado BLT Sandwich,1,13.0,13.0,14.04,0.0
+ZJnR5bALkOLNawzZMwwP9t6eV,b69fb86a-027f-477b-b2e4-e6dfc4291438,Iced Matcha,1,6.5,7.0,7.56,0.0
+3mIaTHuj4who2SKmXWJFWcoeV,c0688d31-8859-4722-9ab5-2faf2151748c,Tea,1,3.5,3.5,3.78,0.0
+3mIaTHuj4who2SKmXWJFWcoeV,cf38624d-1ee5-412f-92a0-4158631db0f6,Bagels,1,2.2,4.0,4.32,0.0
+hV5KuTjwbffvyOXU9vK8WNteV,85b989e6-c7d1-4880-aa43-428a29001053,Egg + Cheese,1,5.0,7.0,7.56,0.0
+hV5KuTjwbffvyOXU9vK8WNteV,73b11758-79e3-4cd5-921f-2678889f79eb,Latte,1,5.25,6.25,6.75,0.0
+HYZOivirf8exNBFKZOHQY5feV,d7c82299-4273-43bf-888f-79d75aa6baaf,Iced Coffee,1,4.75,4.75,5.13,0.0
+hRtVkOrJitHsCLaAptEwZXweV,3baf7cf5-d509-4b5c-9606-bf67da611c64,Bagels,1,2.2,4.0,4.32,0.0
+38NjFXNV5wDe2LSH34Yb3f2eV,5EA82602-9DCC-429E-B0A3-8A6D1475C736,Egg + Cheese,1,5.0,8.25,8.91,0.0
+t5GLZi2RwNcX2DVZClwxqZueV,d5c2709c-4526-480b-ba48-7a49abe61b3f,Coffee,1,2.75,2.75,2.97,0.0
+BpjmmRcpG4F2ApESuflVXF1eV,931C926E-946E-4252-8954-0A331408E19E,Egg + Cheese,1,5.0,7.0,7.56,0.0
+BpjmmRcpG4F2ApESuflVXF1eV,2EB1CD45-60F6-42CF-9579-D29A614FD3B6,Knead Donut,1,4.5,4.5,4.86,0.0
+BpjmmRcpG4F2ApESuflVXF1eV,e00f0711-f80d-4778-ad80-6b589afd4387,Coffee,1,3.75,3.75,4.05,0.0
+1j9l9UxOMIte8FdFhMt0KXseV,462C299F-8B00-4B45-9D75-C4A5E3E9B6F8,Egg + Cheese,1,5.0,7.0,7.56,0.0
+1j9l9UxOMIte8FdFhMt0KXseV,dab9df0e-2c7b-4302-a7fc-927ef3af9a51,Coke,1,2.5,2.5,2.7,0.0
+xNLPsK8PjC52shquTj8KCDueV,f4781b6b-dc2a-41f8-ba9b-e94d0b887eb0,Coffee,1,2.75,2.75,2.86,0.1
+xNLPsK8PjC52shquTj8KCDueV,ac008933-df6f-4d83-85e1-5d61329fd7fb,Bagel + Cream Cheese,1,4.0,4.0,4.16,0.15
+x9zfaHSGI9TrIhiBuqZQWQneV,04ee1dbe-d38c-4ef3-97bd-d535b82b3c07,Coffee,1,3.25,3.25,3.51,0.0
+V1wwyyGzQyV8XggqFsHB8P1eV,c3c6bc4e-6146-4787-9d8e-68327d29afc6,Iced Coffee,1,4.0,4.0,4.32,0.0
+3m25x2dEgzil98LCihRPFTseV,96c1e4a3-ad36-450c-9aee-7e868efeef36,Chicken Salad Sandwich,1,12.0,12.0,12.96,0.0
+3m25x2dEgzil98LCihRPFTseV,95cb4f8b-e83c-4268-8953-43fd4c1fb112,Latte,1,4.75,4.75,5.13,0.0
+tzvJnnGSuICWqGAgKgGRZAjeV,1ee96bd3-bd67-49c2-8693-cf9720ffa443,Bagel + Butter/EB,2,3.5,7.0,7.56,0.0
+tzvJnnGSuICWqGAgKgGRZAjeV,6307c7c7-0907-4746-90ec-71bec6c798a4,Iced Mocha,1,6.5,7.5,8.1,0.0
+tzvJnnGSuICWqGAgKgGRZAjeV,641c6520-2409-4811-8fd2-8d2c83e4da76,Winter Specials '23-24 ICED,1,6.75,7.25,7.83,0.0
+tzvJnnGSuICWqGAgKgGRZAjeV,c0cc52b4-2bc0-4b62-83a1-1e0bacb3b871,Knead Donut,1,4.5,4.5,4.86,0.0
+jgC2xOYDbPGtB4UWfdb9W85eV,391fa5d5-539e-4215-bfee-056e93fd9143,Iced Coffee,1,4.75,4.75,5.13,0.0
+jgC2xOYDbPGtB4UWfdb9W85eV,3f18a247-0421-4724-81f4-e2ca6a0d0d79,Bagel + Butter/EB,1,3.5,3.5,3.78,0.0
+jgC2xOYDbPGtB4UWfdb9W85eV,323e7639-c0f6-4640-a5f3-8a00dc6047f2,PecanBun,1,4.75,4.75,5.13,0.0
+BdxOjEildAXCjgevLD1jnR2eV,89c680c5-a204-4697-ad62-a6ae0f3e63d1,CC + Lox + Red Onion,1,11.0,11.0,11.88,0.0
+BdxOjEildAXCjgevLD1jnR2eV,c8b82b46-130c-4f20-8cb5-396224883a2e,Latte,1,4.75,4.75,5.13,0.0
+DkOLF5RoaRQcDKa6SbYIlkveV,f0bb792d-96a7-4281-b763-c0ca56e99bb3,Egg + Cheese,1,5.0,5.0,5.4,0.0
+DkOLF5RoaRQcDKa6SbYIlkveV,ba13b2f3-509d-4ae8-bc90-f099876a1854,Winter Specials '23-24 ICED,1,7.75,7.75,8.37,0.0
+DkOLF5RoaRQcDKa6SbYIlkveV,943ae19f-d0f5-433b-a793-5f2860f11d27,Almond Croissant,1,4.0,4.0,4.32,0.0
+J3mTxFlczsXplFDn0iuPkF8eV,db556588-1a85-4ef1-ac11-dbb7c4d0c654,Iced Coffee,1,4.0,4.0,4.32,0.0
+55rhyigjW6X9CQ7TPs8gTKveV,b185e860-f18b-4abc-be05-80932aa31834,Latte,1,4.75,4.75,5.13,0.0
+FxyYW4rgE1SK8SHgB8RHu1ieV,cd0548ee-5bed-4653-b6dd-79b0c9781488,Coffee,1,2.75,2.75,2.7,0.25
+Xag9FMN09eBr2txdp0VUmoxeV,7bfc5419-351c-49bb-ae05-baf43576d17b,Coffee,1,3.75,3.75,4.05,0.0
+Xag9FMN09eBr2txdp0VUmoxeV,bc80bbfb-3d7d-4812-ab6f-4992316b6872,Muffin,1,4.0,4.0,4.32,0.0
+3Kw7IytsRXH0WZldf1ApTMfeV,da06094c-9fa5-4589-bf38-8c48b3d4cb26,Coffee,1,3.25,3.25,3.51,0.0
+B9pkG9Aq6p6CVFQKMrwS4cyeV,aafd9177-8d50-4e31-ae3c-06729e4a37a0,Iced Buzzo Latte,1,7.25,7.75,8.37,0.0
+B9pkG9Aq6p6CVFQKMrwS4cyeV,057fd505-bdd3-4f42-9e4d-387b597e24b2,Bagel + Cream Cheese,1,4.0,4.0,4.32,0.0
+XiugmB9TNXzbfWx8jQD0VEAfV,0df6b40d-37e7-43e4-aadf-c57115e22beb,Egg + Cheese,1,5.0,7.0,7.56,0.0
+XiugmB9TNXzbfWx8jQD0VEAfV,d6eb5130-4e88-40ea-a80c-53e4d62101c8,Winter Specials '23-24 HOT,1,6.75,6.75,7.29,0.0
+5D8thMAUDUdIRMmTv8BRnIseV,e7a8bc8f-0304-4f09-b6ce-a06dde486a1b,Egg + Cheese,1,5.0,7.0,7.56,0.0
+5D8thMAUDUdIRMmTv8BRnIseV,e5dce5fb-0e1b-4c3f-bf8b-91ee36a595a0,Chai Latte,1,4.25,5.75,6.21,0.0
+5D8thMAUDUdIRMmTv8BRnIseV,68471376-8631-48e8-9bbe-fa3fad93eaa8,Knead Donut,1,4.5,4.5,4.86,0.0
+VdskETo173lJtcXJqAW4VMheV,2c0c9f3c-427a-4f94-8505-44b651d4e05b,Bagels,1,2.2,3.45,3.72,0.0
+fM120xdDNBakK72GphIqVS3eV,f6051927-9f7c-4d4b-9fde-cf91306074e0,Iced Maple Latte,1,7.25,7.25,7.83,0.0
+fM120xdDNBakK72GphIqVS3eV,c1654a15-da1b-4418-8ed6-a9a9232b7e0a,Bagel + Cream Cheese,1,4.0,4.0,4.32,0.0
+fM120xdDNBakK72GphIqVS3eV,05bc5f5c-4d86-4fe8-9f8e-4010351b152f,Knead Donut,1,4.5,4.5,4.86,0.0
+lT7gkfcGRyhcT5u8UTMAgqreV,48c58db7-6969-4b21-bfc7-987928a5784f,Flower Power,1,6.25,6.75,7.29,0.0
+Bv0vrrGvyYMLvgL7JR9sf8heV,e6c1d837-48ee-4cbf-879d-7eda77c3fd00,Coffee,1,3.25,3.25,3.51,0.0
+FvpM0dfS6RmiUOBLEuCP061eV,59802647-16aa-4500-9b12-84c6716a4e04,Spindrift,1,3.5,3.5,3.78,0.0
+FvpM0dfS6RmiUOBLEuCP061eV,ecd746da-ab4d-405f-adbc-0429d48a5ba9,Egg + Cheese,1,5.0,7.0,7.56,0.0
+FvpM0dfS6RmiUOBLEuCP061eV,f40e79cc-51d9-40a0-97ec-599a3b7392fd,Lavender Latte,1,6.25,6.75,7.29,0.0
+17fi0dAl1Re3hqTiyVEkfAkeV,d259cebb-2dca-4c13-83d0-5c20e2248d49,Knead Donut,1,4.5,4.5,4.86,0.0
+nwPpB2cIoTBOAhPC9rQvyL9eV,b33c9c38-b7e9-47fa-a11c-952c9a2bae64,Knead Donut,1,4.5,4.5,4.86,0.0
