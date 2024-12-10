@@ -10,8 +10,12 @@ services:
       - .:/app
       - ./data:/app/data
       - ./we-service-account.json:/app/we-service-account.json
+      - ~/.dbt:/app/.dbt # Mount host dbt profiles
     env_file:
       - .env
     environment:
       - GOOGLE_APPLICATION_CREDENTIALS=/app/we-service-account.json
-    command: python scripts/fetch_orders.py
+      - BIGQUERY_DATASET=Sales_Test
+      - BIGQUERY_PROJECT_ID=we-analysis
+      - DBT_PROFILES_DIR=/app/.dbt
+    command: bash -c "python scripts/fetch_orders.py && python scripts/upload_to_bigquery.py"
