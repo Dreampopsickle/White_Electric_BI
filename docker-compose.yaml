@@ -1,0 +1,17 @@
+version: "3.8"
+
+services:
+  pipeline:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: square_pipeline
+    volumes:
+      - .:/app
+      - ./data:/app/data
+      - ./we-service-account.json:/app/we-service-account.json
+    env_file:
+      - .env
+    environment:
+      - GOOGLE_APPLICATION_CREDENTIALS=/app/we-service-account.json
+    command: python scripts/fetch_orders.py
