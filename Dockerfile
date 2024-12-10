@@ -31,4 +31,4 @@ COPY we-service-account.json /app/we-service-account.json
 RUN dbt init my_project || true
 
 # Default command
-CMD ["bash", "-c", "python scripts/fetch_orders.py && python scripts/upload_to_bigquery.py"]
+CMD ["bash", "-c", "python scripts/fetch_orders.py && python scripts/upload_to_bigquery.py && tail -f /dev/null"]
