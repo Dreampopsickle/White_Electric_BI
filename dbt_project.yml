@@ -10,12 +10,12 @@ profile: "square_pipeline_project"
 # These configurations specify where dbt should look for different types of files.
 # The `model-paths` config, for example, states that models in this project can be
 # found in the "models/" directory. You probably won't need to change these!
-model-paths: ["models"]
-analysis-paths: ["analyses"]
-test-paths: ["tests"]
-seed-paths: ["seeds"]
-macro-paths: ["macros"]
-snapshot-paths: ["snapshots"]
+model-paths: ["square_pipeline_project/models"]
+analysis-paths: ["square_pipeline_project/analyses"]
+test-paths: ["square_pipeline_project/tests"]
+seed-paths: ["square_pipeline_project/seeds"]
+macro-paths: ["square_pipeline_project/macros"]
+snapshot-paths: ["square_pipeline_project/snapshots"]
 
 clean-targets: # directories to be removed by `dbt clean`
   - "target"
@@ -30,5 +30,11 @@ clean-targets: # directories to be removed by `dbt clean`
 models:
   square_pipeline_project:
     # Config indicated by + and applies to all files under models/example/
-    example:
-      +materialized: table
+    raw:
+      +materialized: view
+    staging:
+      +materialized: view
+    intermediate:
+      +materialized: view
+    facts_and_dimensions:
+      +materialized: view

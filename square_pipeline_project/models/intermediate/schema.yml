@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: int_order_items
+    description: "Intermediate table linking orders and line items."
+    columns:
+      - name: order_id
+        description: "Unique identifier for the order."
+      - name: item_name
+        description: "Name of the purchased item."
+  - name: int_order_payments
+    description: "Intermediate table linking orders and payments."
+    columns:
+      - name: payment_id
+        description: "Unique identifier for the payment."
+      - name: payment_amount
+        description: "Payment amount."

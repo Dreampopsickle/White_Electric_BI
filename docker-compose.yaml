@@ -6,6 +6,8 @@ services:
       context: .
       dockerfile: Dockerfile
     container_name: square_pipeline
+    stdin_open: true
+    tty: true
     volumes:
       - .:/app
       - ./data:/app/data
@@ -18,7 +20,7 @@ services:
       - BIGQUERY_DATASET=Sales_Test
       - BIGQUERY_PROJECT_ID=we-analysis
       - DBT_PROFILES_DIR=/app/.dbt
-    command: bash -c "python scripts/fetch_orders.py && python scripts/upload_to_bigquery.py && tail -f /dev/null"
+    command: bash
     restart: always
     networks:
       - square_pipeline_network

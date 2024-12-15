@@ -1,0 +1,71 @@
+version: 2
+
+models:
+  - name: fact_sales
+    description: "Fact table aggregating sales data, including revenue, tax, tips, and total items sold."
+    columns:
+      - name: order_id
+        description: "Primary key for the order, linking to stg_orders."
+      - name: location_id
+        description: "Foreign key linking to dim_location."
+      - name: order_created_at
+        description: "Timestamp for the order creation, linking to dim_time.datetime."
+      - name: revenue
+        description: "Total revenue for the order."
+      - name: tax_amount
+        description: "Total tax amount for the order."
+      - name: tip_amount
+        description: "Total tip amount for the order."
+      - name: total_items_sold
+        description: "Total number of items sold in the order."
+      - name: average_order_value
+        description: "Average revenue per item in the order."
+      - name: tax_percentage
+        description: "Tax as a percentage of total revenue."
+      - name: tip_percentage
+        description: "Tip as a percentage of total revenue."
+  - name: dim_items
+    description: "Dimension table containing details about items sold."
+    columns:
+      - name: item_name
+        description: "Name of the item."
+  - name: dim_locations
+    description: "Dimension table containing details about store locations."
+    columns:
+      - name: location_id
+        description: "Unique identifier for the location."
+      - name: total_orders
+        description: "Total number of orders for the location."
+    name: dim_time
+    description: "Time dimension table with detailed temporal breakdowns for analytics."
+    columns:
+      - name: datetime
+        description: "Unique timestamp representing the primary key."
+      - name: date
+        description: "Date without time component."
+      - name: year
+        description: "Year of the datetime."
+      - name: quarter
+        description: "Quarter of the year (1-4)."
+      - name: month
+        description: "Month of the year (1-12)."
+      - name: month_name
+        description: "Full name of the month (e.g., January)."
+      - name: week
+        description: "Week of the year."
+      - name: day
+        description: "Day of the month."
+      - name: day_name
+        description: "Full name of the day (e.g., Monday)."
+      - name: day_of_week
+        description: "Numeric representation of the day of the week (1=Sunday, 7=Saturday)."
+      - name: hour
+        description: "Hour of the day (0-23)."
+      - name: minute
+        description: "Minute of the hour (0-59)."
+      - name: second
+        description: "Second of the minute (0-59)."
+      - name: is_weekend
+        description: "Boolean flag indicating whether the date is a weekend."
+      - name: date_key
+        description: "Concatenated key for easy joining with date-based datasets."

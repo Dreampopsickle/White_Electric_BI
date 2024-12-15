@@ -1,5 +1,10 @@
 from google.cloud import bigquery
 import os
+import logging
+
+# Configure Logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 def upload_csv_to_bigquery(file_path, table_id, schema):
     # Initialize BQ client
@@ -18,12 +23,22 @@ def upload_csv_to_bigquery(file_path, table_id, schema):
         job = client.load_table_from_file(file, table_id, job_config=job_config)
         job.result() #wait for job to complete
 
-    print(f"Loaded {job.output_rows} rows into {table_id}.")
+    logger.info(f"Loaded {job.output_rows} rows into {table_id}.")
+
+    # Delete csv after successful upload
+    try:
+        os.remove(file_path)
+        logger.info(f"Delete File: {file_path}")
+    except Exception as e:
+        logger.error(f"Failed to delete file {file_path}: {e}")
 
 if __name__ == "__main__":
     #Env var
     dataset_id = os.getenv("BIGQUERY_DATASET")
     project_id = os.getenv("BIGQUERY_PROJECT_ID")
+
+    if not dataset_id or not project_id:
+        raise ValueError("BIGQUERY_DATASET and BIGQUERY_PROJECT_ID must be set.")
     file_paths = [
         "./data/payment_data.csv",
         "./data/orders_data.csv",
