@@ -35,5 +35,6 @@ models:
       +schema: staging
     dev:
       +materialized: view
+      +schema: dev
     prod:
       +materialized: view

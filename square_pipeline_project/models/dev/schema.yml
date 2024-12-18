@@ -1,1 +1,34 @@
+version: 2
 
+models:
+  - name: dev_order_items
+    description: "Denormalized order-item level data combining orders and line items."
+    columns:
+      - name: order_id
+        description: "Unique identifier for the order."
+        tests:
+          - unique
+          - not_null
+      - name: item_name
+        description: "Name of the purchased item."
+
+  - name: dev_order_payments
+    description: "Denormalized order-payment level data combining orders and payments."
+    columns:
+      - name: order_id
+        description: "Unique identifier for the order."
+        tests:
+          - unique
+          - not_null
+      - name: payment_id
+        description: "Unique identifier for the payment."
+
+  - name: dev_sales_summary
+    description: "Aggregated sales summary data by location and date."
+    columns:
+      - name: order_date
+        description: "Date of the order."
+        tests:
+          - not_null
+      - name: total_sales
+        description: "Total sales revenue for the date."
