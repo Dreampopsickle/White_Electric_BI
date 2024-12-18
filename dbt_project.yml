@@ -30,11 +30,10 @@ clean-targets: # directories to be removed by `dbt clean`
 models:
   square_pipeline_project:
     # Config indicated by + and applies to all files under models/example/
-    raw:
-      +materialized: view
     staging:
       +materialized: view
-    intermediate:
+      +schema: staging
+    dev:
       +materialized: view
-    facts_and_dimensions:
+    prod:
       +materialized: view

@@ -1,19 +1,12 @@
-WITH orders as (
-    SELECT 
-        order_id,
-        location_id, 
-        created_at AS order_created_at, 
-        updated_at AS order_updated_at,
-        state AS order_state,
-        CAST(total_money AS FLOAT64) AS total_amount,
-        CAST(total_tax_money AS FLOAT64) AS total_tax,
-        CAST(total_tip_money AS FLOAT64) AS total_tip,
-        CAST(total_discount_money AS FLOAT64) AS total_discount
-    FROM {{ source('raw', 'orders') }}
-)
+{{ config(materialized='view', enabled=true) }}
 
-SELECT 
-    *
+SELECT
+    order_id,
+    created_at AS order_created_at,
+    state AS order_state,
+    total_money AS total_amount,
+    total_tax_money AS total_tax,
+    total_tip_money AS total_tip,
+    total_discount_money AS total_discount
 FROM 
-    orders
-
+    {{ source('raw', 'orders') }}

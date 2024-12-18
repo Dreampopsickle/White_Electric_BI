@@ -1,40 +1,116 @@
 version: 2
 
+# Defining sources (raw BigQuery tables)
+sources:
+  - name: raw
+    description: "Raw tables directly loaded into BigQuery from the Square API."
+    database: "{{ env_var('BIGQUERY_PROJECT_ID') }}"
+    schema: "{{ env_var('BIGQUERY_DATASET') }}"
+    tables:
+      - name: payments
+        description: "Raw payments data extracted from Square API."
+        columns:
+          - name: id
+            description: "Unique identifier for the payment."
+          - name: created_at
+            description: "Timestamp when the payment was created."
+          - name: amount_money
+            description: "Payment amount and currency."
+          - name: status
+            description: "Status of the payment (e.g., COMPLETED)."
+
+      - name: orders
+        description: "Raw orders data extracted from Square API."
+        columns:
+          - name: order_id
+            description: "Unique identifier for the order."
+          - name: total_money
+            description: "Total amount for the order."
+          - name: created_at
+            description: "Timestamp when the order was created."
+
+      - name: line_items
+        description: "Raw line items data extracted from Square API."
+        columns:
+          - name: order_id
+            description: "Reference to the associated order."
+          - name: item_name
+            description: "Name of the purchased item."
+          - name: quantity
+            description: "Quantity of the item purchased."
+          - name: gross_sales
+            description: "Gross sales amount for the line item."
+
+# Defining the staging models
 models:
   - name: stg_payments
-    description: "Cleaned and normalized payments data."
+    description: "Cleaned and normalized payments data extracted from the Square API."
     columns:
       - name: payment_id
         description: "Unique identifier for the payment."
+        tests:
+          - unique
+          - not_null
+
       - name: payment_created_at
         description: "Timestamp when the payment was created."
-      - name: amount
-        description: "Payment amount in USD."
-      - name: status
-        description: "Status of the payment (e.g., COMPLETED)."
+
+      - name: payment_status
+        description: "Status of the payment (e.g., COMPLETED, FAILED)."
+
+      - name: payment_amount
+        description: "The payment amount in USD."
+        tests:
+          - not_null
+
+      - name: currency
+        description: "Currency of the payment (e.g., USD)."
+
       - name: order_id
-        description: "Unique identifier for the related order."
+        description: "Reference to the associated order."
 
   - name: stg_orders
-    description: "Cleaned and normalized orders data."
+    description: "Cleaned and normalized orders data from the Square API."
     columns:
       - name: order_id
         description: "Unique identifier for the order."
-      - name: location_id
-        description: "Identifier for the location where the order was placed."
-      - name: total_amount
-        description: "Total amount for the order in USD."
+        tests:
+          - unique
+          - not_null
+
       - name: order_created_at
         description: "Timestamp when the order was created."
 
+      - name: total_amount
+        description: "The total amount for the order in USD."
+        tests:
+          - not_null
+
+      - name: total_tax
+        description: "Total tax applied to the order in USD."
+
+      - name: total_tip
+        description: "Total tip amount for the order in USD."
+
   - name: stg_line_items
-    description: "Cleaned and normalized line items data."
+    description: "Cleaned and normalized line items data from the Square API."
     columns:
       - name: order_id
-        description: "Unique identifier for the order this item belongs to."
+        description: "Reference to the associated order."
+        tests:
+          - not_null
+
+      - name: line_item_uid
+        description: "Unique identifier for the line item."
+
       - name: item_name
         description: "Name of the purchased item."
+
       - name: quantity
         description: "Quantity of the item purchased."
+
       - name: gross_sales
-        description: "Gross sales amount for the line item."
+        description: "Gross sales amount for the line item in USD."
+
+      - name: modifier_name
+        description: "Name of the modifier applied to the item (e.g., Bacon, Garlic)."

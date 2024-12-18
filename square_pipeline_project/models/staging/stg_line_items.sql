@@ -1,18 +1,12 @@
-with line_items AS (
-    SELECT
-        order_id, 
-        line_item_uid,
-        item_name,
-        CAST(quantity AS INT64) AS quantity,
-        CAST(base_price AS FLOAT64) AS base_price,
-        CAST(gross_sales AS FLOAT64) AS gross_sales, 
-        CAST(total_money AS FLOAT64) AS total_money,
-        modifier_name,
-        CAST(modifier_price AS FLOAT64) as modifier_price
-    FROM {{ source('raw', 'line_items') }}
-)
+{{ config(materialized='view', enabled=true) }}
 
-SELECT 
-    *
-FROM
-    line_items
+SELECT
+    order_id,
+    line_item_uid AS line_item_id,
+    item_name,
+    CAST(quantity AS INT64) AS quantity,
+    gross_sales,
+    modifier_name,
+    modifier_price
+FROM 
+    {{ source('raw', 'line_items') }}
