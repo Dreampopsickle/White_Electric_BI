@@ -1,0 +1,1 @@
+SELECT * FROM Sales_Test_prod.dim_items

@@ -5,7 +5,7 @@
 with dbt_test__target as (
 
   select item_id as unique_field
-  from `we-analysis`.`Sales_Test`.`dim_items`
+  from `we-analysis`.`Sales_Test_prod`.`dim_items`
   where item_id is not null
 
 )

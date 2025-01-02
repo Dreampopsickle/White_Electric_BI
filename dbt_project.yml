@@ -38,3 +38,4 @@ models:
       +schema: dev
     prod:
       +materialized: view
+      +schema: prod

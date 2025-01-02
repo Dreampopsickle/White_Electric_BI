@@ -8933,3 +8933,647 @@ where total_sales is null
 [0m20:29:08.305109 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8fdd30a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8b24f640>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8ad54fa0>]}
 [0m20:29:08.305497 [debug] [MainThread]: Flushing usage events
 [0m20:29:08.751115 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:03:08.574854 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9bf23100>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9b2debe0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9b2dec40>]}
+
+
+============================== 23:03:08.580468 | 53704b73-bce2-49f9-b461-f7ad990e6740 ==============================
+[0m23:03:08.580468 [info ] [MainThread]: Running with dbt=1.9.0
+[0m23:03:08.581131 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/app/logs', 'debug': 'False', 'profiles_dir': '/app/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt build --select prod.*', 'introspect': 'True', 'log_format': 'default', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m23:03:09.656286 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '53704b73-bce2-49f9-b461-f7ad990e6740', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7f132f10>]}
+[0m23:03:09.696636 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '53704b73-bce2-49f9-b461-f7ad990e6740', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7f11f730>]}
+[0m23:03:09.697364 [info ] [MainThread]: Registered adapter: bigquery=1.9.0
+[0m23:03:09.832755 [debug] [MainThread]: checksum: c99e828bba267739642b5a3ce85f17518764ea526e0e6c4fdc649171c1a66bff, vars: {}, profile: , target: , version: 1.9.0
+[0m23:03:10.211365 [info ] [MainThread]: Unable to do partial parsing because a project config has changed
+[0m23:03:10.212696 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '53704b73-bce2-49f9-b461-f7ad990e6740', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9b761c40>]}
+[0m23:03:11.036382 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'fact_order_items' in the 'models' section of file 'square_pipeline_project/models/prod/schema.yml'
+[0m23:03:11.345037 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.square_pipeline_project.not_null_fact_order_items_order_id.ce02dc1e7e' (square_pipeline_project/models/prod/schema.yml) depends on a node named 'fact_order_items' in package '' which was not found
+[0m23:03:11.346314 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.square_pipeline_project.not_null_fact_order_items_item_id.fbfa46453a' (square_pipeline_project/models/prod/schema.yml) depends on a node named 'fact_order_items' in package '' which was not found
+[0m23:03:11.449429 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '53704b73-bce2-49f9-b461-f7ad990e6740', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff978ec130>]}
+[0m23:03:11.712588 [debug] [MainThread]: Wrote artifact WritableManifest to /app/target/manifest.json
+[0m23:03:11.717341 [debug] [MainThread]: Wrote artifact SemanticManifest to /app/target/semantic_manifest.json
+[0m23:03:11.756408 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '53704b73-bce2-49f9-b461-f7ad990e6740', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff97a42cd0>]}
+[0m23:03:11.757022 [info ] [MainThread]: Found 11 models, 21 data tests, 3 sources, 487 macros
+[0m23:03:11.759746 [info ] [MainThread]: 
+[0m23:03:11.760282 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m23:03:11.760592 [info ] [MainThread]: 
+[0m23:03:11.761217 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m23:03:11.765267 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_we-analysis'
+[0m23:03:11.765879 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:03:12.729101 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_we-analysis, now create_we-analysis_Sales_Test_prod)
+[0m23:03:12.737810 [debug] [ThreadPool]: Creating schema "database: "we-analysis"
+schema: "Sales_Test_prod"
+"
+[0m23:03:12.753465 [debug] [ThreadPool]: On create_we-analysis_Sales_Test_prod: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "square_pipeline_project", "target_name": "dev", "connection_name": "create_we-analysis_Sales_Test_prod"} */
+create schema if not exists `we-analysis`.`Sales_Test_prod`
+  
+[0m23:03:12.754114 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m23:03:13.325672 [debug] [ThreadPool]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=we-analysis&j=bq:US:ee41bd19-68ee-4b55-8848-e00bea3735f6&page=queryresults
+[0m23:03:14.331710 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_we-analysis_Sales_Test_prod, now list_we-analysis_Sales_Test_staging)
+[0m23:03:14.333718 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_we-analysis_Sales_Test_dev'
+[0m23:03:14.335294 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:03:14.334970 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_we-analysis_Sales_Test_prod'
+[0m23:03:14.334239 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m23:03:14.336086 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:03:14.892667 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '53704b73-bce2-49f9-b461-f7ad990e6740', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff97c80c70>]}
+[0m23:03:14.897903 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m23:03:14.907793 [debug] [Thread-1  ]: Began running node model.square_pipeline_project.dim_items
+[0m23:03:14.908258 [debug] [Thread-2  ]: Began running node model.square_pipeline_project.dim_orders
+[0m23:03:14.908536 [debug] [Thread-3  ]: Began running node model.square_pipeline_project.dim_time
+[0m23:03:14.908868 [debug] [Thread-4  ]: Began running node model.square_pipeline_project.fact_orders
+[0m23:03:14.909889 [info ] [Thread-1  ]: 1 of 14 START sql view model Sales_Test_prod.dim_items ......................... [RUN]
+[0m23:03:14.910885 [info ] [Thread-2  ]: 2 of 14 START sql view model Sales_Test_prod.dim_orders ........................ [RUN]
+[0m23:03:14.911932 [info ] [Thread-3  ]: 3 of 14 START sql view model Sales_Test_prod.dim_time .......................... [RUN]
+[0m23:03:14.913156 [info ] [Thread-4  ]: 4 of 14 START sql view model Sales_Test_prod.fact_orders ....................... [RUN]
+[0m23:03:14.914832 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_we-analysis_Sales_Test_dev, now model.square_pipeline_project.dim_items)
+[0m23:03:14.915304 [debug] [Thread-2  ]: Re-using an available connection from the pool (formerly list_we-analysis_Sales_Test_staging, now model.square_pipeline_project.dim_orders)
+[0m23:03:14.916184 [debug] [Thread-3  ]: Re-using an available connection from the pool (formerly list_we-analysis_Sales_Test_prod, now model.square_pipeline_project.dim_time)
+[0m23:03:14.917009 [debug] [Thread-4  ]: Acquiring new bigquery connection 'model.square_pipeline_project.fact_orders'
+[0m23:03:14.917558 [debug] [Thread-1  ]: Began compiling node model.square_pipeline_project.dim_items
+[0m23:03:14.917945 [debug] [Thread-2  ]: Began compiling node model.square_pipeline_project.dim_orders
+[0m23:03:14.918343 [debug] [Thread-3  ]: Began compiling node model.square_pipeline_project.dim_time
+[0m23:03:14.918732 [debug] [Thread-4  ]: Began compiling node model.square_pipeline_project.fact_orders
+[0m23:03:14.949501 [debug] [Thread-2  ]: Writing injected SQL for node "model.square_pipeline_project.dim_orders"
+[0m23:03:14.950043 [debug] [Thread-1  ]: Writing injected SQL for node "model.square_pipeline_project.dim_items"
+[0m23:03:14.953988 [debug] [Thread-3  ]: Writing injected SQL for node "model.square_pipeline_project.dim_time"
+[0m23:03:14.958225 [debug] [Thread-4  ]: Writing injected SQL for node "model.square_pipeline_project.fact_orders"
+[0m23:03:14.961313 [debug] [Thread-1  ]: Began executing node model.square_pipeline_project.dim_items
+[0m23:03:14.961645 [debug] [Thread-3  ]: Began executing node model.square_pipeline_project.dim_time
+[0m23:03:14.961851 [debug] [Thread-2  ]: Began executing node model.square_pipeline_project.dim_orders
+[0m23:03:14.985818 [debug] [Thread-4  ]: Began executing node model.square_pipeline_project.fact_orders
+[0m23:03:15.003316 [debug] [Thread-3  ]: Writing runtime sql for node "model.square_pipeline_project.dim_time"
+[0m23:03:15.004676 [debug] [Thread-1  ]: Writing runtime sql for node "model.square_pipeline_project.dim_items"
+[0m23:03:15.007377 [debug] [Thread-2  ]: Writing runtime sql for node "model.square_pipeline_project.dim_orders"
+[0m23:03:15.011649 [debug] [Thread-4  ]: Writing runtime sql for node "model.square_pipeline_project.fact_orders"
+[0m23:03:15.014136 [debug] [Thread-2  ]: On model.square_pipeline_project.dim_orders: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "square_pipeline_project", "target_name": "dev", "node_id": "model.square_pipeline_project.dim_orders"} */
+
+
+  create or replace view `we-analysis`.`Sales_Test_prod`.`dim_orders`
+  OPTIONS()
+  as 
+WITH orders AS (
+    SELECT 
+        DISTINCT order_id,
+        payment_id,
+        payment_status,
+        payment_source,
+        payment_amount
+    FROM `we-analysis`.`Sales_Test_dev`.`dev_order_payments`
+)
+
+SELECT * FROM orders;
+
+
+[0m23:03:15.014565 [debug] [Thread-1  ]: On model.square_pipeline_project.dim_items: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "square_pipeline_project", "target_name": "dev", "node_id": "model.square_pipeline_project.dim_items"} */
+
+
+  create or replace view `we-analysis`.`Sales_Test_prod`.`dim_items`
+  OPTIONS()
+  as 
+WITH items AS (
+    SELECT 
+        DISTINCT line_item_id AS item_id,
+        item_name,
+        modifier_name,
+        modifier_price
+    FROM 
+        `we-analysis`.`Sales_Test_dev`.`dev_order_items`
+)
+
+SELECT * FROM items;
+
+
+[0m23:03:15.015668 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m23:03:15.015141 [debug] [Thread-4  ]: On model.square_pipeline_project.fact_orders: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "square_pipeline_project", "target_name": "dev", "node_id": "model.square_pipeline_project.fact_orders"} */
+
+
+  create or replace view `we-analysis`.`Sales_Test_prod`.`fact_orders`
+  OPTIONS()
+  as 
+
+WITH order_items AS (
+    SELECT 
+        order_id,
+        line_item_id AS item_id,
+        item_name,
+        quantity,
+        gross_sales AS revenue
+   FROM `we-analysis`.`Sales_Test_dev`.`dev_order_items`
+)
+
+SELECT * FROM order_items;
+
+
+[0m23:03:15.015346 [debug] [Thread-3  ]: On model.square_pipeline_project.dim_time: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "square_pipeline_project", "target_name": "dev", "node_id": "model.square_pipeline_project.dim_time"} */
+
+
+  create or replace view `we-analysis`.`Sales_Test_prod`.`dim_time`
+  OPTIONS()
+  as 
+
+WITH dates_and_times AS (
+    SELECT 
+        DISTINCT TIMESTAMP(order_created_at) AS full_timestamp
+    FROM `we-analysis`.`Sales_Test_dev`.`dev_order_items`
+),
+
+time_data AS (
+    SELECT
+        full_timestamp,
+        DATE(full_timestamp) AS date_key,
+        EXTRACT(YEAR FROM full_timestamp) AS year,
+        EXTRACT(MONTH FROM full_timestamp) AS month,
+        EXTRACT(DAY FROM full_timestamp) AS day,
+        EXTRACT(HOUR FROM full_timestamp) AS hour,
+        EXTRACT(MINUTE FROM full_timestamp) AS minute,
+        EXTRACT(SECOND FROM full_timestamp) AS second,
+        EXTRACT(DAYOFWEEK FROM full_timestamp) AS day_of_week,
+        CASE
+            WHEN EXTRACT(DAYOFWEEK FROM full_timestamp) IN (1, 7) THEN TRUE
+            ELSE FALSE
+        END AS is_weekend
+    FROM dates_and_times
+)
+
+SELECT * FROM time_data;
+
+
+[0m23:03:15.014921 [debug] [Thread-2  ]: Opening a new connection, currently in state closed
+[0m23:03:15.052523 [debug] [Thread-4  ]: Opening a new connection, currently in state init
+[0m23:03:15.053853 [debug] [Thread-3  ]: Opening a new connection, currently in state closed
+[0m23:03:15.813627 [debug] [Thread-2  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=we-analysis&j=bq:US:a7668d75-f3ba-4391-99cb-c5a09b9fb01d&page=queryresults
+[0m23:03:15.815867 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=we-analysis&j=bq:US:99083e00-e3e2-4b34-a2fc-e7b6f3b72de1&page=queryresults
+[0m23:03:15.909994 [debug] [Thread-3  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=we-analysis&j=bq:US:b1b57ffc-6b31-4476-b85b-01b72ab3374d&page=queryresults
+[0m23:03:16.011320 [debug] [Thread-4  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=we-analysis&j=bq:US:cf39bea6-5553-41d0-9389-654d13b0ad69&page=queryresults
+[0m23:03:16.228058 [debug] [Thread-2  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '53704b73-bce2-49f9-b461-f7ad990e6740', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff97b9e8b0>]}
+[0m23:03:16.228861 [info ] [Thread-2  ]: 2 of 14 OK created sql view model Sales_Test_prod.dim_orders ................... [[32mCREATE VIEW (0 processed)[0m in 1.31s]
+[0m23:03:16.229627 [debug] [Thread-2  ]: Finished running node model.square_pipeline_project.dim_orders
+[0m23:03:16.230065 [debug] [Thread-2  ]: Began running node model.square_pipeline_project.fact_sales
+[0m23:03:16.231007 [info ] [Thread-2  ]: 5 of 14 START sql view model Sales_Test_prod.fact_sales ........................ [RUN]
+[0m23:03:16.231623 [debug] [Thread-2  ]: Re-using an available connection from the pool (formerly model.square_pipeline_project.dim_orders, now model.square_pipeline_project.fact_sales)
+[0m23:03:16.231951 [debug] [Thread-2  ]: Began compiling node model.square_pipeline_project.fact_sales
+[0m23:03:16.235172 [debug] [Thread-2  ]: Writing injected SQL for node "model.square_pipeline_project.fact_sales"
+[0m23:03:16.236602 [debug] [Thread-2  ]: Began executing node model.square_pipeline_project.fact_sales
+[0m23:03:16.239404 [debug] [Thread-2  ]: Writing runtime sql for node "model.square_pipeline_project.fact_sales"
+[0m23:03:16.240398 [debug] [Thread-2  ]: On model.square_pipeline_project.fact_sales: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "square_pipeline_project", "target_name": "dev", "node_id": "model.square_pipeline_project.fact_sales"} */
+
+
+  create or replace view `we-analysis`.`Sales_Test_prod`.`fact_sales`
+  OPTIONS()
+  as 
+
+WITH sales_data AS (
+    SELECT
+        order_date,
+        order_id,
+        total_sales,
+        total_gross_sales,
+        total_orders,
+        total_payments
+    from `we-analysis`.`Sales_Test_dev`.`dev_sales_summary`
+)
+
+SELECT * FROM sales_data;
+
+
+[0m23:03:16.240772 [debug] [Thread-2  ]: Opening a new connection, currently in state closed
+[0m23:03:16.302489 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '53704b73-bce2-49f9-b461-f7ad990e6740', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7f085a90>]}
+[0m23:03:16.306109 [info ] [Thread-1  ]: 1 of 14 OK created sql view model Sales_Test_prod.dim_items .................... [[32mCREATE VIEW (0 processed)[0m in 1.39s]
+[0m23:03:16.307857 [debug] [Thread-1  ]: Finished running node model.square_pipeline_project.dim_items
+[0m23:03:16.308565 [debug] [Thread-1  ]: Began running node test.square_pipeline_project.not_null_dim_orders_order_id.a67b7c295d
+[0m23:03:16.309520 [info ] [Thread-1  ]: 6 of 14 START test not_null_dim_orders_order_id ................................ [RUN]
+[0m23:03:16.310433 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.square_pipeline_project.dim_items, now test.square_pipeline_project.not_null_dim_orders_order_id.a67b7c295d)
+[0m23:03:16.311604 [debug] [Thread-1  ]: Began compiling node test.square_pipeline_project.not_null_dim_orders_order_id.a67b7c295d
+[0m23:03:16.415228 [debug] [Thread-1  ]: Writing injected SQL for node "test.square_pipeline_project.not_null_dim_orders_order_id.a67b7c295d"
+[0m23:03:16.424507 [debug] [Thread-3  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '53704b73-bce2-49f9-b461-f7ad990e6740', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff97263c70>]}
+[0m23:03:16.427078 [info ] [Thread-3  ]: 3 of 14 OK created sql view model Sales_Test_prod.dim_time ..................... [[32mCREATE VIEW (0 processed)[0m in 1.51s]
+[0m23:03:16.427926 [debug] [Thread-1  ]: Began executing node test.square_pipeline_project.not_null_dim_orders_order_id.a67b7c295d
+[0m23:03:16.428995 [debug] [Thread-3  ]: Finished running node model.square_pipeline_project.dim_time
+[0m23:03:16.453960 [debug] [Thread-3  ]: Began running node test.square_pipeline_project.unique_dim_orders_order_id.9786299635
+[0m23:03:16.454509 [debug] [Thread-1  ]: Writing runtime sql for node "test.square_pipeline_project.not_null_dim_orders_order_id.a67b7c295d"
+[0m23:03:16.455430 [info ] [Thread-3  ]: 7 of 14 START test unique_dim_orders_order_id .................................. [RUN]
+[0m23:03:16.458130 [debug] [Thread-3  ]: Re-using an available connection from the pool (formerly model.square_pipeline_project.dim_time, now test.square_pipeline_project.unique_dim_orders_order_id.9786299635)
+[0m23:03:16.459349 [debug] [Thread-3  ]: Began compiling node test.square_pipeline_project.unique_dim_orders_order_id.9786299635
+[0m23:03:16.473887 [debug] [Thread-3  ]: Writing injected SQL for node "test.square_pipeline_project.unique_dim_orders_order_id.9786299635"
+[0m23:03:16.474506 [debug] [Thread-1  ]: On test.square_pipeline_project.not_null_dim_orders_order_id.a67b7c295d: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "square_pipeline_project", "target_name": "dev", "node_id": "test.square_pipeline_project.not_null_dim_orders_order_id.a67b7c295d"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select order_id
+from `we-analysis`.`Sales_Test_prod`.`dim_orders`
+where order_id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m23:03:16.477480 [debug] [Thread-4  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '53704b73-bce2-49f9-b461-f7ad990e6740', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff97e1e5e0>]}
+[0m23:03:16.477875 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m23:03:16.478322 [debug] [Thread-3  ]: Began executing node test.square_pipeline_project.unique_dim_orders_order_id.9786299635
+[0m23:03:16.478759 [info ] [Thread-4  ]: 4 of 14 OK created sql view model Sales_Test_prod.fact_orders .................. [[32mCREATE VIEW (0 processed)[0m in 1.56s]
+[0m23:03:16.484100 [debug] [Thread-3  ]: Writing runtime sql for node "test.square_pipeline_project.unique_dim_orders_order_id.9786299635"
+[0m23:03:16.529186 [debug] [Thread-4  ]: Finished running node model.square_pipeline_project.fact_orders
+[0m23:03:16.532030 [debug] [Thread-4  ]: Began running node test.square_pipeline_project.not_null_dim_items_item_id.9c886c9cd1
+[0m23:03:16.533506 [info ] [Thread-4  ]: 8 of 14 START test not_null_dim_items_item_id .................................. [RUN]
+[0m23:03:16.535011 [debug] [Thread-4  ]: Re-using an available connection from the pool (formerly model.square_pipeline_project.fact_orders, now test.square_pipeline_project.not_null_dim_items_item_id.9c886c9cd1)
+[0m23:03:16.534223 [debug] [Thread-3  ]: On test.square_pipeline_project.unique_dim_orders_order_id.9786299635: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "square_pipeline_project", "target_name": "dev", "node_id": "test.square_pipeline_project.unique_dim_orders_order_id.9786299635"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with dbt_test__target as (
+
+  select order_id as unique_field
+  from `we-analysis`.`Sales_Test_prod`.`dim_orders`
+  where order_id is not null
+
+)
+
+select
+    unique_field,
+    count(*) as n_records
+
+from dbt_test__target
+group by unique_field
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m23:03:16.536893 [debug] [Thread-3  ]: Opening a new connection, currently in state closed
+[0m23:03:16.535766 [debug] [Thread-4  ]: Began compiling node test.square_pipeline_project.not_null_dim_items_item_id.9c886c9cd1
+[0m23:03:16.585646 [debug] [Thread-4  ]: Writing injected SQL for node "test.square_pipeline_project.not_null_dim_items_item_id.9c886c9cd1"
+[0m23:03:16.588561 [debug] [Thread-4  ]: Began executing node test.square_pipeline_project.not_null_dim_items_item_id.9c886c9cd1
+[0m23:03:16.592000 [debug] [Thread-4  ]: Writing runtime sql for node "test.square_pipeline_project.not_null_dim_items_item_id.9c886c9cd1"
+[0m23:03:16.594152 [debug] [Thread-4  ]: On test.square_pipeline_project.not_null_dim_items_item_id.9c886c9cd1: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "square_pipeline_project", "target_name": "dev", "node_id": "test.square_pipeline_project.not_null_dim_items_item_id.9c886c9cd1"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select item_id
+from `we-analysis`.`Sales_Test_prod`.`dim_items`
+where item_id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m23:03:16.594512 [debug] [Thread-4  ]: Opening a new connection, currently in state closed
+[0m23:03:17.234975 [debug] [Thread-2  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=we-analysis&j=bq:US:87dc2ec9-3259-478e-bdb7-cbeb23853858&page=queryresults
+[0m23:03:17.686690 [debug] [Thread-2  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '53704b73-bce2-49f9-b461-f7ad990e6740', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9c0f8e50>]}
+[0m23:03:17.687842 [info ] [Thread-2  ]: 5 of 14 OK created sql view model Sales_Test_prod.fact_sales ................... [[32mCREATE VIEW (0 processed)[0m in 1.45s]
+[0m23:03:17.688832 [debug] [Thread-2  ]: Finished running node model.square_pipeline_project.fact_sales
+[0m23:03:17.689721 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=we-analysis&j=bq:US:09955f55-249d-4532-8376-ae20121514fd&page=queryresults
+[0m23:03:17.690137 [debug] [Thread-2  ]: Began running node test.square_pipeline_project.unique_dim_items_item_id.d6b0c82950
+[0m23:03:17.691995 [info ] [Thread-2  ]: 9 of 14 START test unique_dim_items_item_id .................................... [RUN]
+[0m23:03:17.692528 [debug] [Thread-2  ]: Re-using an available connection from the pool (formerly model.square_pipeline_project.fact_sales, now test.square_pipeline_project.unique_dim_items_item_id.d6b0c82950)
+[0m23:03:17.692854 [debug] [Thread-2  ]: Began compiling node test.square_pipeline_project.unique_dim_items_item_id.d6b0c82950
+[0m23:03:17.697112 [debug] [Thread-2  ]: Writing injected SQL for node "test.square_pipeline_project.unique_dim_items_item_id.d6b0c82950"
+[0m23:03:17.698529 [debug] [Thread-2  ]: Began executing node test.square_pipeline_project.unique_dim_items_item_id.d6b0c82950
+[0m23:03:17.701964 [debug] [Thread-2  ]: Writing runtime sql for node "test.square_pipeline_project.unique_dim_items_item_id.d6b0c82950"
+[0m23:03:17.704048 [debug] [Thread-2  ]: On test.square_pipeline_project.unique_dim_items_item_id.d6b0c82950: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "square_pipeline_project", "target_name": "dev", "node_id": "test.square_pipeline_project.unique_dim_items_item_id.d6b0c82950"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with dbt_test__target as (
+
+  select item_id as unique_field
+  from `we-analysis`.`Sales_Test_prod`.`dim_items`
+  where item_id is not null
+
+)
+
+select
+    unique_field,
+    count(*) as n_records
+
+from dbt_test__target
+group by unique_field
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m23:03:17.704864 [debug] [Thread-2  ]: Opening a new connection, currently in state closed
+[0m23:03:17.886151 [debug] [Thread-4  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=we-analysis&j=bq:US:125de630-d309-4013-9432-ed23ccf83695&page=queryresults
+[0m23:03:17.997790 [debug] [Thread-3  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=we-analysis&j=bq:US:c505b5ca-8cfd-4100-a674-de22ccbd88a6&page=queryresults
+[0m23:03:18.252631 [info ] [Thread-1  ]: 6 of 14 PASS not_null_dim_orders_order_id ...................................... [[32mPASS[0m in 1.94s]
+[0m23:03:18.254342 [debug] [Thread-1  ]: Finished running node test.square_pipeline_project.not_null_dim_orders_order_id.a67b7c295d
+[0m23:03:18.254883 [debug] [Thread-1  ]: Began running node test.square_pipeline_project.not_null_dim_time_date.2080f42875
+[0m23:03:18.255474 [info ] [Thread-1  ]: 10 of 14 START test not_null_dim_time_date ..................................... [RUN]
+[0m23:03:18.256018 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly test.square_pipeline_project.not_null_dim_orders_order_id.a67b7c295d, now test.square_pipeline_project.not_null_dim_time_date.2080f42875)
+[0m23:03:18.256481 [debug] [Thread-1  ]: Began compiling node test.square_pipeline_project.not_null_dim_time_date.2080f42875
+[0m23:03:18.261354 [debug] [Thread-1  ]: Writing injected SQL for node "test.square_pipeline_project.not_null_dim_time_date.2080f42875"
+[0m23:03:18.262792 [debug] [Thread-1  ]: Began executing node test.square_pipeline_project.not_null_dim_time_date.2080f42875
+[0m23:03:18.265674 [debug] [Thread-1  ]: Writing runtime sql for node "test.square_pipeline_project.not_null_dim_time_date.2080f42875"
+[0m23:03:18.266768 [debug] [Thread-1  ]: On test.square_pipeline_project.not_null_dim_time_date.2080f42875: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "square_pipeline_project", "target_name": "dev", "node_id": "test.square_pipeline_project.not_null_dim_time_date.2080f42875"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select date
+from `we-analysis`.`Sales_Test_prod`.`dim_time`
+where date is null
+
+
+
+      
+    ) dbt_internal_test
+[0m23:03:18.267174 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m23:03:18.407979 [info ] [Thread-4  ]: 8 of 14 PASS not_null_dim_items_item_id ........................................ [[32mPASS[0m in 1.87s]
+[0m23:03:18.408751 [debug] [Thread-4  ]: Finished running node test.square_pipeline_project.not_null_dim_items_item_id.9c886c9cd1
+[0m23:03:18.409124 [debug] [Thread-4  ]: Began running node test.square_pipeline_project.unique_dim_time_date.d694a05da6
+[0m23:03:18.409488 [info ] [Thread-4  ]: 11 of 14 START test unique_dim_time_date ....................................... [RUN]
+[0m23:03:18.409994 [debug] [Thread-4  ]: Re-using an available connection from the pool (formerly test.square_pipeline_project.not_null_dim_items_item_id.9c886c9cd1, now test.square_pipeline_project.unique_dim_time_date.d694a05da6)
+[0m23:03:18.410294 [debug] [Thread-4  ]: Began compiling node test.square_pipeline_project.unique_dim_time_date.d694a05da6
+[0m23:03:18.415607 [debug] [Thread-4  ]: Writing injected SQL for node "test.square_pipeline_project.unique_dim_time_date.d694a05da6"
+[0m23:03:18.416928 [debug] [Thread-4  ]: Began executing node test.square_pipeline_project.unique_dim_time_date.d694a05da6
+[0m23:03:18.419811 [debug] [Thread-4  ]: Writing runtime sql for node "test.square_pipeline_project.unique_dim_time_date.d694a05da6"
+[0m23:03:18.421392 [debug] [Thread-4  ]: On test.square_pipeline_project.unique_dim_time_date.d694a05da6: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "square_pipeline_project", "target_name": "dev", "node_id": "test.square_pipeline_project.unique_dim_time_date.d694a05da6"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with dbt_test__target as (
+
+  select date as unique_field
+  from `we-analysis`.`Sales_Test_prod`.`dim_time`
+  where date is not null
+
+)
+
+select
+    unique_field,
+    count(*) as n_records
+
+from dbt_test__target
+group by unique_field
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m23:03:18.421938 [debug] [Thread-4  ]: Opening a new connection, currently in state closed
+[0m23:03:18.504712 [error] [Thread-3  ]: 7 of 14 FAIL 2 unique_dim_orders_order_id ...................................... [[31mFAIL 2[0m in 2.05s]
+[0m23:03:18.505869 [debug] [Thread-3  ]: Finished running node test.square_pipeline_project.unique_dim_orders_order_id.9786299635
+[0m23:03:18.506256 [debug] [Thread-3  ]: Began running node test.square_pipeline_project.not_null_fact_sales_order_date.d04f309174
+[0m23:03:18.507124 [debug] [Thread-7  ]: Marking all children of 'test.square_pipeline_project.unique_dim_orders_order_id.9786299635' to be skipped because of status 'fail'.  Reason: Got 2 results, configured to fail if != 0.
+[0m23:03:18.507512 [info ] [Thread-3  ]: 12 of 14 START test not_null_fact_sales_order_date ............................. [RUN]
+[0m23:03:18.508601 [debug] [Thread-3  ]: Re-using an available connection from the pool (formerly test.square_pipeline_project.unique_dim_orders_order_id.9786299635, now test.square_pipeline_project.not_null_fact_sales_order_date.d04f309174)
+[0m23:03:18.508947 [debug] [Thread-3  ]: Began compiling node test.square_pipeline_project.not_null_fact_sales_order_date.d04f309174
+[0m23:03:18.515739 [debug] [Thread-3  ]: Writing injected SQL for node "test.square_pipeline_project.not_null_fact_sales_order_date.d04f309174"
+[0m23:03:18.516806 [debug] [Thread-3  ]: Began executing node test.square_pipeline_project.not_null_fact_sales_order_date.d04f309174
+[0m23:03:18.521027 [debug] [Thread-3  ]: Writing runtime sql for node "test.square_pipeline_project.not_null_fact_sales_order_date.d04f309174"
+[0m23:03:18.521937 [debug] [Thread-3  ]: On test.square_pipeline_project.not_null_fact_sales_order_date.d04f309174: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "square_pipeline_project", "target_name": "dev", "node_id": "test.square_pipeline_project.not_null_fact_sales_order_date.d04f309174"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select order_date
+from `we-analysis`.`Sales_Test_prod`.`fact_sales`
+where order_date is null
+
+
+
+      
+    ) dbt_internal_test
+[0m23:03:18.522336 [debug] [Thread-3  ]: Opening a new connection, currently in state closed
+[0m23:03:18.817359 [debug] [Thread-2  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=we-analysis&j=bq:US:66fe2083-4790-42af-b22f-51408b6f0eba&page=queryresults
+[0m23:03:19.017881 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=we-analysis&j=bq:US:150ef033-aada-4945-a697-a7f058ed078f&page=queryresults
+[0m23:03:19.019557 [error] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=we-analysis&j=bq:US:150ef033-aada-4945-a697-a7f058ed078f&page=queryresults
+[0m23:03:19.030361 [debug] [Thread-1  ]: Database Error in test not_null_dim_time_date (square_pipeline_project/models/prod/schema.yml)
+  Unrecognized name: date; Did you mean day? at [15:7]
+  compiled code at target/run/square_pipeline_project/square_pipeline_project/models/prod/schema.yml/not_null_dim_time_date.sql
+[0m23:03:19.031198 [error] [Thread-1  ]: 10 of 14 ERROR not_null_dim_time_date .......................................... [[31mERROR[0m in 0.78s]
+[0m23:03:19.031691 [debug] [Thread-1  ]: Finished running node test.square_pipeline_project.not_null_dim_time_date.2080f42875
+[0m23:03:19.032144 [debug] [Thread-1  ]: Began running node test.square_pipeline_project.not_null_fact_sales_total_gross_sales.30e81ae5ff
+[0m23:03:19.032413 [debug] [Thread-7  ]: Marking all children of 'test.square_pipeline_project.not_null_dim_time_date.2080f42875' to be skipped because of status 'error'.  Reason: Database Error in test not_null_dim_time_date (square_pipeline_project/models/prod/schema.yml)
+  Unrecognized name: date; Did you mean day? at [15:7]
+  compiled code at target/run/square_pipeline_project/square_pipeline_project/models/prod/schema.yml/not_null_dim_time_date.sql.
+[0m23:03:19.032733 [info ] [Thread-1  ]: 13 of 14 START test not_null_fact_sales_total_gross_sales ...................... [RUN]
+[0m23:03:19.033508 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly test.square_pipeline_project.not_null_dim_time_date.2080f42875, now test.square_pipeline_project.not_null_fact_sales_total_gross_sales.30e81ae5ff)
+[0m23:03:19.033878 [debug] [Thread-1  ]: Began compiling node test.square_pipeline_project.not_null_fact_sales_total_gross_sales.30e81ae5ff
+[0m23:03:19.041369 [debug] [Thread-1  ]: Writing injected SQL for node "test.square_pipeline_project.not_null_fact_sales_total_gross_sales.30e81ae5ff"
+[0m23:03:19.042621 [debug] [Thread-1  ]: Began executing node test.square_pipeline_project.not_null_fact_sales_total_gross_sales.30e81ae5ff
+[0m23:03:19.045152 [debug] [Thread-1  ]: Writing runtime sql for node "test.square_pipeline_project.not_null_fact_sales_total_gross_sales.30e81ae5ff"
+[0m23:03:19.045990 [debug] [Thread-1  ]: On test.square_pipeline_project.not_null_fact_sales_total_gross_sales.30e81ae5ff: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "square_pipeline_project", "target_name": "dev", "node_id": "test.square_pipeline_project.not_null_fact_sales_total_gross_sales.30e81ae5ff"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select total_gross_sales
+from `we-analysis`.`Sales_Test_prod`.`fact_sales`
+where total_gross_sales is null
+
+
+
+      
+    ) dbt_internal_test
+[0m23:03:19.046293 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m23:03:19.269287 [debug] [Thread-4  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=we-analysis&j=bq:US:11f5c9df-5a9d-4527-bd53-05ac2927e822&page=queryresults
+[0m23:03:19.269963 [error] [Thread-4  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=we-analysis&j=bq:US:11f5c9df-5a9d-4527-bd53-05ac2927e822&page=queryresults
+[0m23:03:19.271370 [debug] [Thread-4  ]: Database Error in test unique_dim_time_date (square_pipeline_project/models/prod/schema.yml)
+  Unrecognized name: date; Did you mean day? at [15:9]
+  compiled code at target/run/square_pipeline_project/square_pipeline_project/models/prod/schema.yml/unique_dim_time_date.sql
+[0m23:03:19.271931 [error] [Thread-4  ]: 11 of 14 ERROR unique_dim_time_date ............................................ [[31mERROR[0m in 0.86s]
+[0m23:03:19.272476 [debug] [Thread-4  ]: Finished running node test.square_pipeline_project.unique_dim_time_date.d694a05da6
+[0m23:03:19.272855 [debug] [Thread-4  ]: Began running node test.square_pipeline_project.not_null_fact_sales_total_sales.2feb308531
+[0m23:03:19.273324 [debug] [Thread-7  ]: Marking all children of 'test.square_pipeline_project.unique_dim_time_date.d694a05da6' to be skipped because of status 'error'.  Reason: Database Error in test unique_dim_time_date (square_pipeline_project/models/prod/schema.yml)
+  Unrecognized name: date; Did you mean day? at [15:9]
+  compiled code at target/run/square_pipeline_project/square_pipeline_project/models/prod/schema.yml/unique_dim_time_date.sql.
+[0m23:03:19.273688 [info ] [Thread-4  ]: 14 of 14 START test not_null_fact_sales_total_sales ............................ [RUN]
+[0m23:03:19.274342 [debug] [Thread-4  ]: Re-using an available connection from the pool (formerly test.square_pipeline_project.unique_dim_time_date.d694a05da6, now test.square_pipeline_project.not_null_fact_sales_total_sales.2feb308531)
+[0m23:03:19.274745 [debug] [Thread-4  ]: Began compiling node test.square_pipeline_project.not_null_fact_sales_total_sales.2feb308531
+[0m23:03:19.279434 [debug] [Thread-4  ]: Writing injected SQL for node "test.square_pipeline_project.not_null_fact_sales_total_sales.2feb308531"
+[0m23:03:19.280506 [debug] [Thread-4  ]: Began executing node test.square_pipeline_project.not_null_fact_sales_total_sales.2feb308531
+[0m23:03:19.283049 [debug] [Thread-4  ]: Writing runtime sql for node "test.square_pipeline_project.not_null_fact_sales_total_sales.2feb308531"
+[0m23:03:19.284676 [debug] [Thread-4  ]: On test.square_pipeline_project.not_null_fact_sales_total_sales.2feb308531: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "square_pipeline_project", "target_name": "dev", "node_id": "test.square_pipeline_project.not_null_fact_sales_total_sales.2feb308531"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select total_sales
+from `we-analysis`.`Sales_Test_prod`.`fact_sales`
+where total_sales is null
+
+
+
+      
+    ) dbt_internal_test
+[0m23:03:19.285310 [debug] [Thread-4  ]: Opening a new connection, currently in state closed
+[0m23:03:19.325161 [error] [Thread-2  ]: 9 of 14 FAIL 252 unique_dim_items_item_id ...................................... [[31mFAIL 252[0m in 1.63s]
+[0m23:03:19.326510 [debug] [Thread-2  ]: Finished running node test.square_pipeline_project.unique_dim_items_item_id.d6b0c82950
+[0m23:03:19.327865 [debug] [Thread-7  ]: Marking all children of 'test.square_pipeline_project.unique_dim_items_item_id.d6b0c82950' to be skipped because of status 'fail'.  Reason: Got 252 results, configured to fail if != 0.
+[0m23:03:19.662629 [debug] [Thread-3  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=we-analysis&j=bq:US:f95773f8-b400-4d1a-a0b3-cc7f4b00fab4&page=queryresults
+[0m23:03:20.138178 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=we-analysis&j=bq:US:6ee29d37-c7f4-4b21-ae31-eeddec445950&page=queryresults
+[0m23:03:20.215769 [info ] [Thread-3  ]: 12 of 14 PASS not_null_fact_sales_order_date ................................... [[32mPASS[0m in 1.71s]
+[0m23:03:20.217336 [debug] [Thread-3  ]: Finished running node test.square_pipeline_project.not_null_fact_sales_order_date.d04f309174
+[0m23:03:20.439734 [debug] [Thread-4  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=we-analysis&j=bq:US:5b07fadf-0c70-455c-a3e6-3b770de6e832&page=queryresults
+[0m23:03:20.651673 [error] [Thread-1  ]: 13 of 14 FAIL 3 not_null_fact_sales_total_gross_sales .......................... [[31mFAIL 3[0m in 1.62s]
+[0m23:03:20.653358 [debug] [Thread-1  ]: Finished running node test.square_pipeline_project.not_null_fact_sales_total_gross_sales.30e81ae5ff
+[0m23:03:20.653950 [debug] [Thread-7  ]: Marking all children of 'test.square_pipeline_project.not_null_fact_sales_total_gross_sales.30e81ae5ff' to be skipped because of status 'fail'.  Reason: Got 3 results, configured to fail if != 0.
+[0m23:03:20.954728 [info ] [Thread-4  ]: 14 of 14 PASS not_null_fact_sales_total_sales .................................. [[32mPASS[0m in 1.68s]
+[0m23:03:20.956499 [debug] [Thread-4  ]: Finished running node test.square_pipeline_project.not_null_fact_sales_total_sales.2feb308531
+[0m23:03:20.961151 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m23:03:20.964055 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m23:03:20.964454 [debug] [MainThread]: Connection 'test.square_pipeline_project.unique_dim_items_item_id.d6b0c82950' was properly closed.
+[0m23:03:20.964783 [debug] [MainThread]: Connection 'test.square_pipeline_project.not_null_fact_sales_total_gross_sales.30e81ae5ff' was properly closed.
+[0m23:03:20.965131 [debug] [MainThread]: Connection 'test.square_pipeline_project.not_null_fact_sales_order_date.d04f309174' was properly closed.
+[0m23:03:20.965365 [debug] [MainThread]: Connection 'test.square_pipeline_project.not_null_fact_sales_total_sales.2feb308531' was properly closed.
+[0m23:03:20.965945 [info ] [MainThread]: 
+[0m23:03:20.966418 [info ] [MainThread]: Finished running 9 data tests, 5 view models in 0 hours 0 minutes and 9.20 seconds (9.20s).
+[0m23:03:20.969510 [debug] [MainThread]: Command end result
+[0m23:03:21.151228 [debug] [MainThread]: Wrote artifact WritableManifest to /app/target/manifest.json
+[0m23:03:21.158864 [debug] [MainThread]: Wrote artifact SemanticManifest to /app/target/semantic_manifest.json
+[0m23:03:21.167946 [debug] [MainThread]: Wrote artifact RunExecutionResult to /app/target/run_results.json
+[0m23:03:21.168302 [info ] [MainThread]: 
+[0m23:03:21.168891 [info ] [MainThread]: [31mCompleted with 5 errors, 0 partial successes, and 0 warnings:[0m
+[0m23:03:21.169984 [info ] [MainThread]: 
+[0m23:03:21.173001 [error] [MainThread]: [31mFailure in test unique_dim_orders_order_id (square_pipeline_project/models/prod/schema.yml)[0m
+[0m23:03:21.173900 [error] [MainThread]:   Got 2 results, configured to fail if != 0
+[0m23:03:21.174360 [info ] [MainThread]: 
+[0m23:03:21.174811 [info ] [MainThread]:   compiled code at target/compiled/square_pipeline_project/square_pipeline_project/models/prod/schema.yml/unique_dim_orders_order_id.sql
+[0m23:03:21.175263 [info ] [MainThread]: 
+[0m23:03:21.175742 [error] [MainThread]:   Database Error in test not_null_dim_time_date (square_pipeline_project/models/prod/schema.yml)
+  Unrecognized name: date; Did you mean day? at [15:7]
+  compiled code at target/run/square_pipeline_project/square_pipeline_project/models/prod/schema.yml/not_null_dim_time_date.sql
+[0m23:03:21.176320 [info ] [MainThread]: 
+[0m23:03:21.177005 [error] [MainThread]:   Database Error in test unique_dim_time_date (square_pipeline_project/models/prod/schema.yml)
+  Unrecognized name: date; Did you mean day? at [15:9]
+  compiled code at target/run/square_pipeline_project/square_pipeline_project/models/prod/schema.yml/unique_dim_time_date.sql
+[0m23:03:21.177828 [info ] [MainThread]: 
+[0m23:03:21.178603 [error] [MainThread]: [31mFailure in test unique_dim_items_item_id (square_pipeline_project/models/prod/schema.yml)[0m
+[0m23:03:21.178910 [error] [MainThread]:   Got 252 results, configured to fail if != 0
+[0m23:03:21.179315 [info ] [MainThread]: 
+[0m23:03:21.179864 [info ] [MainThread]:   compiled code at target/compiled/square_pipeline_project/square_pipeline_project/models/prod/schema.yml/unique_dim_items_item_id.sql
+[0m23:03:21.180248 [info ] [MainThread]: 
+[0m23:03:21.180658 [error] [MainThread]: [31mFailure in test not_null_fact_sales_total_gross_sales (square_pipeline_project/models/prod/schema.yml)[0m
+[0m23:03:21.181301 [error] [MainThread]:   Got 3 results, configured to fail if != 0
+[0m23:03:21.181637 [info ] [MainThread]: 
+[0m23:03:21.182111 [info ] [MainThread]:   compiled code at target/compiled/square_pipeline_project/square_pipeline_project/models/prod/schema.yml/not_null_fact_sales_total_gross_sales.sql
+[0m23:03:21.182427 [info ] [MainThread]: 
+[0m23:03:21.182816 [info ] [MainThread]: Done. PASS=9 WARN=0 ERROR=5 SKIP=0 TOTAL=14
+[0m23:03:21.191520 [debug] [MainThread]: Resource report: {"command_name": "build", "command_success": false, "command_wall_clock_time": 12.669466, "process_in_blocks": "0", "process_kernel_time": 1.665402, "process_mem_max_rss": "212424", "process_out_blocks": "3586", "process_user_time": 5.768282}
+[0m23:03:21.194319 [debug] [MainThread]: Command `dbt build` failed at 23:03:21.194123 after 12.68 seconds
+[0m23:03:21.195664 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9bf23100>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff97060e20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff97084c40>]}
+[0m23:03:21.196696 [debug] [MainThread]: Flushing usage events
+[0m23:03:21.620313 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m15:43:33.853414 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffabd830a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffab140340>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffab1402e0>]}
+
+
+============================== 15:43:33.858124 | 2f3ab6d9-48f3-4a0f-9c01-ff46be219d66 ==============================
+[0m15:43:33.858124 [info ] [MainThread]: Running with dbt=1.9.0
+[0m15:43:33.858773 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/app/logs', 'profiles_dir': '/app/.dbt', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt debug', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m15:43:33.867050 [info ] [MainThread]: dbt version: 1.9.0
+[0m15:43:33.867446 [info ] [MainThread]: python version: 3.9.21
+[0m15:43:33.867878 [info ] [MainThread]: python path: /usr/local/bin/python3.9
+[0m15:43:33.868235 [info ] [MainThread]: os info: Linux-6.10.14-linuxkit-aarch64-with-glibc2.36
+[0m15:43:34.544363 [info ] [MainThread]: Using profiles dir at /app/.dbt
+[0m15:43:34.544888 [info ] [MainThread]: Using profiles.yml file at /app/.dbt/profiles.yml
+[0m15:43:34.545337 [info ] [MainThread]: Using dbt_project.yml file at /app/dbt_project.yml
+[0m15:43:34.545835 [info ] [MainThread]: adapter type: bigquery
+[0m15:43:34.546122 [info ] [MainThread]: adapter version: 1.9.0
+[0m15:43:34.602675 [info ] [MainThread]: Configuration:
+[0m15:43:34.603202 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m15:43:34.603596 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m15:43:34.603847 [info ] [MainThread]: Required dependencies:
+[0m15:43:34.604214 [debug] [MainThread]: Executing "git --help"
+[0m15:43:34.615371 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m15:43:34.616060 [debug] [MainThread]: STDERR: "b''"
+[0m15:43:34.616365 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m15:43:34.616707 [info ] [MainThread]: Connection:
+[0m15:43:34.617450 [info ] [MainThread]:   method: service-account
+[0m15:43:34.617977 [info ] [MainThread]:   database: we-analysis
+[0m15:43:34.618517 [info ] [MainThread]:   execution_project: we-analysis
+[0m15:43:34.618932 [info ] [MainThread]:   schema: Sales_Test
+[0m15:43:34.619195 [info ] [MainThread]:   location: None
+[0m15:43:34.619620 [info ] [MainThread]:   priority: None
+[0m15:43:34.620052 [info ] [MainThread]:   maximum_bytes_billed: None
+[0m15:43:34.620895 [info ] [MainThread]:   impersonate_service_account: None
+[0m15:43:34.621289 [info ] [MainThread]:   job_retry_deadline_seconds: None
+[0m15:43:34.621528 [info ] [MainThread]:   job_retries: 1
+[0m15:43:34.621871 [info ] [MainThread]:   job_creation_timeout_seconds: None
+[0m15:43:34.622498 [info ] [MainThread]:   job_execution_timeout_seconds: None
+[0m15:43:34.623065 [info ] [MainThread]:   timeout_seconds: None
+[0m15:43:34.623401 [info ] [MainThread]:   client_id: None
+[0m15:43:34.623805 [info ] [MainThread]:   token_uri: None
+[0m15:43:34.624100 [info ] [MainThread]:   dataproc_region: None
+[0m15:43:34.624395 [info ] [MainThread]:   dataproc_cluster_name: None
+[0m15:43:34.624664 [info ] [MainThread]:   gcs_bucket: None
+[0m15:43:34.624931 [info ] [MainThread]:   dataproc_batch: None
+[0m15:43:34.625564 [info ] [MainThread]: Registered adapter: bigquery=1.9.0
+[0m15:43:34.694401 [debug] [MainThread]: Acquiring new bigquery connection 'debug'
+[0m15:43:34.694891 [debug] [MainThread]: On debug: select 1 as id
+[0m15:43:34.695183 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m15:43:35.644127 [debug] [MainThread]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=we-analysis&j=bq:US:07e10317-ff5a-4d57-8fdb-a958bbbe8a53&page=queryresults
+[0m15:43:36.178541 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m15:43:36.179410 [info ] [MainThread]: [32mAll checks passed![0m
+[0m15:43:36.181280 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": true, "command_wall_clock_time": 2.3762648, "process_in_blocks": "241840", "process_kernel_time": 0.314591, "process_mem_max_rss": "191740", "process_out_blocks": "13", "process_user_time": 1.911439}
+[0m15:43:36.181762 [debug] [MainThread]: Command `dbt debug` succeeded at 15:43:36.181674 after 2.38 seconds
+[0m15:43:36.182057 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m15:43:36.182400 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffabd830a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffabb8a190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8ee60640>]}
+[0m15:43:36.182755 [debug] [MainThread]: Flushing usage events
+[0m15:43:36.466068 [debug] [MainThread]: An error was encountered while trying to flush usage events

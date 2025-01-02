@@ -1,6 +1,6 @@
 
 
-  create or replace view `we-analysis`.`Sales_Test`.`dim_time`
+  create or replace view `we-analysis`.`Sales_Test_prod`.`dim_time`
   OPTIONS()
   as 
 

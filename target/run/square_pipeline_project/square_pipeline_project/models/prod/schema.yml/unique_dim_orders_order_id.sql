@@ -10,7 +10,7 @@ select
 with dbt_test__target as (
 
   select order_id as unique_field
-  from `we-analysis`.`Sales_Test`.`dim_orders`
+  from `we-analysis`.`Sales_Test_prod`.`dim_orders`
   where order_id is not null
 
 )

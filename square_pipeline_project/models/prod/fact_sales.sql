@@ -5,7 +5,7 @@ WITH sales_data AS (
         order_date,
         order_id,
         total_sales,
-        total_gross_sales,
+        total_gross_sales,we
         total_orders,
         total_payments
     from {{ ref('dev_sales_summary') }}

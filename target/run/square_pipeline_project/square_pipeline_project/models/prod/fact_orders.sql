@@ -1,6 +1,6 @@
 
 
-  create or replace view `we-analysis`.`Sales_Test`.`fact_orders`
+  create or replace view `we-analysis`.`Sales_Test_prod`.`fact_orders`
   OPTIONS()
   as 
 

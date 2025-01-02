@@ -5,7 +5,7 @@
 with dbt_test__target as (
 
   select date as unique_field
-  from `we-analysis`.`Sales_Test`.`dim_time`
+  from `we-analysis`.`Sales_Test_prod`.`dim_time`
   where date is not null
 
 )
