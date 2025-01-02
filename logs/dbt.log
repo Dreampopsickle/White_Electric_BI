@@ -9577,3 +9577,1625 @@ where total_sales is null
 [0m15:43:36.182400 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffabd830a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffabb8a190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8ee60640>]}
 [0m15:43:36.182755 [debug] [MainThread]: Flushing usage events
 [0m15:43:36.466068 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:04:29.570085 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff81eb9fd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff80fd3340>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff80fd32e0>]}
+
+
+============================== 21:04:29.573902 | 9317d7f7-bc48-497f-a4f1-42496e0ed530 ==============================
+[0m21:04:29.573902 [info ] [MainThread]: Running with dbt=1.9.0
+[0m21:04:29.574593 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/app/.dbt', 'fail_fast': 'False', 'debug': 'False', 'log_path': '/app/logs', 'warn_error': 'None', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'invocation_command': 'dbt build', 'send_anonymous_usage_stats': 'True'}
+[0m21:04:30.178368 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '9317d7f7-bc48-497f-a4f1-42496e0ed530', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff812bc5b0>]}
+[0m21:04:30.208974 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '9317d7f7-bc48-497f-a4f1-42496e0ed530', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff64fdb5b0>]}
+[0m21:04:30.209425 [info ] [MainThread]: Registered adapter: bigquery=1.9.0
+[0m21:04:30.289486 [debug] [MainThread]: checksum: c99e828bba267739642b5a3ce85f17518764ea526e0e6c4fdc649171c1a66bff, vars: {}, profile: , target: , version: 1.9.0
+[0m21:04:30.442221 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m21:04:30.442800 [debug] [MainThread]: Partial parsing: updated file: square_pipeline_project://square_pipeline_project/models/prod/fact_sales.sql
+[0m21:04:30.690435 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '9317d7f7-bc48-497f-a4f1-42496e0ed530', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7d77b130>]}
+[0m21:04:30.759319 [debug] [MainThread]: Wrote artifact WritableManifest to /app/target/manifest.json
+[0m21:04:30.762030 [debug] [MainThread]: Wrote artifact SemanticManifest to /app/target/semantic_manifest.json
+[0m21:04:30.789441 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '9317d7f7-bc48-497f-a4f1-42496e0ed530', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7d781c40>]}
+[0m21:04:30.789929 [info ] [MainThread]: Found 11 models, 21 data tests, 3 sources, 487 macros
+[0m21:04:30.792302 [info ] [MainThread]: 
+[0m21:04:30.792639 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m21:04:30.792990 [info ] [MainThread]: 
+[0m21:04:30.793470 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m21:04:30.796757 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_we-analysis'
+[0m21:04:30.797176 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_we-analysis'
+[0m21:04:30.797443 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:04:30.797719 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_we-analysis'
+[0m21:04:30.798030 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:04:30.798721 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:04:31.554543 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_we-analysis, now list_we-analysis_Sales_Test_dev)
+[0m21:04:31.556394 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_we-analysis, now list_we-analysis_Sales_Test_staging)
+[0m21:04:31.557432 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_we-analysis, now list_we-analysis_Sales_Test_prod)
+[0m21:04:31.557866 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m21:04:31.558547 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m21:04:31.559101 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m21:04:32.019481 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '9317d7f7-bc48-497f-a4f1-42496e0ed530', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7d7c6130>]}
+[0m21:04:32.020693 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m21:04:32.024664 [debug] [Thread-1  ]: Began running node model.square_pipeline_project.stg_line_items
+[0m21:04:32.024985 [debug] [Thread-2  ]: Began running node model.square_pipeline_project.stg_orders
+[0m21:04:32.025235 [debug] [Thread-3  ]: Began running node model.square_pipeline_project.stg_payments
+[0m21:04:32.025796 [info ] [Thread-1  ]: 1 of 32 START sql view model Sales_Test_staging.stg_line_items ................. [RUN]
+[0m21:04:32.026409 [info ] [Thread-2  ]: 2 of 32 START sql view model Sales_Test_staging.stg_orders ..................... [RUN]
+[0m21:04:32.027383 [info ] [Thread-3  ]: 3 of 32 START sql view model Sales_Test_staging.stg_payments ................... [RUN]
+[0m21:04:32.028002 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_we-analysis_Sales_Test_prod, now model.square_pipeline_project.stg_line_items)
+[0m21:04:32.029229 [debug] [Thread-1  ]: Began compiling node model.square_pipeline_project.stg_line_items
+[0m21:04:32.028889 [debug] [Thread-3  ]: Re-using an available connection from the pool (formerly list_we-analysis_Sales_Test_staging, now model.square_pipeline_project.stg_payments)
+[0m21:04:32.028433 [debug] [Thread-2  ]: Re-using an available connection from the pool (formerly list_we-analysis_Sales_Test_dev, now model.square_pipeline_project.stg_orders)
+[0m21:04:32.041789 [debug] [Thread-2  ]: Began compiling node model.square_pipeline_project.stg_orders
+[0m21:04:32.041203 [debug] [Thread-3  ]: Began compiling node model.square_pipeline_project.stg_payments
+[0m21:04:32.039962 [debug] [Thread-1  ]: Writing injected SQL for node "model.square_pipeline_project.stg_line_items"
+[0m21:04:32.047829 [debug] [Thread-2  ]: Writing injected SQL for node "model.square_pipeline_project.stg_orders"
+[0m21:04:32.050378 [debug] [Thread-3  ]: Writing injected SQL for node "model.square_pipeline_project.stg_payments"
+[0m21:04:32.052705 [debug] [Thread-1  ]: Began executing node model.square_pipeline_project.stg_line_items
+[0m21:04:32.053126 [debug] [Thread-2  ]: Began executing node model.square_pipeline_project.stg_orders
+[0m21:04:32.059250 [debug] [Thread-3  ]: Began executing node model.square_pipeline_project.stg_payments
+[0m21:04:32.078890 [debug] [Thread-1  ]: Writing runtime sql for node "model.square_pipeline_project.stg_line_items"
+[0m21:04:32.081592 [debug] [Thread-2  ]: Writing runtime sql for node "model.square_pipeline_project.stg_orders"
+[0m21:04:32.083806 [debug] [Thread-3  ]: Writing runtime sql for node "model.square_pipeline_project.stg_payments"
+[0m21:04:32.090356 [debug] [Thread-3  ]: On model.square_pipeline_project.stg_payments: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "square_pipeline_project", "target_name": "dev", "node_id": "model.square_pipeline_project.stg_payments"} */
+
+
+  create or replace view `we-analysis`.`Sales_Test_staging`.`stg_payments`
+  OPTIONS()
+  as 
+
+SELECT
+    id AS payment_id,
+    created_at AS payment_created_at,
+    status AS payment_status,
+    source_type AS payment_source,
+    CAST(JSON_EXTRACT_SCALAR(amount_money, '$.amount') AS FLOAT64) / 100 AS payment_amount,
+    JSON_EXTRACT_SCALAR(amount_money, '$.currency') AS CURRENCY,
+    order_id
+FROM 
+    `we-analysis`.`Sales_Test`.`payments`;
+
+
+[0m21:04:32.092632 [debug] [Thread-1  ]: On model.square_pipeline_project.stg_line_items: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "square_pipeline_project", "target_name": "dev", "node_id": "model.square_pipeline_project.stg_line_items"} */
+
+
+  create or replace view `we-analysis`.`Sales_Test_staging`.`stg_line_items`
+  OPTIONS()
+  as 
+
+SELECT
+    order_id,
+    line_item_uid AS line_item_id,
+    item_name,
+    CAST(quantity AS INT64) AS quantity,
+    gross_sales,
+    modifier_name,
+    modifier_price
+FROM 
+    `we-analysis`.`Sales_Test`.`line_items`;
+
+
+[0m21:04:32.093182 [debug] [Thread-3  ]: Opening a new connection, currently in state closed
+[0m21:04:32.093755 [debug] [Thread-2  ]: On model.square_pipeline_project.stg_orders: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "square_pipeline_project", "target_name": "dev", "node_id": "model.square_pipeline_project.stg_orders"} */
+
+
+  create or replace view `we-analysis`.`Sales_Test_staging`.`stg_orders`
+  OPTIONS()
+  as 
+
+SELECT
+    order_id,
+    created_at AS order_created_at,
+    state AS order_state,
+    total_money AS total_amount,
+    total_tax_money AS total_tax,
+    total_tip_money AS total_tip,
+    total_discount_money AS total_discount
+FROM 
+    `we-analysis`.`Sales_Test`.`orders`;
+
+
+[0m21:04:32.094222 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m21:04:32.134754 [debug] [Thread-2  ]: Opening a new connection, currently in state closed
+[0m21:04:32.697137 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=we-analysis&j=bq:US:f13d562f-59ed-44b2-a2d9-1f42d808b093&page=queryresults
+[0m21:04:32.723396 [debug] [Thread-3  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=we-analysis&j=bq:US:1e7b1987-6494-4e78-90ba-7febc67b71fe&page=queryresults
+[0m21:04:32.779191 [debug] [Thread-2  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=we-analysis&j=bq:US:ea891829-0c25-4123-a830-25285e1154cb&page=queryresults
+[0m21:04:33.247264 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '9317d7f7-bc48-497f-a4f1-42496e0ed530', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7d27ee80>]}
+[0m21:04:33.247511 [debug] [Thread-2  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '9317d7f7-bc48-497f-a4f1-42496e0ed530', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7d23eeb0>]}
+[0m21:04:33.247716 [debug] [Thread-3  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '9317d7f7-bc48-497f-a4f1-42496e0ed530', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff650532b0>]}
+[0m21:04:33.248167 [info ] [Thread-1  ]: 1 of 32 OK created sql view model Sales_Test_staging.stg_line_items ............ [[32mCREATE VIEW (0 processed)[0m in 1.22s]
+[0m21:04:33.248840 [info ] [Thread-2  ]: 2 of 32 OK created sql view model Sales_Test_staging.stg_orders ................ [[32mCREATE VIEW (0 processed)[0m in 1.22s]
+[0m21:04:33.249549 [info ] [Thread-3  ]: 3 of 32 OK created sql view model Sales_Test_staging.stg_payments .............. [[32mCREATE VIEW (0 processed)[0m in 1.22s]
+[0m21:04:33.251038 [debug] [Thread-3  ]: Finished running node model.square_pipeline_project.stg_payments
+[0m21:04:33.250673 [debug] [Thread-2  ]: Finished running node model.square_pipeline_project.stg_orders
+[0m21:04:33.250226 [debug] [Thread-1  ]: Finished running node model.square_pipeline_project.stg_line_items
+[0m21:04:33.251645 [debug] [Thread-4  ]: Began running node test.square_pipeline_project.not_null_stg_payments_payment_amount.d091f14632
+[0m21:04:33.251904 [debug] [Thread-3  ]: Began running node test.square_pipeline_project.not_null_stg_payments_payment_id.c19cc50075
+[0m21:04:33.252111 [debug] [Thread-2  ]: Began running node test.square_pipeline_project.unique_stg_payments_payment_id.3744510712
+[0m21:04:33.252566 [debug] [Thread-1  ]: Began running node test.square_pipeline_project.not_null_stg_orders_order_id.81cfe2fe64
+[0m21:04:33.252993 [info ] [Thread-4  ]: 4 of 32 START test not_null_stg_payments_payment_amount ........................ [RUN]
+[0m21:04:33.253321 [info ] [Thread-3  ]: 5 of 32 START test not_null_stg_payments_payment_id ............................ [RUN]
+[0m21:04:33.253785 [info ] [Thread-2  ]: 6 of 32 START test unique_stg_payments_payment_id .............................. [RUN]
+[0m21:04:33.254186 [info ] [Thread-1  ]: 7 of 32 START test not_null_stg_orders_order_id ................................ [RUN]
+[0m21:04:33.254644 [debug] [Thread-4  ]: Acquiring new bigquery connection 'test.square_pipeline_project.not_null_stg_payments_payment_amount.d091f14632'
+[0m21:04:33.254992 [debug] [Thread-3  ]: Re-using an available connection from the pool (formerly model.square_pipeline_project.stg_payments, now test.square_pipeline_project.not_null_stg_payments_payment_id.c19cc50075)
+[0m21:04:33.255587 [debug] [Thread-2  ]: Re-using an available connection from the pool (formerly model.square_pipeline_project.stg_orders, now test.square_pipeline_project.unique_stg_payments_payment_id.3744510712)
+[0m21:04:33.255918 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.square_pipeline_project.stg_line_items, now test.square_pipeline_project.not_null_stg_orders_order_id.81cfe2fe64)
+[0m21:04:33.256257 [debug] [Thread-4  ]: Began compiling node test.square_pipeline_project.not_null_stg_payments_payment_amount.d091f14632
+[0m21:04:33.256540 [debug] [Thread-3  ]: Began compiling node test.square_pipeline_project.not_null_stg_payments_payment_id.c19cc50075
+[0m21:04:33.256849 [debug] [Thread-2  ]: Began compiling node test.square_pipeline_project.unique_stg_payments_payment_id.3744510712
+[0m21:04:33.257098 [debug] [Thread-1  ]: Began compiling node test.square_pipeline_project.not_null_stg_orders_order_id.81cfe2fe64
+[0m21:04:33.266078 [debug] [Thread-4  ]: Writing injected SQL for node "test.square_pipeline_project.not_null_stg_payments_payment_amount.d091f14632"
+[0m21:04:33.269144 [debug] [Thread-3  ]: Writing injected SQL for node "test.square_pipeline_project.not_null_stg_payments_payment_id.c19cc50075"
+[0m21:04:33.273976 [debug] [Thread-2  ]: Writing injected SQL for node "test.square_pipeline_project.unique_stg_payments_payment_id.3744510712"
+[0m21:04:33.276936 [debug] [Thread-1  ]: Writing injected SQL for node "test.square_pipeline_project.not_null_stg_orders_order_id.81cfe2fe64"
+[0m21:04:33.278840 [debug] [Thread-3  ]: Began executing node test.square_pipeline_project.not_null_stg_payments_payment_id.c19cc50075
+[0m21:04:33.289681 [debug] [Thread-3  ]: Writing runtime sql for node "test.square_pipeline_project.not_null_stg_payments_payment_id.c19cc50075"
+[0m21:04:33.290357 [debug] [Thread-1  ]: Began executing node test.square_pipeline_project.not_null_stg_orders_order_id.81cfe2fe64
+[0m21:04:33.291343 [debug] [Thread-2  ]: Began executing node test.square_pipeline_project.unique_stg_payments_payment_id.3744510712
+[0m21:04:33.291584 [debug] [Thread-4  ]: Began executing node test.square_pipeline_project.not_null_stg_payments_payment_amount.d091f14632
+[0m21:04:33.293808 [debug] [Thread-1  ]: Writing runtime sql for node "test.square_pipeline_project.not_null_stg_orders_order_id.81cfe2fe64"
+[0m21:04:33.297069 [debug] [Thread-2  ]: Writing runtime sql for node "test.square_pipeline_project.unique_stg_payments_payment_id.3744510712"
+[0m21:04:33.299276 [debug] [Thread-4  ]: Writing runtime sql for node "test.square_pipeline_project.not_null_stg_payments_payment_amount.d091f14632"
+[0m21:04:33.300121 [debug] [Thread-3  ]: On test.square_pipeline_project.not_null_stg_payments_payment_id.c19cc50075: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "square_pipeline_project", "target_name": "dev", "node_id": "test.square_pipeline_project.not_null_stg_payments_payment_id.c19cc50075"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select payment_id
+from `we-analysis`.`Sales_Test_staging`.`stg_payments`
+where payment_id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m21:04:33.301167 [debug] [Thread-3  ]: Opening a new connection, currently in state closed
+[0m21:04:33.301429 [debug] [Thread-1  ]: On test.square_pipeline_project.not_null_stg_orders_order_id.81cfe2fe64: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "square_pipeline_project", "target_name": "dev", "node_id": "test.square_pipeline_project.not_null_stg_orders_order_id.81cfe2fe64"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select order_id
+from `we-analysis`.`Sales_Test_staging`.`stg_orders`
+where order_id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m21:04:33.301648 [debug] [Thread-2  ]: On test.square_pipeline_project.unique_stg_payments_payment_id.3744510712: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "square_pipeline_project", "target_name": "dev", "node_id": "test.square_pipeline_project.unique_stg_payments_payment_id.3744510712"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with dbt_test__target as (
+
+  select payment_id as unique_field
+  from `we-analysis`.`Sales_Test_staging`.`stg_payments`
+  where payment_id is not null
+
+)
+
+select
+    unique_field,
+    count(*) as n_records
+
+from dbt_test__target
+group by unique_field
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m21:04:33.304787 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m21:04:33.306212 [debug] [Thread-4  ]: On test.square_pipeline_project.not_null_stg_payments_payment_amount.d091f14632: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "square_pipeline_project", "target_name": "dev", "node_id": "test.square_pipeline_project.not_null_stg_payments_payment_amount.d091f14632"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select payment_amount
+from `we-analysis`.`Sales_Test_staging`.`stg_payments`
+where payment_amount is null
+
+
+
+      
+    ) dbt_internal_test
+[0m21:04:33.340202 [debug] [Thread-2  ]: Opening a new connection, currently in state closed
+[0m21:04:33.341256 [debug] [Thread-4  ]: Opening a new connection, currently in state init
+[0m21:04:34.230006 [debug] [Thread-4  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=we-analysis&j=bq:US:648f178b-c225-4ade-be41-b5f31f9060e4&page=queryresults
+[0m21:04:34.233059 [debug] [Thread-3  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=we-analysis&j=bq:US:73d29cb6-7cfe-4370-a536-404c292b1ff9&page=queryresults
+[0m21:04:34.269338 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=we-analysis&j=bq:US:184f1ba9-21d8-415d-a6a6-121775be896a&page=queryresults
+[0m21:04:34.477134 [debug] [Thread-2  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=we-analysis&j=bq:US:76e1ce56-f94b-4033-8215-62c05930f7a8&page=queryresults
+[0m21:04:34.765578 [info ] [Thread-3  ]: 5 of 32 PASS not_null_stg_payments_payment_id .................................. [[32mPASS[0m in 1.51s]
+[0m21:04:34.768558 [info ] [Thread-1  ]: 7 of 32 PASS not_null_stg_orders_order_id ...................................... [[32mPASS[0m in 1.51s]
+[0m21:04:34.770007 [info ] [Thread-4  ]: 4 of 32 PASS not_null_stg_payments_payment_amount .............................. [[32mPASS[0m in 1.52s]
+[0m21:04:34.770977 [debug] [Thread-3  ]: Finished running node test.square_pipeline_project.not_null_stg_payments_payment_id.c19cc50075
+[0m21:04:34.772002 [debug] [Thread-1  ]: Finished running node test.square_pipeline_project.not_null_stg_orders_order_id.81cfe2fe64
+[0m21:04:34.773044 [debug] [Thread-4  ]: Finished running node test.square_pipeline_project.not_null_stg_payments_payment_amount.d091f14632
+[0m21:04:34.773975 [debug] [Thread-3  ]: Began running node test.square_pipeline_project.not_null_stg_orders_total_amount.f31d98d41b
+[0m21:04:34.774920 [debug] [Thread-1  ]: Began running node test.square_pipeline_project.unique_stg_orders_order_id.e3b841c71a
+[0m21:04:34.775767 [debug] [Thread-4  ]: Began running node test.square_pipeline_project.not_null_stg_line_items_order_id.428f282475
+[0m21:04:34.776606 [info ] [Thread-3  ]: 8 of 32 START test not_null_stg_orders_total_amount ............................ [RUN]
+[0m21:04:34.777470 [info ] [Thread-1  ]: 9 of 32 START test unique_stg_orders_order_id .................................. [RUN]
+[0m21:04:34.778379 [info ] [Thread-4  ]: 10 of 32 START test not_null_stg_line_items_order_id ........................... [RUN]
+[0m21:04:34.779550 [debug] [Thread-3  ]: Re-using an available connection from the pool (formerly test.square_pipeline_project.not_null_stg_payments_payment_id.c19cc50075, now test.square_pipeline_project.not_null_stg_orders_total_amount.f31d98d41b)
+[0m21:04:34.780621 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly test.square_pipeline_project.not_null_stg_orders_order_id.81cfe2fe64, now test.square_pipeline_project.unique_stg_orders_order_id.e3b841c71a)
+[0m21:04:34.781343 [debug] [Thread-4  ]: Re-using an available connection from the pool (formerly test.square_pipeline_project.not_null_stg_payments_payment_amount.d091f14632, now test.square_pipeline_project.not_null_stg_line_items_order_id.428f282475)
+[0m21:04:34.782697 [debug] [Thread-3  ]: Began compiling node test.square_pipeline_project.not_null_stg_orders_total_amount.f31d98d41b
+[0m21:04:34.783364 [debug] [Thread-1  ]: Began compiling node test.square_pipeline_project.unique_stg_orders_order_id.e3b841c71a
+[0m21:04:34.784111 [debug] [Thread-4  ]: Began compiling node test.square_pipeline_project.not_null_stg_line_items_order_id.428f282475
+[0m21:04:34.792062 [debug] [Thread-3  ]: Writing injected SQL for node "test.square_pipeline_project.not_null_stg_orders_total_amount.f31d98d41b"
+[0m21:04:34.797080 [debug] [Thread-1  ]: Writing injected SQL for node "test.square_pipeline_project.unique_stg_orders_order_id.e3b841c71a"
+[0m21:04:34.804939 [debug] [Thread-4  ]: Writing injected SQL for node "test.square_pipeline_project.not_null_stg_line_items_order_id.428f282475"
+[0m21:04:34.809289 [debug] [Thread-3  ]: Began executing node test.square_pipeline_project.not_null_stg_orders_total_amount.f31d98d41b
+[0m21:04:34.809930 [debug] [Thread-1  ]: Began executing node test.square_pipeline_project.unique_stg_orders_order_id.e3b841c71a
+[0m21:04:34.812281 [debug] [Thread-3  ]: Writing runtime sql for node "test.square_pipeline_project.not_null_stg_orders_total_amount.f31d98d41b"
+[0m21:04:34.812748 [debug] [Thread-4  ]: Began executing node test.square_pipeline_project.not_null_stg_line_items_order_id.428f282475
+[0m21:04:34.814855 [debug] [Thread-1  ]: Writing runtime sql for node "test.square_pipeline_project.unique_stg_orders_order_id.e3b841c71a"
+[0m21:04:34.817469 [debug] [Thread-4  ]: Writing runtime sql for node "test.square_pipeline_project.not_null_stg_line_items_order_id.428f282475"
+[0m21:04:34.818117 [debug] [Thread-3  ]: On test.square_pipeline_project.not_null_stg_orders_total_amount.f31d98d41b: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "square_pipeline_project", "target_name": "dev", "node_id": "test.square_pipeline_project.not_null_stg_orders_total_amount.f31d98d41b"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select total_amount
+from `we-analysis`.`Sales_Test_staging`.`stg_orders`
+where total_amount is null
+
+
+
+      
+    ) dbt_internal_test
+[0m21:04:34.819107 [debug] [Thread-3  ]: Opening a new connection, currently in state closed
+[0m21:04:34.819394 [debug] [Thread-1  ]: On test.square_pipeline_project.unique_stg_orders_order_id.e3b841c71a: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "square_pipeline_project", "target_name": "dev", "node_id": "test.square_pipeline_project.unique_stg_orders_order_id.e3b841c71a"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with dbt_test__target as (
+
+  select order_id as unique_field
+  from `we-analysis`.`Sales_Test_staging`.`stg_orders`
+  where order_id is not null
+
+)
+
+select
+    unique_field,
+    count(*) as n_records
+
+from dbt_test__target
+group by unique_field
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m21:04:34.820229 [debug] [Thread-4  ]: On test.square_pipeline_project.not_null_stg_line_items_order_id.428f282475: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "square_pipeline_project", "target_name": "dev", "node_id": "test.square_pipeline_project.not_null_stg_line_items_order_id.428f282475"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select order_id
+from `we-analysis`.`Sales_Test_staging`.`stg_line_items`
+where order_id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m21:04:34.820831 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m21:04:34.858739 [debug] [Thread-4  ]: Opening a new connection, currently in state closed
+[0m21:04:34.973106 [info ] [Thread-2  ]: 6 of 32 PASS unique_stg_payments_payment_id .................................... [[32mPASS[0m in 1.72s]
+[0m21:04:34.974633 [debug] [Thread-2  ]: Finished running node test.square_pipeline_project.unique_stg_payments_payment_id.3744510712
+[0m21:04:35.770610 [debug] [Thread-4  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=we-analysis&j=bq:US:548133c3-f8c6-4d89-adeb-8da9cff1db64&page=queryresults
+[0m21:04:35.772232 [debug] [Thread-3  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=we-analysis&j=bq:US:245b0725-a0f4-417d-aa81-35c9313143f1&page=queryresults
+[0m21:04:35.880430 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=we-analysis&j=bq:US:03a67248-6286-4fb9-8094-49360045f1da&page=queryresults
+[0m21:04:36.264116 [info ] [Thread-4  ]: 10 of 32 PASS not_null_stg_line_items_order_id ................................. [[32mPASS[0m in 1.48s]
+[0m21:04:36.266344 [debug] [Thread-4  ]: Finished running node test.square_pipeline_project.not_null_stg_line_items_order_id.428f282475
+[0m21:04:36.294404 [info ] [Thread-3  ]: 8 of 32 PASS not_null_stg_orders_total_amount .................................. [[32mPASS[0m in 1.51s]
+[0m21:04:36.296150 [debug] [Thread-3  ]: Finished running node test.square_pipeline_project.not_null_stg_orders_total_amount.f31d98d41b
+[0m21:04:36.401739 [info ] [Thread-1  ]: 9 of 32 PASS unique_stg_orders_order_id ........................................ [[32mPASS[0m in 1.62s]
+[0m21:04:36.404127 [debug] [Thread-1  ]: Finished running node test.square_pipeline_project.unique_stg_orders_order_id.e3b841c71a
+[0m21:04:36.406400 [debug] [Thread-2  ]: Began running node model.square_pipeline_project.dev_order_items
+[0m21:04:36.408132 [info ] [Thread-2  ]: 11 of 32 START sql view model Sales_Test_dev.dev_order_items ................... [RUN]
+[0m21:04:36.407488 [debug] [Thread-3  ]: Began running node model.square_pipeline_project.dev_sales_summary
+[0m21:04:36.406947 [debug] [Thread-4  ]: Began running node model.square_pipeline_project.dev_order_payments
+[0m21:04:36.408976 [debug] [Thread-2  ]: Re-using an available connection from the pool (formerly test.square_pipeline_project.unique_stg_payments_payment_id.3744510712, now model.square_pipeline_project.dev_order_items)
+[0m21:04:36.409672 [info ] [Thread-3  ]: 13 of 32 START sql view model Sales_Test_dev.dev_sales_summary ................. [RUN]
+[0m21:04:36.410510 [info ] [Thread-4  ]: 12 of 32 START sql view model Sales_Test_dev.dev_order_payments ................ [RUN]
+[0m21:04:36.411215 [debug] [Thread-2  ]: Began compiling node model.square_pipeline_project.dev_order_items
+[0m21:04:36.411846 [debug] [Thread-3  ]: Re-using an available connection from the pool (formerly test.square_pipeline_project.not_null_stg_orders_total_amount.f31d98d41b, now model.square_pipeline_project.dev_sales_summary)
+[0m21:04:36.412398 [debug] [Thread-4  ]: Re-using an available connection from the pool (formerly test.square_pipeline_project.not_null_stg_line_items_order_id.428f282475, now model.square_pipeline_project.dev_order_payments)
+[0m21:04:36.430405 [debug] [Thread-2  ]: Writing injected SQL for node "model.square_pipeline_project.dev_order_items"
+[0m21:04:36.431617 [debug] [Thread-3  ]: Began compiling node model.square_pipeline_project.dev_sales_summary
+[0m21:04:36.432369 [debug] [Thread-4  ]: Began compiling node model.square_pipeline_project.dev_order_payments
+[0m21:04:36.438587 [debug] [Thread-3  ]: Writing injected SQL for node "model.square_pipeline_project.dev_sales_summary"
+[0m21:04:36.445964 [debug] [Thread-4  ]: Writing injected SQL for node "model.square_pipeline_project.dev_order_payments"
+[0m21:04:36.448659 [debug] [Thread-2  ]: Began executing node model.square_pipeline_project.dev_order_items
+[0m21:04:36.454044 [debug] [Thread-2  ]: Writing runtime sql for node "model.square_pipeline_project.dev_order_items"
+[0m21:04:36.454441 [debug] [Thread-3  ]: Began executing node model.square_pipeline_project.dev_sales_summary
+[0m21:04:36.455263 [debug] [Thread-4  ]: Began executing node model.square_pipeline_project.dev_order_payments
+[0m21:04:36.458625 [debug] [Thread-3  ]: Writing runtime sql for node "model.square_pipeline_project.dev_sales_summary"
+[0m21:04:36.461703 [debug] [Thread-4  ]: Writing runtime sql for node "model.square_pipeline_project.dev_order_payments"
+[0m21:04:36.462490 [debug] [Thread-2  ]: On model.square_pipeline_project.dev_order_items: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "square_pipeline_project", "target_name": "dev", "node_id": "model.square_pipeline_project.dev_order_items"} */
+
+
+  create or replace view `we-analysis`.`Sales_Test_dev`.`dev_order_items`
+  OPTIONS()
+  as 
+
+WITH order_items AS (
+    SELECT 
+        o.order_id,
+        o.order_created_at,
+        o.total_amount AS order_total,
+        li.line_item_id,
+        li.item_name,
+        li.quantity,
+        li.gross_sales,
+        li.modifier_name,
+        li.modifier_price
+    FROM `we-analysis`.`Sales_Test_staging`.`stg_orders` o
+    JOIN `we-analysis`.`Sales_Test_staging`.`stg_line_items` li
+    ON o.order_id = li.order_id
+)
+
+SELECT *
+FROM order_items;
+
+
+[0m21:04:36.463351 [debug] [Thread-3  ]: On model.square_pipeline_project.dev_sales_summary: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "square_pipeline_project", "target_name": "dev", "node_id": "model.square_pipeline_project.dev_sales_summary"} */
+
+
+  create or replace view `we-analysis`.`Sales_Test_dev`.`dev_sales_summary`
+  OPTIONS()
+  as 
+
+WITH sales_summary AS (
+    SELECT
+        o.order_id,
+        o.order_created_at AS order_date,
+        SUM(o.total_amount) AS total_sales,
+        SUM(li.gross_sales) AS total_gross_sales,
+        COUNT(DISTINCT o.order_id) AS total_orders,
+        COUNT(DISTINCT p.payment_id) AS total_payments
+    FROM `we-analysis`.`Sales_Test_staging`.`stg_orders` o
+    LEFT JOIN `we-analysis`.`Sales_Test_staging`.`stg_line_items` li
+    ON o.order_id = li.order_id
+    LEFT JOIN `we-analysis`.`Sales_Test_staging`.`stg_payments` p
+    ON o.order_id = p.order_id
+    WHERE p.payment_status = 'COMPLETED'
+    GROUP BY o.order_created_at, o.order_id
+)
+
+SELECT * FROM sales_summary;
+
+
+[0m21:04:36.463879 [debug] [Thread-2  ]: Opening a new connection, currently in state closed
+[0m21:04:36.464314 [debug] [Thread-4  ]: On model.square_pipeline_project.dev_order_payments: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "square_pipeline_project", "target_name": "dev", "node_id": "model.square_pipeline_project.dev_order_payments"} */
+
+
+  create or replace view `we-analysis`.`Sales_Test_dev`.`dev_order_payments`
+  OPTIONS()
+  as 
+
+WITH order_payments AS (
+    SELECT 
+        o.order_id,
+        o.order_created_at,
+        p.payment_id,
+        p.payment_amount,
+        p.payment_status,
+        p.payment_source
+    FROM `we-analysis`.`Sales_Test_staging`.`stg_orders` o
+    JOIN `we-analysis`.`Sales_Test_staging`.`stg_payments` p
+    ON o.order_id = p.order_id
+)
+
+SELECT *
+FROM order_payments;
+
+
+[0m21:04:36.464626 [debug] [Thread-3  ]: Opening a new connection, currently in state closed
+[0m21:04:36.466785 [debug] [Thread-4  ]: Opening a new connection, currently in state closed
+[0m21:04:37.193163 [debug] [Thread-3  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=we-analysis&j=bq:US:1fd54f90-c5d7-47fa-b206-6bef797c7f62&page=queryresults
+[0m21:04:37.194388 [debug] [Thread-4  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=we-analysis&j=bq:US:93081b79-c87d-48f4-bd3b-b4ce5b19f47c&page=queryresults
+[0m21:04:37.477756 [debug] [Thread-4  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '9317d7f7-bc48-497f-a4f1-42496e0ed530', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7cee0f40>]}
+[0m21:04:37.480028 [info ] [Thread-4  ]: 12 of 32 OK created sql view model Sales_Test_dev.dev_order_payments ........... [[32mCREATE VIEW (0 processed)[0m in 1.06s]
+[0m21:04:37.481467 [debug] [Thread-4  ]: Finished running node model.square_pipeline_project.dev_order_payments
+[0m21:04:37.482986 [debug] [Thread-1  ]: Began running node test.square_pipeline_project.not_null_dev_order_payments_order_id.2e639650d7
+[0m21:04:37.483532 [debug] [Thread-4  ]: Began running node test.square_pipeline_project.unique_dev_order_payments_order_id.8eab189bd8
+[0m21:04:37.484326 [info ] [Thread-1  ]: 14 of 32 START test not_null_dev_order_payments_order_id ....................... [RUN]
+[0m21:04:37.485182 [info ] [Thread-4  ]: 15 of 32 START test unique_dev_order_payments_order_id ......................... [RUN]
+[0m21:04:37.487171 [debug] [Thread-4  ]: Re-using an available connection from the pool (formerly model.square_pipeline_project.dev_order_payments, now test.square_pipeline_project.unique_dev_order_payments_order_id.8eab189bd8)
+[0m21:04:37.487862 [debug] [Thread-4  ]: Began compiling node test.square_pipeline_project.unique_dev_order_payments_order_id.8eab189bd8
+[0m21:04:37.486341 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly test.square_pipeline_project.unique_stg_orders_order_id.e3b841c71a, now test.square_pipeline_project.not_null_dev_order_payments_order_id.2e639650d7)
+[0m21:04:37.496766 [debug] [Thread-1  ]: Began compiling node test.square_pipeline_project.not_null_dev_order_payments_order_id.2e639650d7
+[0m21:04:37.496135 [debug] [Thread-4  ]: Writing injected SQL for node "test.square_pipeline_project.unique_dev_order_payments_order_id.8eab189bd8"
+[0m21:04:37.507141 [debug] [Thread-1  ]: Writing injected SQL for node "test.square_pipeline_project.not_null_dev_order_payments_order_id.2e639650d7"
+[0m21:04:37.511681 [debug] [Thread-2  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=we-analysis&j=bq:US:b3ff0378-bf0d-4ba9-80bc-a58f54389829&page=queryresults
+[0m21:04:37.512504 [debug] [Thread-3  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '9317d7f7-bc48-497f-a4f1-42496e0ed530', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7d2046a0>]}
+[0m21:04:37.514862 [debug] [Thread-4  ]: Began executing node test.square_pipeline_project.unique_dev_order_payments_order_id.8eab189bd8
+[0m21:04:37.515515 [debug] [Thread-1  ]: Began executing node test.square_pipeline_project.not_null_dev_order_payments_order_id.2e639650d7
+[0m21:04:37.516079 [info ] [Thread-3  ]: 13 of 32 OK created sql view model Sales_Test_dev.dev_sales_summary ............ [[32mCREATE VIEW (0 processed)[0m in 1.10s]
+[0m21:04:37.519297 [debug] [Thread-4  ]: Writing runtime sql for node "test.square_pipeline_project.unique_dev_order_payments_order_id.8eab189bd8"
+[0m21:04:37.521850 [debug] [Thread-1  ]: Writing runtime sql for node "test.square_pipeline_project.not_null_dev_order_payments_order_id.2e639650d7"
+[0m21:04:37.522505 [debug] [Thread-3  ]: Finished running node model.square_pipeline_project.dev_sales_summary
+[0m21:04:37.524554 [debug] [Thread-3  ]: Began running node test.square_pipeline_project.not_null_dev_sales_summary_order_date.15d1fb76e4
+[0m21:04:37.526666 [debug] [Thread-1  ]: On test.square_pipeline_project.not_null_dev_order_payments_order_id.2e639650d7: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "square_pipeline_project", "target_name": "dev", "node_id": "test.square_pipeline_project.not_null_dev_order_payments_order_id.2e639650d7"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select order_id
+from `we-analysis`.`Sales_Test_dev`.`dev_order_payments`
+where order_id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m21:04:37.525836 [info ] [Thread-3  ]: 16 of 32 START test not_null_dev_sales_summary_order_date ...................... [RUN]
+[0m21:04:37.527264 [debug] [Thread-4  ]: On test.square_pipeline_project.unique_dev_order_payments_order_id.8eab189bd8: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "square_pipeline_project", "target_name": "dev", "node_id": "test.square_pipeline_project.unique_dev_order_payments_order_id.8eab189bd8"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with dbt_test__target as (
+
+  select order_id as unique_field
+  from `we-analysis`.`Sales_Test_dev`.`dev_order_payments`
+  where order_id is not null
+
+)
+
+select
+    unique_field,
+    count(*) as n_records
+
+from dbt_test__target
+group by unique_field
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m21:04:37.527871 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m21:04:37.528455 [debug] [Thread-3  ]: Re-using an available connection from the pool (formerly model.square_pipeline_project.dev_sales_summary, now test.square_pipeline_project.not_null_dev_sales_summary_order_date.15d1fb76e4)
+[0m21:04:37.529372 [debug] [Thread-4  ]: Opening a new connection, currently in state closed
+[0m21:04:37.530275 [debug] [Thread-3  ]: Began compiling node test.square_pipeline_project.not_null_dev_sales_summary_order_date.15d1fb76e4
+[0m21:04:37.575356 [debug] [Thread-3  ]: Writing injected SQL for node "test.square_pipeline_project.not_null_dev_sales_summary_order_date.15d1fb76e4"
+[0m21:04:37.609891 [debug] [Thread-3  ]: Began executing node test.square_pipeline_project.not_null_dev_sales_summary_order_date.15d1fb76e4
+[0m21:04:37.611921 [debug] [Thread-3  ]: Writing runtime sql for node "test.square_pipeline_project.not_null_dev_sales_summary_order_date.15d1fb76e4"
+[0m21:04:37.613380 [debug] [Thread-3  ]: On test.square_pipeline_project.not_null_dev_sales_summary_order_date.15d1fb76e4: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "square_pipeline_project", "target_name": "dev", "node_id": "test.square_pipeline_project.not_null_dev_sales_summary_order_date.15d1fb76e4"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select order_date
+from `we-analysis`.`Sales_Test_dev`.`dev_sales_summary`
+where order_date is null
+
+
+
+      
+    ) dbt_internal_test
+[0m21:04:37.613733 [debug] [Thread-3  ]: Opening a new connection, currently in state closed
+[0m21:04:37.934900 [debug] [Thread-2  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '9317d7f7-bc48-497f-a4f1-42496e0ed530', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8208d4f0>]}
+[0m21:04:37.936530 [info ] [Thread-2  ]: 11 of 32 OK created sql view model Sales_Test_dev.dev_order_items .............. [[32mCREATE VIEW (0 processed)[0m in 1.53s]
+[0m21:04:37.938090 [debug] [Thread-2  ]: Finished running node model.square_pipeline_project.dev_order_items
+[0m21:04:37.939583 [debug] [Thread-2  ]: Began running node test.square_pipeline_project.not_null_dev_order_items_order_id.18f03cf12c
+[0m21:04:37.940448 [info ] [Thread-2  ]: 17 of 32 START test not_null_dev_order_items_order_id .......................... [RUN]
+[0m21:04:37.941616 [debug] [Thread-2  ]: Re-using an available connection from the pool (formerly model.square_pipeline_project.dev_order_items, now test.square_pipeline_project.not_null_dev_order_items_order_id.18f03cf12c)
+[0m21:04:37.942411 [debug] [Thread-2  ]: Began compiling node test.square_pipeline_project.not_null_dev_order_items_order_id.18f03cf12c
+[0m21:04:37.950149 [debug] [Thread-2  ]: Writing injected SQL for node "test.square_pipeline_project.not_null_dev_order_items_order_id.18f03cf12c"
+[0m21:04:37.952659 [debug] [Thread-2  ]: Began executing node test.square_pipeline_project.not_null_dev_order_items_order_id.18f03cf12c
+[0m21:04:37.958726 [debug] [Thread-2  ]: Writing runtime sql for node "test.square_pipeline_project.not_null_dev_order_items_order_id.18f03cf12c"
+[0m21:04:37.960738 [debug] [Thread-2  ]: On test.square_pipeline_project.not_null_dev_order_items_order_id.18f03cf12c: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "square_pipeline_project", "target_name": "dev", "node_id": "test.square_pipeline_project.not_null_dev_order_items_order_id.18f03cf12c"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select order_id
+from `we-analysis`.`Sales_Test_dev`.`dev_order_items`
+where order_id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m21:04:37.961364 [debug] [Thread-2  ]: Opening a new connection, currently in state closed
+[0m21:04:38.631342 [debug] [Thread-4  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=we-analysis&j=bq:US:c79f518b-4162-4ac5-8b94-d85e8c69e2e5&page=queryresults
+[0m21:04:38.632945 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=we-analysis&j=bq:US:895760f6-5a9e-4ec8-b127-9c2407fe5339&page=queryresults
+[0m21:04:38.741365 [debug] [Thread-3  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=we-analysis&j=bq:US:6ccf0e1b-6658-4bf6-848f-9b9de6937757&page=queryresults
+[0m21:04:38.919269 [debug] [Thread-2  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=we-analysis&j=bq:US:aa2491ed-bd1f-4d27-8f3e-95d53062710c&page=queryresults
+[0m21:04:39.118785 [info ] [Thread-1  ]: 14 of 32 PASS not_null_dev_order_payments_order_id ............................. [[32mPASS[0m in 1.63s]
+[0m21:04:39.121118 [debug] [Thread-1  ]: Finished running node test.square_pipeline_project.not_null_dev_order_payments_order_id.2e639650d7
+[0m21:04:39.122362 [debug] [Thread-1  ]: Began running node test.square_pipeline_project.unique_dev_order_items_order_id.9a970d7fa4
+[0m21:04:39.123456 [info ] [Thread-1  ]: 18 of 32 START test unique_dev_order_items_order_id ............................ [RUN]
+[0m21:04:39.124927 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly test.square_pipeline_project.not_null_dev_order_payments_order_id.2e639650d7, now test.square_pipeline_project.unique_dev_order_items_order_id.9a970d7fa4)
+[0m21:04:39.125780 [debug] [Thread-1  ]: Began compiling node test.square_pipeline_project.unique_dev_order_items_order_id.9a970d7fa4
+[0m21:04:39.134260 [debug] [Thread-1  ]: Writing injected SQL for node "test.square_pipeline_project.unique_dev_order_items_order_id.9a970d7fa4"
+[0m21:04:39.136542 [debug] [Thread-1  ]: Began executing node test.square_pipeline_project.unique_dev_order_items_order_id.9a970d7fa4
+[0m21:04:39.140278 [debug] [Thread-1  ]: Writing runtime sql for node "test.square_pipeline_project.unique_dev_order_items_order_id.9a970d7fa4"
+[0m21:04:39.141833 [debug] [Thread-1  ]: On test.square_pipeline_project.unique_dev_order_items_order_id.9a970d7fa4: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "square_pipeline_project", "target_name": "dev", "node_id": "test.square_pipeline_project.unique_dev_order_items_order_id.9a970d7fa4"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with dbt_test__target as (
+
+  select order_id as unique_field
+  from `we-analysis`.`Sales_Test_dev`.`dev_order_items`
+  where order_id is not null
+
+)
+
+select
+    unique_field,
+    count(*) as n_records
+
+from dbt_test__target
+group by unique_field
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m21:04:39.142474 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m21:04:39.283645 [info ] [Thread-3  ]: 16 of 32 PASS not_null_dev_sales_summary_order_date ............................ [[32mPASS[0m in 1.76s]
+[0m21:04:39.284709 [debug] [Thread-3  ]: Finished running node test.square_pipeline_project.not_null_dev_sales_summary_order_date.15d1fb76e4
+[0m21:04:39.285610 [debug] [Thread-3  ]: Began running node model.square_pipeline_project.fact_sales
+[0m21:04:39.286244 [info ] [Thread-3  ]: 19 of 32 START sql view model Sales_Test_prod.fact_sales ....................... [RUN]
+[0m21:04:39.286923 [debug] [Thread-3  ]: Re-using an available connection from the pool (formerly test.square_pipeline_project.not_null_dev_sales_summary_order_date.15d1fb76e4, now model.square_pipeline_project.fact_sales)
+[0m21:04:39.287423 [debug] [Thread-3  ]: Began compiling node model.square_pipeline_project.fact_sales
+[0m21:04:39.291458 [debug] [Thread-3  ]: Writing injected SQL for node "model.square_pipeline_project.fact_sales"
+[0m21:04:39.293301 [debug] [Thread-3  ]: Began executing node model.square_pipeline_project.fact_sales
+[0m21:04:39.296315 [debug] [Thread-3  ]: Writing runtime sql for node "model.square_pipeline_project.fact_sales"
+[0m21:04:39.298003 [debug] [Thread-3  ]: On model.square_pipeline_project.fact_sales: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "square_pipeline_project", "target_name": "dev", "node_id": "model.square_pipeline_project.fact_sales"} */
+
+
+  create or replace view `we-analysis`.`Sales_Test_prod`.`fact_sales`
+  OPTIONS()
+  as 
+
+WITH sales_data AS (
+    SELECT
+        order_date,
+        order_id,
+        total_sales,
+        total_gross_sales,we
+        total_orders,
+        total_payments
+    from `we-analysis`.`Sales_Test_dev`.`dev_sales_summary`
+)
+
+SELECT * FROM sales_data;
+
+
+[0m21:04:39.298415 [debug] [Thread-3  ]: Opening a new connection, currently in state closed
+[0m21:04:39.364963 [error] [Thread-4  ]: 15 of 32 FAIL 2 unique_dev_order_payments_order_id ............................. [[31mFAIL 2[0m in 1.88s]
+[0m21:04:39.365790 [debug] [Thread-4  ]: Finished running node test.square_pipeline_project.unique_dev_order_payments_order_id.8eab189bd8
+[0m21:04:39.366428 [debug] [Thread-7  ]: Marking all children of 'test.square_pipeline_project.unique_dev_order_payments_order_id.8eab189bd8' to be skipped because of status 'fail'.  Reason: Got 2 results, configured to fail if != 0.
+[0m21:04:39.367339 [debug] [Thread-4  ]: Began running node model.square_pipeline_project.dim_orders
+[0m21:04:39.367703 [info ] [Thread-4  ]: 20 of 32 SKIP relation Sales_Test_prod.dim_orders .............................. [[33mSKIP[0m]
+[0m21:04:39.368223 [debug] [Thread-4  ]: Finished running node model.square_pipeline_project.dim_orders
+[0m21:04:39.368574 [debug] [Thread-7  ]: Marking all children of 'model.square_pipeline_project.dim_orders' to be skipped because of status 'skipped'. 
+[0m21:04:39.369046 [debug] [Thread-4  ]: Began running node test.square_pipeline_project.not_null_dim_orders_order_id.a67b7c295d
+[0m21:04:39.369370 [info ] [Thread-4  ]: 21 of 32 SKIP test not_null_dim_orders_order_id ................................ [[33mSKIP[0m]
+[0m21:04:39.369755 [debug] [Thread-4  ]: Finished running node test.square_pipeline_project.not_null_dim_orders_order_id.a67b7c295d
+[0m21:04:39.370086 [debug] [Thread-4  ]: Began running node test.square_pipeline_project.unique_dim_orders_order_id.9786299635
+[0m21:04:39.370561 [info ] [Thread-4  ]: 22 of 32 SKIP test unique_dim_orders_order_id .................................. [[33mSKIP[0m]
+[0m21:04:39.370924 [debug] [Thread-4  ]: Finished running node test.square_pipeline_project.unique_dim_orders_order_id.9786299635
+[0m21:04:39.370282 [debug] [Thread-7  ]: Marking all children of 'test.square_pipeline_project.not_null_dim_orders_order_id.a67b7c295d' to be skipped because of status 'skipped'. 
+[0m21:04:39.371432 [debug] [Thread-7  ]: Marking all children of 'test.square_pipeline_project.unique_dim_orders_order_id.9786299635' to be skipped because of status 'skipped'. 
+[0m21:04:39.390737 [info ] [Thread-2  ]: 17 of 32 PASS not_null_dev_order_items_order_id ................................ [[32mPASS[0m in 1.45s]
+[0m21:04:39.391470 [debug] [Thread-2  ]: Finished running node test.square_pipeline_project.not_null_dev_order_items_order_id.18f03cf12c
+[0m21:04:39.960359 [debug] [Thread-3  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=we-analysis&j=bq:US:fe8ff76b-2dd5-4dd3-bab2-36e34d4f34aa&page=queryresults
+[0m21:04:40.099988 [error] [Thread-3  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=we-analysis&j=bq:US:fe8ff76b-2dd5-4dd3-bab2-36e34d4f34aa&page=queryresults
+[0m21:04:40.120547 [debug] [Thread-3  ]: Database Error in model fact_sales (square_pipeline_project/models/prod/fact_sales.sql)
+  Unrecognized name: we at [13:27]
+  compiled code at target/run/square_pipeline_project/square_pipeline_project/models/prod/fact_sales.sql
+[0m21:04:40.122629 [debug] [Thread-3  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '9317d7f7-bc48-497f-a4f1-42496e0ed530', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7dab9c70>]}
+[0m21:04:40.124550 [error] [Thread-3  ]: 19 of 32 ERROR creating sql view model Sales_Test_prod.fact_sales .............. [[31mERROR[0m in 0.83s]
+[0m21:04:40.125768 [debug] [Thread-3  ]: Finished running node model.square_pipeline_project.fact_sales
+[0m21:04:40.126846 [debug] [Thread-7  ]: Marking all children of 'model.square_pipeline_project.fact_sales' to be skipped because of status 'error'.  Reason: Database Error in model fact_sales (square_pipeline_project/models/prod/fact_sales.sql)
+  Unrecognized name: we at [13:27]
+  compiled code at target/run/square_pipeline_project/square_pipeline_project/models/prod/fact_sales.sql.
+[0m21:04:40.128491 [debug] [Thread-4  ]: Began running node test.square_pipeline_project.not_null_fact_sales_order_date.d04f309174
+[0m21:04:40.129119 [debug] [Thread-2  ]: Began running node test.square_pipeline_project.not_null_fact_sales_total_gross_sales.30e81ae5ff
+[0m21:04:40.129630 [debug] [Thread-3  ]: Began running node test.square_pipeline_project.not_null_fact_sales_total_sales.2feb308531
+[0m21:04:40.130258 [info ] [Thread-4  ]: 23 of 32 SKIP test not_null_fact_sales_order_date .............................. [[33mSKIP[0m]
+[0m21:04:40.131064 [info ] [Thread-2  ]: 24 of 32 SKIP test not_null_fact_sales_total_gross_sales ....................... [[33mSKIP[0m]
+[0m21:04:40.131828 [info ] [Thread-3  ]: 25 of 32 SKIP test not_null_fact_sales_total_sales ............................. [[33mSKIP[0m]
+[0m21:04:40.132652 [debug] [Thread-4  ]: Finished running node test.square_pipeline_project.not_null_fact_sales_order_date.d04f309174
+[0m21:04:40.133336 [debug] [Thread-2  ]: Finished running node test.square_pipeline_project.not_null_fact_sales_total_gross_sales.30e81ae5ff
+[0m21:04:40.134031 [debug] [Thread-3  ]: Finished running node test.square_pipeline_project.not_null_fact_sales_total_sales.2feb308531
+[0m21:04:40.134605 [debug] [Thread-7  ]: Marking all children of 'test.square_pipeline_project.not_null_fact_sales_order_date.d04f309174' to be skipped because of status 'skipped'. 
+[0m21:04:40.135755 [debug] [Thread-7  ]: Marking all children of 'test.square_pipeline_project.not_null_fact_sales_total_gross_sales.30e81ae5ff' to be skipped because of status 'skipped'. 
+[0m21:04:40.136335 [debug] [Thread-7  ]: Marking all children of 'test.square_pipeline_project.not_null_fact_sales_total_sales.2feb308531' to be skipped because of status 'skipped'. 
+[0m21:04:40.276643 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=we-analysis&j=bq:US:89086773-02b1-4bf8-a088-4c2c69fbd511&page=queryresults
+[0m21:04:40.731341 [error] [Thread-1  ]: 18 of 32 FAIL 200 unique_dev_order_items_order_id .............................. [[31mFAIL 200[0m in 1.61s]
+[0m21:04:40.733778 [debug] [Thread-1  ]: Finished running node test.square_pipeline_project.unique_dev_order_items_order_id.9a970d7fa4
+[0m21:04:40.734809 [debug] [Thread-7  ]: Marking all children of 'test.square_pipeline_project.unique_dev_order_items_order_id.9a970d7fa4' to be skipped because of status 'fail'.  Reason: Got 200 results, configured to fail if != 0.
+[0m21:04:40.736955 [debug] [Thread-4  ]: Began running node model.square_pipeline_project.dim_items
+[0m21:04:40.737493 [debug] [Thread-2  ]: Began running node model.square_pipeline_project.dim_time
+[0m21:04:40.737885 [debug] [Thread-3  ]: Began running node model.square_pipeline_project.fact_orders
+[0m21:04:40.738444 [info ] [Thread-4  ]: 26 of 32 SKIP relation Sales_Test_prod.dim_items ............................... [[33mSKIP[0m]
+[0m21:04:40.739374 [info ] [Thread-2  ]: 27 of 32 SKIP relation Sales_Test_prod.dim_time ................................ [[33mSKIP[0m]
+[0m21:04:40.740068 [info ] [Thread-3  ]: 28 of 32 SKIP relation Sales_Test_prod.fact_orders ............................. [[33mSKIP[0m]
+[0m21:04:40.740855 [debug] [Thread-4  ]: Finished running node model.square_pipeline_project.dim_items
+[0m21:04:40.741677 [debug] [Thread-2  ]: Finished running node model.square_pipeline_project.dim_time
+[0m21:04:40.742310 [debug] [Thread-3  ]: Finished running node model.square_pipeline_project.fact_orders
+[0m21:04:40.743991 [debug] [Thread-7  ]: Marking all children of 'model.square_pipeline_project.dim_items' to be skipped because of status 'skipped'. 
+[0m21:04:40.746071 [debug] [Thread-7  ]: Marking all children of 'model.square_pipeline_project.dim_time' to be skipped because of status 'skipped'. 
+[0m21:04:40.747396 [debug] [Thread-1  ]: Began running node test.square_pipeline_project.not_null_dim_items_item_id.9c886c9cd1
+[0m21:04:40.748622 [debug] [Thread-4  ]: Began running node test.square_pipeline_project.unique_dim_items_item_id.d6b0c82950
+[0m21:04:40.749143 [debug] [Thread-7  ]: Marking all children of 'model.square_pipeline_project.fact_orders' to be skipped because of status 'skipped'. 
+[0m21:04:40.749860 [debug] [Thread-3  ]: Began running node test.square_pipeline_project.not_null_dim_time_date.2080f42875
+[0m21:04:40.750207 [info ] [Thread-1  ]: 29 of 32 SKIP test not_null_dim_items_item_id .................................. [[33mSKIP[0m]
+[0m21:04:40.750567 [debug] [Thread-2  ]: Began running node test.square_pipeline_project.unique_dim_time_date.d694a05da6
+[0m21:04:40.751325 [info ] [Thread-4  ]: 30 of 32 SKIP test unique_dim_items_item_id .................................... [[33mSKIP[0m]
+[0m21:04:40.752116 [info ] [Thread-3  ]: 31 of 32 SKIP test not_null_dim_time_date ...................................... [[33mSKIP[0m]
+[0m21:04:40.752784 [debug] [Thread-1  ]: Finished running node test.square_pipeline_project.not_null_dim_items_item_id.9c886c9cd1
+[0m21:04:40.753248 [info ] [Thread-2  ]: 32 of 32 SKIP test unique_dim_time_date ........................................ [[33mSKIP[0m]
+[0m21:04:40.753696 [debug] [Thread-4  ]: Finished running node test.square_pipeline_project.unique_dim_items_item_id.d6b0c82950
+[0m21:04:40.754234 [debug] [Thread-3  ]: Finished running node test.square_pipeline_project.not_null_dim_time_date.2080f42875
+[0m21:04:40.754615 [debug] [Thread-7  ]: Marking all children of 'test.square_pipeline_project.not_null_dim_items_item_id.9c886c9cd1' to be skipped because of status 'skipped'. 
+[0m21:04:40.755032 [debug] [Thread-2  ]: Finished running node test.square_pipeline_project.unique_dim_time_date.d694a05da6
+[0m21:04:40.755730 [debug] [Thread-7  ]: Marking all children of 'test.square_pipeline_project.unique_dim_items_item_id.d6b0c82950' to be skipped because of status 'skipped'. 
+[0m21:04:40.757081 [debug] [Thread-7  ]: Marking all children of 'test.square_pipeline_project.not_null_dim_time_date.2080f42875' to be skipped because of status 'skipped'. 
+[0m21:04:40.757593 [debug] [Thread-7  ]: Marking all children of 'test.square_pipeline_project.unique_dim_time_date.d694a05da6' to be skipped because of status 'skipped'. 
+[0m21:04:40.759844 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m21:04:40.763079 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m21:04:40.764160 [debug] [MainThread]: Connection 'model.square_pipeline_project.fact_sales' was properly closed.
+[0m21:04:40.764619 [debug] [MainThread]: Connection 'test.square_pipeline_project.not_null_dev_order_items_order_id.18f03cf12c' was properly closed.
+[0m21:04:40.764958 [debug] [MainThread]: Connection 'test.square_pipeline_project.unique_dev_order_items_order_id.9a970d7fa4' was properly closed.
+[0m21:04:40.765259 [debug] [MainThread]: Connection 'test.square_pipeline_project.unique_dev_order_payments_order_id.8eab189bd8' was properly closed.
+[0m21:04:40.765857 [info ] [MainThread]: 
+[0m21:04:40.766323 [info ] [MainThread]: Finished running 21 data tests, 11 view models in 0 hours 0 minutes and 9.97 seconds (9.97s).
+[0m21:04:40.769621 [debug] [MainThread]: Command end result
+[0m21:04:40.813955 [debug] [MainThread]: Wrote artifact WritableManifest to /app/target/manifest.json
+[0m21:04:40.819566 [debug] [MainThread]: Wrote artifact SemanticManifest to /app/target/semantic_manifest.json
+[0m21:04:40.830454 [debug] [MainThread]: Wrote artifact RunExecutionResult to /app/target/run_results.json
+[0m21:04:40.830775 [info ] [MainThread]: 
+[0m21:04:40.831143 [info ] [MainThread]: [31mCompleted with 3 errors, 0 partial successes, and 0 warnings:[0m
+[0m21:04:40.831533 [info ] [MainThread]: 
+[0m21:04:40.831903 [error] [MainThread]: [31mFailure in test unique_dev_order_payments_order_id (square_pipeline_project/models/dev/schema.yml)[0m
+[0m21:04:40.832301 [error] [MainThread]:   Got 2 results, configured to fail if != 0
+[0m21:04:40.832525 [info ] [MainThread]: 
+[0m21:04:40.832820 [info ] [MainThread]:   compiled code at target/compiled/square_pipeline_project/square_pipeline_project/models/dev/schema.yml/unique_dev_order_payments_order_id.sql
+[0m21:04:40.833101 [info ] [MainThread]: 
+[0m21:04:40.833491 [error] [MainThread]:   Database Error in model fact_sales (square_pipeline_project/models/prod/fact_sales.sql)
+  Unrecognized name: we at [13:27]
+  compiled code at target/run/square_pipeline_project/square_pipeline_project/models/prod/fact_sales.sql
+[0m21:04:40.833785 [info ] [MainThread]: 
+[0m21:04:40.834149 [error] [MainThread]: [31mFailure in test unique_dev_order_items_order_id (square_pipeline_project/models/dev/schema.yml)[0m
+[0m21:04:40.834453 [error] [MainThread]:   Got 200 results, configured to fail if != 0
+[0m21:04:40.834730 [info ] [MainThread]: 
+[0m21:04:40.835047 [info ] [MainThread]:   compiled code at target/compiled/square_pipeline_project/square_pipeline_project/models/dev/schema.yml/unique_dev_order_items_order_id.sql
+[0m21:04:40.835407 [info ] [MainThread]: 
+[0m21:04:40.835718 [info ] [MainThread]: Done. PASS=16 WARN=0 ERROR=3 SKIP=13 TOTAL=32
+[0m21:04:40.839027 [debug] [MainThread]: Resource report: {"command_name": "build", "command_success": false, "command_wall_clock_time": 11.309407, "process_in_blocks": "47912", "process_kernel_time": 0.652658, "process_mem_max_rss": "211156", "process_out_blocks": "3662", "process_user_time": 4.367945}
+[0m21:04:40.839852 [debug] [MainThread]: Command `dbt build` failed at 21:04:40.839781 after 11.31 seconds
+[0m21:04:40.840343 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff81eb9fd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff81d485b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7cd80b80>]}
+[0m21:04:40.840833 [debug] [MainThread]: Flushing usage events
+[0m21:04:41.056092 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:08:15.379619 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffbb77afd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffbab3dd60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffbab3ddc0>]}
+
+
+============================== 21:08:15.383033 | ec7f7c8b-30bc-436f-8d1a-16fbe669d99b ==============================
+[0m21:08:15.383033 [info ] [MainThread]: Running with dbt=1.9.0
+[0m21:08:15.383734 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/app/.dbt', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/app/logs', 'debug': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'invocation_command': 'dbt build --select stg.*', 'send_anonymous_usage_stats': 'True'}
+[0m21:08:15.913425 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'ec7f7c8b-30bc-436f-8d1a-16fbe669d99b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9e851d30>]}
+[0m21:08:15.944414 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'ec7f7c8b-30bc-436f-8d1a-16fbe669d99b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffbab7dc70>]}
+[0m21:08:15.944864 [info ] [MainThread]: Registered adapter: bigquery=1.9.0
+[0m21:08:16.010087 [debug] [MainThread]: checksum: c99e828bba267739642b5a3ce85f17518764ea526e0e6c4fdc649171c1a66bff, vars: {}, profile: , target: , version: 1.9.0
+[0m21:08:16.156936 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m21:08:16.157248 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m21:08:16.188480 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'ec7f7c8b-30bc-436f-8d1a-16fbe669d99b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb74c7130>]}
+[0m21:08:16.259217 [debug] [MainThread]: Wrote artifact WritableManifest to /app/target/manifest.json
+[0m21:08:16.261859 [debug] [MainThread]: Wrote artifact SemanticManifest to /app/target/semantic_manifest.json
+[0m21:08:16.280876 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'ec7f7c8b-30bc-436f-8d1a-16fbe669d99b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb7469ca0>]}
+[0m21:08:16.281308 [info ] [MainThread]: Found 11 models, 21 data tests, 3 sources, 487 macros
+[0m21:08:16.281886 [warn ] [MainThread]: The selection criterion 'stg.*' does not match any enabled nodes
+[0m21:08:16.282326 [warn ] [MainThread]: The selection criterion 'stg.*' does not match any enabled nodes
+[0m21:08:16.282696 [warn ] [MainThread]: The selection criterion 'stg.*' does not match any enabled nodes
+[0m21:08:16.283434 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m21:08:16.284667 [debug] [MainThread]: Command end result
+[0m21:08:16.313300 [debug] [MainThread]: Wrote artifact WritableManifest to /app/target/manifest.json
+[0m21:08:16.314620 [debug] [MainThread]: Wrote artifact SemanticManifest to /app/target/semantic_manifest.json
+[0m21:08:16.316946 [debug] [MainThread]: Wrote artifact RunExecutionResult to /app/target/run_results.json
+[0m21:08:16.317601 [debug] [MainThread]: Resource report: {"command_name": "build", "command_success": true, "command_wall_clock_time": 0.97640514, "process_in_blocks": "0", "process_kernel_time": 0.296599, "process_mem_max_rss": "194616", "process_out_blocks": "2348", "process_user_time": 2.007022}
+[0m21:08:16.317970 [debug] [MainThread]: Command `dbt build` succeeded at 21:08:16.317916 after 0.98 seconds
+[0m21:08:16.318239 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffbb77afd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffbab7dc70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb7466760>]}
+[0m21:08:16.318482 [debug] [MainThread]: Flushing usage events
+[0m21:08:16.501242 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:08:34.232574 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb4cc3130>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb3dcbaf0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb3dcbb50>]}
+
+
+============================== 21:08:34.236551 | f10fd97c-23d6-49f7-822b-4860dca49e78 ==============================
+[0m21:08:34.236551 [info ] [MainThread]: Running with dbt=1.9.0
+[0m21:08:34.237102 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/app/.dbt', 'version_check': 'True', 'warn_error': 'None', 'log_path': '/app/logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt build --select /stg.*', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m21:08:34.678881 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'f10fd97c-23d6-49f7-822b-4860dca49e78', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff97dda220>]}
+[0m21:08:34.709550 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'f10fd97c-23d6-49f7-822b-4860dca49e78', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff97e1ab20>]}
+[0m21:08:34.710054 [info ] [MainThread]: Registered adapter: bigquery=1.9.0
+[0m21:08:34.779299 [debug] [MainThread]: checksum: c99e828bba267739642b5a3ce85f17518764ea526e0e6c4fdc649171c1a66bff, vars: {}, profile: , target: , version: 1.9.0
+[0m21:08:34.916198 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m21:08:34.916593 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m21:08:34.947721 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'f10fd97c-23d6-49f7-822b-4860dca49e78', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb08c7130>]}
+[0m21:08:35.018634 [debug] [MainThread]: Wrote artifact WritableManifest to /app/target/manifest.json
+[0m21:08:35.021291 [debug] [MainThread]: Wrote artifact SemanticManifest to /app/target/semantic_manifest.json
+[0m21:08:35.038221 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'f10fd97c-23d6-49f7-822b-4860dca49e78', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb089beb0>]}
+[0m21:08:35.038633 [info ] [MainThread]: Found 11 models, 21 data tests, 3 sources, 487 macros
+[0m21:08:35.039182 [error] [MainThread]: Encountered an error:
+Non-relative patterns are unsupported
+[0m21:08:35.044566 [error] [MainThread]: Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/dbt/cli/requires.py", line 153, in wrapper
+    result, success = func(*args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/dbt/cli/requires.py", line 103, in wrapper
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/dbt/cli/requires.py", line 235, in wrapper
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/dbt/cli/requires.py", line 264, in wrapper
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/dbt/cli/requires.py", line 311, in wrapper
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/dbt/cli/requires.py", line 328, in wrapper
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/dbt/cli/main.py", line 204, in build
+    results = task.run()
+  File "/usr/local/lib/python3.9/site-packages/dbt/task/runnable.py", line 572, in run
+    self._runtime_initialize()
+  File "/usr/local/lib/python3.9/site-packages/dbt/task/compile.py", line 133, in _runtime_initialize
+    super()._runtime_initialize()
+  File "/usr/local/lib/python3.9/site-packages/dbt/task/runnable.py", line 174, in _runtime_initialize
+    self.job_queue = self.get_graph_queue()
+  File "/usr/local/lib/python3.9/site-packages/dbt/task/build.py", line 111, in get_graph_queue
+    full_selected_nodes = full_selector.get_selected(spec)
+  File "/usr/local/lib/python3.9/site-packages/dbt/graph/selector.py", line 330, in get_selected
+    selected_nodes, indirect_only = self.select_nodes(spec)
+  File "/usr/local/lib/python3.9/site-packages/dbt/graph/selector.py", line 159, in select_nodes
+    direct_nodes, indirect_nodes = self.select_nodes_recursively(spec)
+  File "/usr/local/lib/python3.9/site-packages/dbt/graph/selector.py", line 131, in select_nodes_recursively
+    bundles = [self.select_nodes_recursively(component) for component in spec]
+  File "/usr/local/lib/python3.9/site-packages/dbt/graph/selector.py", line 131, in <listcomp>
+    bundles = [self.select_nodes_recursively(component) for component in spec]
+  File "/usr/local/lib/python3.9/site-packages/dbt/graph/selector.py", line 131, in select_nodes_recursively
+    bundles = [self.select_nodes_recursively(component) for component in spec]
+  File "/usr/local/lib/python3.9/site-packages/dbt/graph/selector.py", line 131, in <listcomp>
+    bundles = [self.select_nodes_recursively(component) for component in spec]
+  File "/usr/local/lib/python3.9/site-packages/dbt/graph/selector.py", line 131, in select_nodes_recursively
+    bundles = [self.select_nodes_recursively(component) for component in spec]
+  File "/usr/local/lib/python3.9/site-packages/dbt/graph/selector.py", line 131, in <listcomp>
+    bundles = [self.select_nodes_recursively(component) for component in spec]
+  File "/usr/local/lib/python3.9/site-packages/dbt/graph/selector.py", line 129, in select_nodes_recursively
+    direct_nodes, indirect_nodes = self.get_nodes_from_criteria(spec)
+  File "/usr/local/lib/python3.9/site-packages/dbt/graph/selector.py", line 80, in get_nodes_from_criteria
+    collected = self.select_included(nodes, spec)
+  File "/usr/local/lib/python3.9/site-packages/dbt/graph/selector.py", line 66, in select_included
+    return set(method.search(included_nodes, spec.value))
+  File "/usr/local/lib/python3.9/site-packages/dbt/graph/selector_methods.py", line 464, in search
+    paths = set(p.relative_to(root) for p in root.glob(selector))
+  File "/usr/local/lib/python3.9/site-packages/dbt/graph/selector_methods.py", line 464, in <genexpr>
+    paths = set(p.relative_to(root) for p in root.glob(selector))
+  File "/usr/local/lib/python3.9/pathlib.py", line 1175, in glob
+    raise NotImplementedError("Non-relative patterns are unsupported")
+NotImplementedError: Non-relative patterns are unsupported
+
+[0m21:08:35.045929 [debug] [MainThread]: Resource report: {"command_name": "build", "command_success": false, "command_wall_clock_time": 0.84796804, "process_in_blocks": "320", "process_kernel_time": 0.204668, "process_mem_max_rss": "193992", "process_out_blocks": "1234", "process_user_time": 1.98528}
+[0m21:08:35.046363 [debug] [MainThread]: Command `dbt build` failed at 21:08:35.046291 after 0.85 seconds
+[0m21:08:35.046663 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb4cc3130>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb071cb20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb071cac0>]}
+[0m21:08:35.046936 [debug] [MainThread]: Flushing usage events
+[0m21:08:35.166978 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:10:12.084279 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb60830d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb51992e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb5199280>]}
+
+
+============================== 21:10:12.086931 | a64656be-a09a-47ea-bed3-575d1574146c ==============================
+[0m21:10:12.086931 [info ] [MainThread]: Running with dbt=1.9.0
+[0m21:10:12.087562 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/app/.dbt', 'version_check': 'True', 'warn_error': 'None', 'log_path': '/app/logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt run --select path:models/staging/*', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m21:10:12.759333 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'a64656be-a09a-47ea-bed3-575d1574146c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb5896f10>]}
+[0m21:10:12.793413 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'a64656be-a09a-47ea-bed3-575d1574146c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9926a460>]}
+[0m21:10:12.794097 [info ] [MainThread]: Registered adapter: bigquery=1.9.0
+[0m21:10:12.875947 [debug] [MainThread]: checksum: c99e828bba267739642b5a3ce85f17518764ea526e0e6c4fdc649171c1a66bff, vars: {}, profile: , target: , version: 1.9.0
+[0m21:10:13.038243 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m21:10:13.038598 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m21:10:13.070869 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'a64656be-a09a-47ea-bed3-575d1574146c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb1cc6130>]}
+[0m21:10:13.140877 [debug] [MainThread]: Wrote artifact WritableManifest to /app/target/manifest.json
+[0m21:10:13.145404 [debug] [MainThread]: Wrote artifact SemanticManifest to /app/target/semantic_manifest.json
+[0m21:10:13.157939 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'a64656be-a09a-47ea-bed3-575d1574146c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb1c66550>]}
+[0m21:10:13.158338 [info ] [MainThread]: Found 11 models, 21 data tests, 3 sources, 487 macros
+[0m21:10:13.158732 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a64656be-a09a-47ea-bed3-575d1574146c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb1c51af0>]}
+[0m21:10:13.160069 [warn ] [MainThread]: The selection criterion 'path:models/staging/*' does not match any enabled nodes
+[0m21:10:13.161041 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m21:10:13.164378 [debug] [MainThread]: Command end result
+[0m21:10:13.191312 [debug] [MainThread]: Wrote artifact WritableManifest to /app/target/manifest.json
+[0m21:10:13.192608 [debug] [MainThread]: Wrote artifact SemanticManifest to /app/target/semantic_manifest.json
+[0m21:10:13.195054 [debug] [MainThread]: Wrote artifact RunExecutionResult to /app/target/run_results.json
+[0m21:10:13.195974 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 1.1457798, "process_in_blocks": "0", "process_kernel_time": 0.248768, "process_mem_max_rss": "192684", "process_out_blocks": "2337", "process_user_time": 2.207293}
+[0m21:10:13.196346 [debug] [MainThread]: Command `dbt run` succeeded at 21:10:13.196286 after 1.15 seconds
+[0m21:10:13.196628 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb60830d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb5f06eb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb62cfb80>]}
+[0m21:10:13.196887 [debug] [MainThread]: Flushing usage events
+[0m21:10:13.387417 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:10:54.031944 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffba3830d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb97492e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb9749280>]}
+
+
+============================== 21:10:54.034425 | 0735ce05-d46b-41b0-9e0b-199bdda4e34d ==============================
+[0m21:10:54.034425 [info ] [MainThread]: Running with dbt=1.9.0
+[0m21:10:54.034926 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'profiles_dir': '/app/.dbt', 'log_path': '/app/logs', 'version_check': 'True', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'invocation_command': 'dbt run --select models/staging/*', 'introspect': 'True', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m21:10:54.480819 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '0735ce05-d46b-41b0-9e0b-199bdda4e34d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffbb4f0760>]}
+[0m21:10:54.511195 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '0735ce05-d46b-41b0-9e0b-199bdda4e34d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffba166460>]}
+[0m21:10:54.511646 [info ] [MainThread]: Registered adapter: bigquery=1.9.0
+[0m21:10:54.574107 [debug] [MainThread]: checksum: c99e828bba267739642b5a3ce85f17518764ea526e0e6c4fdc649171c1a66bff, vars: {}, profile: , target: , version: 1.9.0
+[0m21:10:54.711320 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m21:10:54.711646 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m21:10:54.742203 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '0735ce05-d46b-41b0-9e0b-199bdda4e34d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb60c6130>]}
+[0m21:10:54.810191 [debug] [MainThread]: Wrote artifact WritableManifest to /app/target/manifest.json
+[0m21:10:54.813464 [debug] [MainThread]: Wrote artifact SemanticManifest to /app/target/semantic_manifest.json
+[0m21:10:54.822437 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '0735ce05-d46b-41b0-9e0b-199bdda4e34d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb6093610>]}
+[0m21:10:54.822847 [info ] [MainThread]: Found 11 models, 21 data tests, 3 sources, 487 macros
+[0m21:10:54.823215 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '0735ce05-d46b-41b0-9e0b-199bdda4e34d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb6050430>]}
+[0m21:10:54.824278 [warn ] [MainThread]: The selection criterion 'models/staging/*' does not match any enabled nodes
+[0m21:10:54.825003 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m21:10:54.826239 [debug] [MainThread]: Command end result
+[0m21:10:54.850455 [debug] [MainThread]: Wrote artifact WritableManifest to /app/target/manifest.json
+[0m21:10:54.851647 [debug] [MainThread]: Wrote artifact SemanticManifest to /app/target/semantic_manifest.json
+[0m21:10:54.853916 [debug] [MainThread]: Wrote artifact RunExecutionResult to /app/target/run_results.json
+[0m21:10:54.854650 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 0.8560398, "process_in_blocks": "0", "process_kernel_time": 0.223658, "process_mem_max_rss": "192764", "process_out_blocks": "2337", "process_user_time": 1.955243}
+[0m21:10:54.855060 [debug] [MainThread]: Command `dbt run` succeeded at 21:10:54.855005 after 0.86 seconds
+[0m21:10:54.855342 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffba3830d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffba206eb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffba9203a0>]}
+[0m21:10:54.855593 [debug] [MainThread]: Flushing usage events
+[0m21:10:54.986541 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:12:37.797868 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa5e03100>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa51c9310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa51c92b0>]}
+
+
+============================== 21:12:37.800660 | e3481d61-70bf-4497-9f1e-a5ac798bd4a6 ==============================
+[0m21:12:37.800660 [info ] [MainThread]: Running with dbt=1.9.0
+[0m21:12:37.801227 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'profiles_dir': '/app/.dbt', 'log_path': '/app/logs', 'fail_fast': 'False', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'static_parser': 'True', 'invocation_command': 'dbt run --select path: models/staging/*', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m21:12:38.248332 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'e3481d61-70bf-4497-9f1e-a5ac798bd4a6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff890183d0>]}
+[0m21:12:38.280084 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'e3481d61-70bf-4497-9f1e-a5ac798bd4a6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa522ce50>]}
+[0m21:12:38.280631 [info ] [MainThread]: Registered adapter: bigquery=1.9.0
+[0m21:12:38.344827 [debug] [MainThread]: checksum: c99e828bba267739642b5a3ce85f17518764ea526e0e6c4fdc649171c1a66bff, vars: {}, profile: , target: , version: 1.9.0
+[0m21:12:38.483525 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m21:12:38.483849 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m21:12:38.515830 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'e3481d61-70bf-4497-9f1e-a5ac798bd4a6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa1ac7130>]}
+[0m21:12:38.584930 [debug] [MainThread]: Wrote artifact WritableManifest to /app/target/manifest.json
+[0m21:12:38.587420 [debug] [MainThread]: Wrote artifact SemanticManifest to /app/target/semantic_manifest.json
+[0m21:12:38.596366 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'e3481d61-70bf-4497-9f1e-a5ac798bd4a6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa1ab7e80>]}
+[0m21:12:38.596803 [info ] [MainThread]: Found 11 models, 21 data tests, 3 sources, 487 macros
+[0m21:12:38.597187 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e3481d61-70bf-4497-9f1e-a5ac798bd4a6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa1a53b50>]}
+[0m21:12:38.597869 [error] [MainThread]: Encountered an error:
+Unacceptable pattern: ''
+[0m21:12:38.598903 [error] [MainThread]: Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/dbt/cli/requires.py", line 153, in wrapper
+    result, success = func(*args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/dbt/cli/requires.py", line 103, in wrapper
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/dbt/cli/requires.py", line 235, in wrapper
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/dbt/cli/requires.py", line 264, in wrapper
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/dbt/cli/requires.py", line 311, in wrapper
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/dbt/cli/requires.py", line 328, in wrapper
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/dbt/cli/main.py", line 578, in run
+    results = task.run()
+  File "/usr/local/lib/python3.9/site-packages/dbt/task/runnable.py", line 572, in run
+    self._runtime_initialize()
+  File "/usr/local/lib/python3.9/site-packages/dbt/task/compile.py", line 133, in _runtime_initialize
+    super()._runtime_initialize()
+  File "/usr/local/lib/python3.9/site-packages/dbt/task/runnable.py", line 174, in _runtime_initialize
+    self.job_queue = self.get_graph_queue()
+  File "/usr/local/lib/python3.9/site-packages/dbt/task/runnable.py", line 164, in get_graph_queue
+    return selector.get_graph_queue(spec, preserve_edges)
+  File "/usr/local/lib/python3.9/site-packages/dbt/graph/selector.py", line 340, in get_graph_queue
+    selected_nodes = self.get_selected(spec)
+  File "/usr/local/lib/python3.9/site-packages/dbt/graph/selector.py", line 330, in get_selected
+    selected_nodes, indirect_only = self.select_nodes(spec)
+  File "/usr/local/lib/python3.9/site-packages/dbt/graph/selector.py", line 159, in select_nodes
+    direct_nodes, indirect_nodes = self.select_nodes_recursively(spec)
+  File "/usr/local/lib/python3.9/site-packages/dbt/graph/selector.py", line 131, in select_nodes_recursively
+    bundles = [self.select_nodes_recursively(component) for component in spec]
+  File "/usr/local/lib/python3.9/site-packages/dbt/graph/selector.py", line 131, in <listcomp>
+    bundles = [self.select_nodes_recursively(component) for component in spec]
+  File "/usr/local/lib/python3.9/site-packages/dbt/graph/selector.py", line 131, in select_nodes_recursively
+    bundles = [self.select_nodes_recursively(component) for component in spec]
+  File "/usr/local/lib/python3.9/site-packages/dbt/graph/selector.py", line 131, in <listcomp>
+    bundles = [self.select_nodes_recursively(component) for component in spec]
+  File "/usr/local/lib/python3.9/site-packages/dbt/graph/selector.py", line 131, in select_nodes_recursively
+    bundles = [self.select_nodes_recursively(component) for component in spec]
+  File "/usr/local/lib/python3.9/site-packages/dbt/graph/selector.py", line 131, in <listcomp>
+    bundles = [self.select_nodes_recursively(component) for component in spec]
+  File "/usr/local/lib/python3.9/site-packages/dbt/graph/selector.py", line 129, in select_nodes_recursively
+    direct_nodes, indirect_nodes = self.get_nodes_from_criteria(spec)
+  File "/usr/local/lib/python3.9/site-packages/dbt/graph/selector.py", line 80, in get_nodes_from_criteria
+    collected = self.select_included(nodes, spec)
+  File "/usr/local/lib/python3.9/site-packages/dbt/graph/selector.py", line 66, in select_included
+    return set(method.search(included_nodes, spec.value))
+  File "/usr/local/lib/python3.9/site-packages/dbt/graph/selector_methods.py", line 464, in search
+    paths = set(p.relative_to(root) for p in root.glob(selector))
+  File "/usr/local/lib/python3.9/site-packages/dbt/graph/selector_methods.py", line 464, in <genexpr>
+    paths = set(p.relative_to(root) for p in root.glob(selector))
+  File "/usr/local/lib/python3.9/pathlib.py", line 1172, in glob
+    raise ValueError("Unacceptable pattern: {!r}".format(pattern))
+ValueError: Unacceptable pattern: ''
+
+[0m21:12:38.599788 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 0.84134465, "process_in_blocks": "0", "process_kernel_time": 0.269981, "process_mem_max_rss": "192028", "process_out_blocks": "1224", "process_user_time": 1.962206}
+[0m21:12:38.600146 [debug] [MainThread]: Command `dbt run` failed at 21:12:38.600092 after 0.84 seconds
+[0m21:12:38.600403 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa5e03100>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa1a93c40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa1a939d0>]}
+[0m21:12:38.600640 [debug] [MainThread]: Flushing usage events
+[0m21:12:38.788201 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:12:47.431859 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb36830d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb27992e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb2799280>]}
+
+
+============================== 21:12:47.434533 | dab6da15-0902-4aa4-b8ac-addd9eda00e9 ==============================
+[0m21:12:47.434533 [info ] [MainThread]: Running with dbt=1.9.0
+[0m21:12:47.435275 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': '/app/.dbt', 'log_path': '/app/logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'invocation_command': 'dbt run --select path:models/staging/*', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m21:12:47.875731 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'dab6da15-0902-4aa4-b8ac-addd9eda00e9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb47f0760>]}
+[0m21:12:47.906729 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'dab6da15-0902-4aa4-b8ac-addd9eda00e9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9681deb0>]}
+[0m21:12:47.907255 [info ] [MainThread]: Registered adapter: bigquery=1.9.0
+[0m21:12:47.972760 [debug] [MainThread]: checksum: c99e828bba267739642b5a3ce85f17518764ea526e0e6c4fdc649171c1a66bff, vars: {}, profile: , target: , version: 1.9.0
+[0m21:12:48.127695 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m21:12:48.128031 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m21:12:48.159079 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'dab6da15-0902-4aa4-b8ac-addd9eda00e9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffaf2cdfa0>]}
+[0m21:12:48.228413 [debug] [MainThread]: Wrote artifact WritableManifest to /app/target/manifest.json
+[0m21:12:48.230610 [debug] [MainThread]: Wrote artifact SemanticManifest to /app/target/semantic_manifest.json
+[0m21:12:48.239001 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'dab6da15-0902-4aa4-b8ac-addd9eda00e9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffaf26eb50>]}
+[0m21:12:48.239447 [info ] [MainThread]: Found 11 models, 21 data tests, 3 sources, 487 macros
+[0m21:12:48.239926 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'dab6da15-0902-4aa4-b8ac-addd9eda00e9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffaf2514f0>]}
+[0m21:12:48.241072 [warn ] [MainThread]: The selection criterion 'path:models/staging/*' does not match any enabled nodes
+[0m21:12:48.241888 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m21:12:48.243132 [debug] [MainThread]: Command end result
+[0m21:12:48.268049 [debug] [MainThread]: Wrote artifact WritableManifest to /app/target/manifest.json
+[0m21:12:48.269647 [debug] [MainThread]: Wrote artifact SemanticManifest to /app/target/semantic_manifest.json
+[0m21:12:48.272180 [debug] [MainThread]: Wrote artifact RunExecutionResult to /app/target/run_results.json
+[0m21:12:48.273734 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 0.8773643, "process_in_blocks": "0", "process_kernel_time": 0.236014, "process_mem_max_rss": "192676", "process_out_blocks": "2337", "process_user_time": 1.984529}
+[0m21:12:48.274246 [debug] [MainThread]: Command `dbt run` succeeded at 21:12:48.274169 after 0.88 seconds
+[0m21:12:48.274560 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb36830d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb47f0760>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff96747400>]}
+[0m21:12:48.274907 [debug] [MainThread]: Flushing usage events
+[0m21:12:48.386148 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:13:54.196693 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9ce830a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9bf8dc10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9bf8dc70>]}
+
+
+============================== 21:13:54.201545 | 3b105255-b57b-41ff-a0a5-d8807eb45a66 ==============================
+[0m21:13:54.201545 [info ] [MainThread]: Running with dbt=1.9.0
+[0m21:13:54.202239 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/app/logs', 'debug': 'False', 'profiles_dir': '/app/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'target_path': 'None', 'invocation_command': 'dbt build --select models/staging', 'send_anonymous_usage_stats': 'True'}
+[0m21:13:54.671679 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '3b105255-b57b-41ff-a0a5-d8807eb45a66', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9dff05b0>]}
+[0m21:13:54.701943 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '3b105255-b57b-41ff-a0a5-d8807eb45a66', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff80030640>]}
+[0m21:13:54.702399 [info ] [MainThread]: Registered adapter: bigquery=1.9.0
+[0m21:13:54.765645 [debug] [MainThread]: checksum: c99e828bba267739642b5a3ce85f17518764ea526e0e6c4fdc649171c1a66bff, vars: {}, profile: , target: , version: 1.9.0
+[0m21:13:54.908733 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m21:13:54.909080 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m21:13:54.939931 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '3b105255-b57b-41ff-a0a5-d8807eb45a66', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff98ac7130>]}
+[0m21:13:55.009060 [debug] [MainThread]: Wrote artifact WritableManifest to /app/target/manifest.json
+[0m21:13:55.011217 [debug] [MainThread]: Wrote artifact SemanticManifest to /app/target/semantic_manifest.json
+[0m21:13:55.028209 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '3b105255-b57b-41ff-a0a5-d8807eb45a66', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff98912e80>]}
+[0m21:13:55.028606 [info ] [MainThread]: Found 11 models, 21 data tests, 3 sources, 487 macros
+[0m21:13:55.029644 [warn ] [MainThread]: The selection criterion 'models/staging' does not match any enabled nodes
+[0m21:13:55.030508 [warn ] [MainThread]: The selection criterion 'models/staging' does not match any enabled nodes
+[0m21:13:55.031333 [warn ] [MainThread]: The selection criterion 'models/staging' does not match any enabled nodes
+[0m21:13:55.032163 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m21:13:55.033439 [debug] [MainThread]: Command end result
+[0m21:13:55.060426 [debug] [MainThread]: Wrote artifact WritableManifest to /app/target/manifest.json
+[0m21:13:55.061986 [debug] [MainThread]: Wrote artifact SemanticManifest to /app/target/semantic_manifest.json
+[0m21:13:55.064319 [debug] [MainThread]: Wrote artifact RunExecutionResult to /app/target/run_results.json
+[0m21:13:55.065005 [debug] [MainThread]: Resource report: {"command_name": "build", "command_success": true, "command_wall_clock_time": 0.90879035, "process_in_blocks": "0", "process_kernel_time": 0.252414, "process_mem_max_rss": "194572", "process_out_blocks": "2348", "process_user_time": 1.989025}
+[0m21:13:55.065360 [debug] [MainThread]: Command `dbt build` succeeded at 21:13:55.065304 after 0.91 seconds
+[0m21:13:55.065623 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9ce830a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff98912e80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff98a86bb0>]}
+[0m21:13:55.065873 [debug] [MainThread]: Flushing usage events
+[0m21:13:55.175868 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:14:22.689401 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffae203070>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffad5ca3a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffad5ca340>]}
+
+
+============================== 21:14:22.691992 | 833a34aa-32aa-4d90-b29a-5c7866976b3c ==============================
+[0m21:14:22.691992 [info ] [MainThread]: Running with dbt=1.9.0
+[0m21:14:22.692619 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/app/.dbt', 'debug': 'False', 'version_check': 'True', 'log_path': '/app/logs', 'warn_error': 'None', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt build --select models/staging/*', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m21:14:23.132339 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '833a34aa-32aa-4d90-b29a-5c7866976b3c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffaf37ef40>]}
+[0m21:14:23.162836 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '833a34aa-32aa-4d90-b29a-5c7866976b3c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff91640790>]}
+[0m21:14:23.163300 [info ] [MainThread]: Registered adapter: bigquery=1.9.0
+[0m21:14:23.226701 [debug] [MainThread]: checksum: c99e828bba267739642b5a3ce85f17518764ea526e0e6c4fdc649171c1a66bff, vars: {}, profile: , target: , version: 1.9.0
+[0m21:14:23.364497 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m21:14:23.364843 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m21:14:23.396394 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '833a34aa-32aa-4d90-b29a-5c7866976b3c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa9ec7130>]}
+[0m21:14:23.465039 [debug] [MainThread]: Wrote artifact WritableManifest to /app/target/manifest.json
+[0m21:14:23.468561 [debug] [MainThread]: Wrote artifact SemanticManifest to /app/target/semantic_manifest.json
+[0m21:14:23.486957 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '833a34aa-32aa-4d90-b29a-5c7866976b3c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa9e528e0>]}
+[0m21:14:23.487501 [info ] [MainThread]: Found 11 models, 21 data tests, 3 sources, 487 macros
+[0m21:14:23.488901 [warn ] [MainThread]: The selection criterion 'models/staging/*' does not match any enabled nodes
+[0m21:14:23.489784 [warn ] [MainThread]: The selection criterion 'models/staging/*' does not match any enabled nodes
+[0m21:14:23.490605 [warn ] [MainThread]: The selection criterion 'models/staging/*' does not match any enabled nodes
+[0m21:14:23.491351 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m21:14:23.492676 [debug] [MainThread]: Command end result
+[0m21:14:23.519614 [debug] [MainThread]: Wrote artifact WritableManifest to /app/target/manifest.json
+[0m21:14:23.521053 [debug] [MainThread]: Wrote artifact SemanticManifest to /app/target/semantic_manifest.json
+[0m21:14:23.523241 [debug] [MainThread]: Wrote artifact RunExecutionResult to /app/target/run_results.json
+[0m21:14:23.523971 [debug] [MainThread]: Resource report: {"command_name": "build", "command_success": true, "command_wall_clock_time": 0.8677155, "process_in_blocks": "0", "process_kernel_time": 0.244926, "process_mem_max_rss": "194556", "process_out_blocks": "2348", "process_user_time": 1.964434}
+[0m21:14:23.524381 [debug] [MainThread]: Command `dbt build` succeeded at 21:14:23.524313 after 0.87 seconds
+[0m21:14:23.524666 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffae203070>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff91304070>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff91640790>]}
+[0m21:14:23.524918 [debug] [MainThread]: Flushing usage events
+[0m21:14:23.658541 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:15:04.811723 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9ce030d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9c1bebe0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9c1bec40>]}
+
+
+============================== 21:15:04.814337 | 0ac93721-66e1-4179-8183-830403a41964 ==============================
+[0m21:15:04.814337 [info ] [MainThread]: Running with dbt=1.9.0
+[0m21:15:04.814802 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_path': '/app/logs', 'version_check': 'True', 'profiles_dir': '/app/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt build --select models/staging/schema.yml models/staging/stg_line_items.sql models/staging/stg_orders.sql models/staging/stg_payments.sql', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m21:15:05.249539 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '0ac93721-66e1-4179-8183-830403a41964', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8003b790>]}
+[0m21:15:05.280662 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '0ac93721-66e1-4179-8183-830403a41964', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9c64a6a0>]}
+[0m21:15:05.281133 [info ] [MainThread]: Registered adapter: bigquery=1.9.0
+[0m21:15:05.344631 [debug] [MainThread]: checksum: c99e828bba267739642b5a3ce85f17518764ea526e0e6c4fdc649171c1a66bff, vars: {}, profile: , target: , version: 1.9.0
+[0m21:15:05.486209 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m21:15:05.486541 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m21:15:05.517474 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '0ac93721-66e1-4179-8183-830403a41964', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff98ac6a00>]}
+[0m21:15:05.588674 [debug] [MainThread]: Wrote artifact WritableManifest to /app/target/manifest.json
+[0m21:15:05.591223 [debug] [MainThread]: Wrote artifact SemanticManifest to /app/target/semantic_manifest.json
+[0m21:15:05.608685 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '0ac93721-66e1-4179-8183-830403a41964', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9d3a57c0>]}
+[0m21:15:05.609073 [info ] [MainThread]: Found 11 models, 21 data tests, 3 sources, 487 macros
+[0m21:15:05.610154 [warn ] [MainThread]: The selection criterion 'models/staging/schema.yml' does not match any enabled nodes
+[0m21:15:05.610969 [warn ] [MainThread]: The selection criterion 'models/staging/stg_line_items.sql' does not match any enabled nodes
+[0m21:15:05.611710 [warn ] [MainThread]: The selection criterion 'models/staging/stg_orders.sql' does not match any enabled nodes
+[0m21:15:05.612543 [warn ] [MainThread]: The selection criterion 'models/staging/stg_payments.sql' does not match any enabled nodes
+[0m21:15:05.613452 [warn ] [MainThread]: The selection criterion 'models/staging/schema.yml' does not match any enabled nodes
+[0m21:15:05.614294 [warn ] [MainThread]: The selection criterion 'models/staging/stg_line_items.sql' does not match any enabled nodes
+[0m21:15:05.615231 [warn ] [MainThread]: The selection criterion 'models/staging/stg_orders.sql' does not match any enabled nodes
+[0m21:15:05.616159 [warn ] [MainThread]: The selection criterion 'models/staging/stg_payments.sql' does not match any enabled nodes
+[0m21:15:05.618437 [warn ] [MainThread]: The selection criterion 'models/staging/schema.yml' does not match any enabled nodes
+[0m21:15:05.621623 [warn ] [MainThread]: The selection criterion 'models/staging/stg_line_items.sql' does not match any enabled nodes
+[0m21:15:05.626728 [warn ] [MainThread]: The selection criterion 'models/staging/stg_orders.sql' does not match any enabled nodes
+[0m21:15:05.630420 [warn ] [MainThread]: The selection criterion 'models/staging/stg_payments.sql' does not match any enabled nodes
+[0m21:15:05.631895 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m21:15:05.634080 [debug] [MainThread]: Command end result
+[0m21:15:05.678542 [debug] [MainThread]: Wrote artifact WritableManifest to /app/target/manifest.json
+[0m21:15:05.680113 [debug] [MainThread]: Wrote artifact SemanticManifest to /app/target/semantic_manifest.json
+[0m21:15:05.682919 [debug] [MainThread]: Wrote artifact RunExecutionResult to /app/target/run_results.json
+[0m21:15:05.683892 [debug] [MainThread]: Resource report: {"command_name": "build", "command_success": true, "command_wall_clock_time": 0.90588444, "process_in_blocks": "0", "process_kernel_time": 0.242956, "process_mem_max_rss": "194452", "process_out_blocks": "2351", "process_user_time": 2.041038}
+[0m21:15:05.684313 [debug] [MainThread]: Command `dbt build` succeeded at 21:15:05.684251 after 0.91 seconds
+[0m21:15:05.684621 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9ce030d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9d3a57c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff98ab9be0>]}
+[0m21:15:05.684900 [debug] [MainThread]: Flushing usage events
+[0m21:15:05.814977 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:16:45.949885 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8ea830a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8db8dbe0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8db8dc40>]}
+
+
+============================== 21:16:45.953094 | 81006609-c156-4fe5-bdff-47c78fece5ce ==============================
+[0m21:16:45.953094 [info ] [MainThread]: Running with dbt=1.9.0
+[0m21:16:45.953536 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/app/.dbt', 'debug': 'False', 'warn_error': 'None', 'log_path': '/app/logs', 'version_check': 'True', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'log_format': 'default', 'invocation_command': 'dbt build --select models/staging', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m21:16:46.458611 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '81006609-c156-4fe5-bdff-47c78fece5ce', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8e2d8b50>]}
+[0m21:16:46.488991 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '81006609-c156-4fe5-bdff-47c78fece5ce', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8df20550>]}
+[0m21:16:46.489454 [info ] [MainThread]: Registered adapter: bigquery=1.9.0
+[0m21:16:46.551544 [debug] [MainThread]: checksum: c99e828bba267739642b5a3ce85f17518764ea526e0e6c4fdc649171c1a66bff, vars: {}, profile: , target: , version: 1.9.0
+[0m21:16:46.694611 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m21:16:46.694939 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m21:16:46.727485 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '81006609-c156-4fe5-bdff-47c78fece5ce', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8a6c7130>]}
+[0m21:16:46.794483 [debug] [MainThread]: Wrote artifact WritableManifest to /app/target/manifest.json
+[0m21:16:46.797171 [debug] [MainThread]: Wrote artifact SemanticManifest to /app/target/semantic_manifest.json
+[0m21:16:46.813981 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '81006609-c156-4fe5-bdff-47c78fece5ce', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8a669df0>]}
+[0m21:16:46.814385 [info ] [MainThread]: Found 11 models, 21 data tests, 3 sources, 487 macros
+[0m21:16:46.815399 [warn ] [MainThread]: The selection criterion 'models/staging' does not match any enabled nodes
+[0m21:16:46.816272 [warn ] [MainThread]: The selection criterion 'models/staging' does not match any enabled nodes
+[0m21:16:46.817087 [warn ] [MainThread]: The selection criterion 'models/staging' does not match any enabled nodes
+[0m21:16:46.817866 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m21:16:46.819340 [debug] [MainThread]: Command end result
+[0m21:16:46.843740 [debug] [MainThread]: Wrote artifact WritableManifest to /app/target/manifest.json
+[0m21:16:46.845129 [debug] [MainThread]: Wrote artifact SemanticManifest to /app/target/semantic_manifest.json
+[0m21:16:46.847527 [debug] [MainThread]: Wrote artifact RunExecutionResult to /app/target/run_results.json
+[0m21:16:46.848207 [debug] [MainThread]: Resource report: {"command_name": "build", "command_success": true, "command_wall_clock_time": 0.9328283, "process_in_blocks": "0", "process_kernel_time": 0.298916, "process_mem_max_rss": "194608", "process_out_blocks": "2348", "process_user_time": 2.00052}
+[0m21:16:46.848601 [debug] [MainThread]: Command `dbt build` succeeded at 21:16:46.848548 after 0.93 seconds
+[0m21:16:46.848866 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8ea830a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7211f790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8fbe0340>]}
+[0m21:16:46.849106 [debug] [MainThread]: Flushing usage events
+[0m21:16:47.043393 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:17:28.792219 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8e2030a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8d5bebe0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8d5bec40>]}
+
+
+============================== 21:17:28.795137 | 1c9f4753-6cf7-43dd-920a-1a892c08d6e4 ==============================
+[0m21:17:28.795137 [info ] [MainThread]: Running with dbt=1.9.0
+[0m21:17:28.795742 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_path': '/app/logs', 'profiles_dir': '/app/.dbt', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'invocation_command': 'dbt build --select path:models/staging', 'send_anonymous_usage_stats': 'True'}
+[0m21:17:29.258435 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '1c9f4753-6cf7-43dd-920a-1a892c08d6e4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8d6a0f10>]}
+[0m21:17:29.288909 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '1c9f4753-6cf7-43dd-920a-1a892c08d6e4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff713eab50>]}
+[0m21:17:29.289369 [info ] [MainThread]: Registered adapter: bigquery=1.9.0
+[0m21:17:29.354451 [debug] [MainThread]: checksum: c99e828bba267739642b5a3ce85f17518764ea526e0e6c4fdc649171c1a66bff, vars: {}, profile: , target: , version: 1.9.0
+[0m21:17:29.493022 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m21:17:29.493353 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m21:17:29.524293 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '1c9f4753-6cf7-43dd-920a-1a892c08d6e4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff89ecdfa0>]}
+[0m21:17:29.595274 [debug] [MainThread]: Wrote artifact WritableManifest to /app/target/manifest.json
+[0m21:17:29.597469 [debug] [MainThread]: Wrote artifact SemanticManifest to /app/target/semantic_manifest.json
+[0m21:17:29.613453 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '1c9f4753-6cf7-43dd-920a-1a892c08d6e4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff89e509d0>]}
+[0m21:17:29.613887 [info ] [MainThread]: Found 11 models, 21 data tests, 3 sources, 487 macros
+[0m21:17:29.615016 [warn ] [MainThread]: The selection criterion 'path:models/staging' does not match any enabled nodes
+[0m21:17:29.615939 [warn ] [MainThread]: The selection criterion 'path:models/staging' does not match any enabled nodes
+[0m21:17:29.616753 [warn ] [MainThread]: The selection criterion 'path:models/staging' does not match any enabled nodes
+[0m21:17:29.617494 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m21:17:29.618755 [debug] [MainThread]: Command end result
+[0m21:17:29.644469 [debug] [MainThread]: Wrote artifact WritableManifest to /app/target/manifest.json
+[0m21:17:29.645707 [debug] [MainThread]: Wrote artifact SemanticManifest to /app/target/semantic_manifest.json
+[0m21:17:29.648000 [debug] [MainThread]: Wrote artifact RunExecutionResult to /app/target/run_results.json
+[0m21:17:29.648691 [debug] [MainThread]: Resource report: {"command_name": "build", "command_success": true, "command_wall_clock_time": 0.89292306, "process_in_blocks": "0", "process_kernel_time": 0.239005, "process_mem_max_rss": "194572", "process_out_blocks": "2348", "process_user_time": 1.968284}
+[0m21:17:29.649053 [debug] [MainThread]: Command `dbt build` succeeded at 21:17:29.648998 after 0.89 seconds
+[0m21:17:29.649313 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8e2030a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8d6a0f10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff89e787c0>]}
+[0m21:17:29.649561 [debug] [MainThread]: Flushing usage events
+[0m21:17:29.754886 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:18:36.882821 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff975530d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9690dbb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9690dc10>]}
+
+
+============================== 21:18:36.885399 | 0f25d48f-abab-4c84-8185-4662c37971ee ==============================
+[0m21:18:36.885399 [info ] [MainThread]: Running with dbt=1.9.0
+[0m21:18:36.885845 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/app/.dbt', 'fail_fast': 'False', 'warn_error': 'None', 'log_path': '/app/logs', 'debug': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'invocation_command': 'dbt build --select path:models/staging', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m21:18:37.369043 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '0f25d48f-abab-4c84-8185-4662c37971ee', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff96d72df0>]}
+[0m21:18:37.399519 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '0f25d48f-abab-4c84-8185-4662c37971ee', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7a6f3c70>]}
+[0m21:18:37.399955 [info ] [MainThread]: Registered adapter: bigquery=1.9.0
+[0m21:18:37.463162 [debug] [MainThread]: checksum: c99e828bba267739642b5a3ce85f17518764ea526e0e6c4fdc649171c1a66bff, vars: {}, profile: , target: , version: 1.9.0
+[0m21:18:37.578238 [info ] [MainThread]: Unable to do partial parsing because a project config has changed
+[0m21:18:37.578742 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '0f25d48f-abab-4c84-8185-4662c37971ee', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff96daba30>]}
+[0m21:18:38.183559 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'fact_order_items' in the 'models' section of file 'square_pipeline_project/models/prod/schema.yml'
+[0m21:18:38.304148 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.square_pipeline_project.not_null_fact_order_items_order_id.ce02dc1e7e' (square_pipeline_project/models/prod/schema.yml) depends on a node named 'fact_order_items' in package '' which was not found
+[0m21:18:38.304661 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.square_pipeline_project.not_null_fact_order_items_item_id.fbfa46453a' (square_pipeline_project/models/prod/schema.yml) depends on a node named 'fact_order_items' in package '' which was not found
+[0m21:18:38.372033 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '0f25d48f-abab-4c84-8185-4662c37971ee', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff92eeefa0>]}
+[0m21:18:38.487877 [debug] [MainThread]: Wrote artifact WritableManifest to /app/target/manifest.json
+[0m21:18:38.489930 [debug] [MainThread]: Wrote artifact SemanticManifest to /app/target/semantic_manifest.json
+[0m21:18:38.505685 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '0f25d48f-abab-4c84-8185-4662c37971ee', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff92efca00>]}
+[0m21:18:38.506085 [info ] [MainThread]: Found 11 models, 21 data tests, 3 sources, 487 macros
+[0m21:18:38.507195 [warn ] [MainThread]: The selection criterion 'path:models/staging' does not match any enabled nodes
+[0m21:18:38.508121 [warn ] [MainThread]: The selection criterion 'path:models/staging' does not match any enabled nodes
+[0m21:18:38.508902 [warn ] [MainThread]: The selection criterion 'path:models/staging' does not match any enabled nodes
+[0m21:18:38.509731 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m21:18:38.510217 [debug] [MainThread]: Command end result
+[0m21:18:38.536231 [debug] [MainThread]: Wrote artifact WritableManifest to /app/target/manifest.json
+[0m21:18:38.537931 [debug] [MainThread]: Wrote artifact SemanticManifest to /app/target/semantic_manifest.json
+[0m21:18:38.587868 [debug] [MainThread]: Wrote artifact RunExecutionResult to /app/target/run_results.json
+[0m21:18:38.589187 [debug] [MainThread]: Resource report: {"command_name": "build", "command_success": true, "command_wall_clock_time": 1.7391012, "process_in_blocks": "0", "process_kernel_time": 0.244212, "process_mem_max_rss": "201324", "process_out_blocks": "3451", "process_user_time": 2.825743}
+[0m21:18:38.589776 [debug] [MainThread]: Command `dbt build` succeeded at 21:18:38.589705 after 1.74 seconds
+[0m21:18:38.590169 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff975530d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff973d6eb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff981dc5b0>]}
+[0m21:18:38.590518 [debug] [MainThread]: Flushing usage events
+[0m21:18:38.787645 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:19:01.389770 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff856c30a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff847cfbe0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff847cfc40>]}
+
+
+============================== 21:19:01.393422 | 7b5f23e2-5682-40da-9fb1-87fb5ccd990e ==============================
+[0m21:19:01.393422 [info ] [MainThread]: Running with dbt=1.9.0
+[0m21:19:01.393959 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/app/.dbt', 'debug': 'False', 'warn_error': 'None', 'log_path': '/app/logs', 'version_check': 'True', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'log_format': 'default', 'invocation_command': 'dbt build --select models/staging', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m21:19:01.826266 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '7b5f23e2-5682-40da-9fb1-87fb5ccd990e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff68835fa0>]}
+[0m21:19:01.856708 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '7b5f23e2-5682-40da-9fb1-87fb5ccd990e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8549eeb0>]}
+[0m21:19:01.857180 [info ] [MainThread]: Registered adapter: bigquery=1.9.0
+[0m21:19:01.920249 [debug] [MainThread]: checksum: c99e828bba267739642b5a3ce85f17518764ea526e0e6c4fdc649171c1a66bff, vars: {}, profile: , target: , version: 1.9.0
+[0m21:19:02.058788 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m21:19:02.059118 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m21:19:02.089918 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '7b5f23e2-5682-40da-9fb1-87fb5ccd990e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff812c3130>]}
+[0m21:19:02.157715 [debug] [MainThread]: Wrote artifact WritableManifest to /app/target/manifest.json
+[0m21:19:02.159930 [debug] [MainThread]: Wrote artifact SemanticManifest to /app/target/semantic_manifest.json
+[0m21:19:02.176045 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '7b5f23e2-5682-40da-9fb1-87fb5ccd990e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff812ac760>]}
+[0m21:19:02.176496 [info ] [MainThread]: Found 11 models, 21 data tests, 3 sources, 487 macros
+[0m21:19:02.177718 [warn ] [MainThread]: The selection criterion 'models/staging' does not match any enabled nodes
+[0m21:19:02.178568 [warn ] [MainThread]: The selection criterion 'models/staging' does not match any enabled nodes
+[0m21:19:02.179356 [warn ] [MainThread]: The selection criterion 'models/staging' does not match any enabled nodes
+[0m21:19:02.180092 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m21:19:02.181292 [debug] [MainThread]: Command end result
+[0m21:19:02.207029 [debug] [MainThread]: Wrote artifact WritableManifest to /app/target/manifest.json
+[0m21:19:02.208281 [debug] [MainThread]: Wrote artifact SemanticManifest to /app/target/semantic_manifest.json
+[0m21:19:02.210413 [debug] [MainThread]: Wrote artifact RunExecutionResult to /app/target/run_results.json
+[0m21:19:02.211078 [debug] [MainThread]: Resource report: {"command_name": "build", "command_success": true, "command_wall_clock_time": 0.8564388, "process_in_blocks": "0", "process_kernel_time": 0.224732, "process_mem_max_rss": "194628", "process_out_blocks": "2354", "process_user_time": 1.959665}
+[0m21:19:02.211448 [debug] [MainThread]: Command `dbt build` succeeded at 21:19:02.211383 after 0.86 seconds
+[0m21:19:02.211727 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff856c30a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff811604f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff812ac760>]}
+[0m21:19:02.212000 [debug] [MainThread]: Flushing usage events
+[0m21:19:02.328516 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:19:51.913511 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb6123100>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb54eb340>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb54eb2e0>]}
+
+
+============================== 21:19:51.916631 | bde720c2-1963-4efb-9f56-6488d81ad254 ==============================
+[0m21:19:51.916631 [info ] [MainThread]: Running with dbt=1.9.0
+[0m21:19:51.917267 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'version_check': 'True', 'log_path': '/app/logs', 'profiles_dir': '/app/.dbt', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'invocation_command': 'dbt run --select models/staging', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m21:19:52.399479 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'bde720c2-1963-4efb-9f56-6488d81ad254', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff993f7b80>]}
+[0m21:19:52.430728 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'bde720c2-1963-4efb-9f56-6488d81ad254', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb58d84f0>]}
+[0m21:19:52.431338 [info ] [MainThread]: Registered adapter: bigquery=1.9.0
+[0m21:19:52.495375 [debug] [MainThread]: checksum: c99e828bba267739642b5a3ce85f17518764ea526e0e6c4fdc649171c1a66bff, vars: {}, profile: , target: , version: 1.9.0
+[0m21:19:52.632169 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m21:19:52.632499 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m21:19:52.663364 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'bde720c2-1963-4efb-9f56-6488d81ad254', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb1ec4130>]}
+[0m21:19:52.731702 [debug] [MainThread]: Wrote artifact WritableManifest to /app/target/manifest.json
+[0m21:19:52.738931 [debug] [MainThread]: Wrote artifact SemanticManifest to /app/target/semantic_manifest.json
+[0m21:19:52.749359 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'bde720c2-1963-4efb-9f56-6488d81ad254', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb1eb3670>]}
+[0m21:19:52.749745 [info ] [MainThread]: Found 11 models, 21 data tests, 3 sources, 487 macros
+[0m21:19:52.750006 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'bde720c2-1963-4efb-9f56-6488d81ad254', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb1e507c0>]}
+[0m21:19:52.750981 [warn ] [MainThread]: The selection criterion 'models/staging' does not match any enabled nodes
+[0m21:19:52.751736 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m21:19:52.753003 [debug] [MainThread]: Command end result
+[0m21:19:52.777637 [debug] [MainThread]: Wrote artifact WritableManifest to /app/target/manifest.json
+[0m21:19:52.778928 [debug] [MainThread]: Wrote artifact SemanticManifest to /app/target/semantic_manifest.json
+[0m21:19:52.781265 [debug] [MainThread]: Wrote artifact RunExecutionResult to /app/target/run_results.json
+[0m21:19:52.781988 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 0.91037786, "process_in_blocks": "0", "process_kernel_time": 0.226889, "process_mem_max_rss": "192668", "process_out_blocks": "2343", "process_user_time": 2.016337}
+[0m21:19:52.782358 [debug] [MainThread]: Command `dbt run` succeeded at 21:19:52.782295 after 0.91 seconds
+[0m21:19:52.782629 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb6123100>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff992ce490>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb58d84f0>]}
+[0m21:19:52.782870 [debug] [MainThread]: Flushing usage events
+[0m21:19:52.910188 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:21:16.534427 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9f583070>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9e93c280>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9e93c220>]}
+
+
+============================== 21:21:16.537188 | f643cc6a-0fac-4123-a56d-5991b5c4e32e ==============================
+[0m21:21:16.537188 [info ] [MainThread]: Running with dbt=1.9.0
+[0m21:21:16.537818 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/app/.dbt', 'fail_fast': 'False', 'warn_error': 'None', 'log_path': '/app/logs', 'debug': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt run --select square_pipeline_project/models/staging', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m21:21:17.005248 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'f643cc6a-0fac-4123-a56d-5991b5c4e32e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff82735130>]}
+[0m21:21:17.036110 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'f643cc6a-0fac-4123-a56d-5991b5c4e32e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9ed80940>]}
+[0m21:21:17.036592 [info ] [MainThread]: Registered adapter: bigquery=1.9.0
+[0m21:21:17.104649 [debug] [MainThread]: checksum: c99e828bba267739642b5a3ce85f17518764ea526e0e6c4fdc649171c1a66bff, vars: {}, profile: , target: , version: 1.9.0
+[0m21:21:17.224933 [info ] [MainThread]: Unable to do partial parsing because a project config has changed
+[0m21:21:17.225449 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'f643cc6a-0fac-4123-a56d-5991b5c4e32e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9edd87c0>]}
+[0m21:21:17.842519 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'fact_order_items' in the 'models' section of file 'square_pipeline_project/models/prod/schema.yml'
+[0m21:21:17.963649 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.square_pipeline_project.not_null_fact_order_items_order_id.ce02dc1e7e' (square_pipeline_project/models/prod/schema.yml) depends on a node named 'fact_order_items' in package '' which was not found
+[0m21:21:17.964147 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.square_pipeline_project.not_null_fact_order_items_item_id.fbfa46453a' (square_pipeline_project/models/prod/schema.yml) depends on a node named 'fact_order_items' in package '' which was not found
+[0m21:21:18.027902 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'f643cc6a-0fac-4123-a56d-5991b5c4e32e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9aeeedf0>]}
+[0m21:21:18.144368 [debug] [MainThread]: Wrote artifact WritableManifest to /app/target/manifest.json
+[0m21:21:18.147095 [debug] [MainThread]: Wrote artifact SemanticManifest to /app/target/semantic_manifest.json
+[0m21:21:18.156221 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'f643cc6a-0fac-4123-a56d-5991b5c4e32e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9afee910>]}
+[0m21:21:18.156713 [info ] [MainThread]: Found 11 models, 21 data tests, 3 sources, 487 macros
+[0m21:21:18.157251 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f643cc6a-0fac-4123-a56d-5991b5c4e32e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9b0129a0>]}
+[0m21:21:18.158905 [info ] [MainThread]: 
+[0m21:21:18.159204 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m21:21:18.159560 [info ] [MainThread]: 
+[0m21:21:18.160045 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m21:21:18.162938 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_we-analysis'
+[0m21:21:18.163286 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:21:18.664383 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_we-analysis, now list_we-analysis_Sales_Test_staging)
+[0m21:21:18.665705 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_we-analysis_Sales_Test_prod'
+[0m21:21:18.667701 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:21:18.667002 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_we-analysis_Sales_Test_dev'
+[0m21:21:18.666353 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m21:21:18.722481 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:21:19.256189 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f643cc6a-0fac-4123-a56d-5991b5c4e32e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa08434c0>]}
+[0m21:21:19.260732 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m21:21:19.270308 [debug] [Thread-1  ]: Began running node model.square_pipeline_project.stg_line_items
+[0m21:21:19.270949 [debug] [Thread-2  ]: Began running node model.square_pipeline_project.stg_orders
+[0m21:21:19.271455 [debug] [Thread-3  ]: Began running node model.square_pipeline_project.stg_payments
+[0m21:21:19.272385 [info ] [Thread-1  ]: 1 of 3 START sql view model Sales_Test_staging.stg_line_items .................. [RUN]
+[0m21:21:19.274635 [info ] [Thread-2  ]: 2 of 3 START sql view model Sales_Test_staging.stg_orders ...................... [RUN]
+[0m21:21:19.276444 [info ] [Thread-3  ]: 3 of 3 START sql view model Sales_Test_staging.stg_payments .................... [RUN]
+[0m21:21:19.277439 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_we-analysis_Sales_Test_prod, now model.square_pipeline_project.stg_line_items)
+[0m21:21:19.280021 [debug] [Thread-1  ]: Began compiling node model.square_pipeline_project.stg_line_items
+[0m21:21:19.279238 [debug] [Thread-3  ]: Re-using an available connection from the pool (formerly list_we-analysis_Sales_Test_dev, now model.square_pipeline_project.stg_payments)
+[0m21:21:19.278424 [debug] [Thread-2  ]: Re-using an available connection from the pool (formerly list_we-analysis_Sales_Test_staging, now model.square_pipeline_project.stg_orders)
+[0m21:21:19.293177 [debug] [Thread-1  ]: Writing injected SQL for node "model.square_pipeline_project.stg_line_items"
+[0m21:21:19.293837 [debug] [Thread-3  ]: Began compiling node model.square_pipeline_project.stg_payments
+[0m21:21:19.294385 [debug] [Thread-2  ]: Began compiling node model.square_pipeline_project.stg_orders
+[0m21:21:19.298455 [debug] [Thread-3  ]: Writing injected SQL for node "model.square_pipeline_project.stg_payments"
+[0m21:21:19.302738 [debug] [Thread-2  ]: Writing injected SQL for node "model.square_pipeline_project.stg_orders"
+[0m21:21:19.303418 [debug] [Thread-1  ]: Began executing node model.square_pipeline_project.stg_line_items
+[0m21:21:19.311812 [debug] [Thread-3  ]: Began executing node model.square_pipeline_project.stg_payments
+[0m21:21:19.334851 [debug] [Thread-1  ]: Writing runtime sql for node "model.square_pipeline_project.stg_line_items"
+[0m21:21:19.335250 [debug] [Thread-2  ]: Began executing node model.square_pipeline_project.stg_orders
+[0m21:21:19.342389 [debug] [Thread-3  ]: Writing runtime sql for node "model.square_pipeline_project.stg_payments"
+[0m21:21:19.346156 [debug] [Thread-2  ]: Writing runtime sql for node "model.square_pipeline_project.stg_orders"
+[0m21:21:19.347510 [debug] [Thread-1  ]: On model.square_pipeline_project.stg_line_items: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "square_pipeline_project", "target_name": "dev", "node_id": "model.square_pipeline_project.stg_line_items"} */
+
+
+  create or replace view `we-analysis`.`Sales_Test_staging`.`stg_line_items`
+  OPTIONS()
+  as 
+
+SELECT
+    order_id,
+    line_item_uid AS line_item_id,
+    item_name,
+    CAST(quantity AS INT64) AS quantity,
+    gross_sales,
+    modifier_name,
+    modifier_price
+FROM 
+    `we-analysis`.`Sales_Test`.`line_items`;
+
+
+[0m21:21:19.348149 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m21:21:19.348519 [debug] [Thread-3  ]: On model.square_pipeline_project.stg_payments: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "square_pipeline_project", "target_name": "dev", "node_id": "model.square_pipeline_project.stg_payments"} */
+
+
+  create or replace view `we-analysis`.`Sales_Test_staging`.`stg_payments`
+  OPTIONS()
+  as 
+
+SELECT
+    id AS payment_id,
+    created_at AS payment_created_at,
+    status AS payment_status,
+    source_type AS payment_source,
+    CAST(JSON_EXTRACT_SCALAR(amount_money, '$.amount') AS FLOAT64) / 100 AS payment_amount,
+    JSON_EXTRACT_SCALAR(amount_money, '$.currency') AS CURRENCY,
+    order_id
+FROM 
+    `we-analysis`.`Sales_Test`.`payments`;
+
+
+[0m21:21:19.348980 [debug] [Thread-2  ]: On model.square_pipeline_project.stg_orders: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "square_pipeline_project", "target_name": "dev", "node_id": "model.square_pipeline_project.stg_orders"} */
+
+
+  create or replace view `we-analysis`.`Sales_Test_staging`.`stg_orders`
+  OPTIONS()
+  as 
+
+SELECT
+    order_id,
+    created_at AS order_created_at,
+    state AS order_state,
+    total_money AS total_amount,
+    total_tax_money AS total_tax,
+    total_tip_money AS total_tip,
+    total_discount_money AS total_discount
+FROM 
+    `we-analysis`.`Sales_Test`.`orders`;
+
+
+[0m21:21:19.349398 [debug] [Thread-3  ]: Opening a new connection, currently in state closed
+[0m21:21:19.384776 [debug] [Thread-2  ]: Opening a new connection, currently in state closed
+[0m21:21:19.996383 [debug] [Thread-2  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=we-analysis&j=bq:US:cd1e4712-42e1-49c6-bed4-920635b897ff&page=queryresults
+[0m21:21:20.001162 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=we-analysis&j=bq:US:0884afc4-9f75-4acc-80df-a84d58bdeb69&page=queryresults
+[0m21:21:20.002492 [debug] [Thread-3  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=we-analysis&j=bq:US:67d5f303-4df5-4d8b-a2b1-7565563dcd41&page=queryresults
+[0m21:21:20.395607 [debug] [Thread-3  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f643cc6a-0fac-4123-a56d-5991b5c4e32e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9aee8f70>]}
+[0m21:21:20.395970 [debug] [Thread-2  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f643cc6a-0fac-4123-a56d-5991b5c4e32e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9f763a90>]}
+[0m21:21:20.396826 [info ] [Thread-3  ]: 3 of 3 OK created sql view model Sales_Test_staging.stg_payments ............... [[32mCREATE VIEW (0 processed)[0m in 1.11s]
+[0m21:21:20.397699 [info ] [Thread-2  ]: 2 of 3 OK created sql view model Sales_Test_staging.stg_orders ................. [[32mCREATE VIEW (0 processed)[0m in 1.12s]
+[0m21:21:20.398863 [debug] [Thread-2  ]: Finished running node model.square_pipeline_project.stg_orders
+[0m21:21:20.398406 [debug] [Thread-3  ]: Finished running node model.square_pipeline_project.stg_payments
+[0m21:21:20.487027 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f643cc6a-0fac-4123-a56d-5991b5c4e32e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9b18ef10>]}
+[0m21:21:20.487941 [info ] [Thread-1  ]: 1 of 3 OK created sql view model Sales_Test_staging.stg_line_items ............. [[32mCREATE VIEW (0 processed)[0m in 1.21s]
+[0m21:21:20.489034 [debug] [Thread-1  ]: Finished running node model.square_pipeline_project.stg_line_items
+[0m21:21:20.491002 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m21:21:20.493841 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m21:21:20.494257 [debug] [MainThread]: Connection 'model.square_pipeline_project.stg_orders' was properly closed.
+[0m21:21:20.494657 [debug] [MainThread]: Connection 'model.square_pipeline_project.stg_line_items' was properly closed.
+[0m21:21:20.495023 [debug] [MainThread]: Connection 'model.square_pipeline_project.stg_payments' was properly closed.
+[0m21:21:20.495571 [info ] [MainThread]: 
+[0m21:21:20.496191 [info ] [MainThread]: Finished running 3 view models in 0 hours 0 minutes and 2.34 seconds (2.34s).
+[0m21:21:20.497392 [debug] [MainThread]: Command end result
+[0m21:21:20.532861 [debug] [MainThread]: Wrote artifact WritableManifest to /app/target/manifest.json
+[0m21:21:20.535403 [debug] [MainThread]: Wrote artifact SemanticManifest to /app/target/semantic_manifest.json
+[0m21:21:20.540076 [debug] [MainThread]: Wrote artifact RunExecutionResult to /app/target/run_results.json
+[0m21:21:20.540343 [info ] [MainThread]: 
+[0m21:21:20.540760 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m21:21:20.541115 [info ] [MainThread]: 
+[0m21:21:20.541497 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=0 SKIP=0 TOTAL=3
+[0m21:21:20.542938 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 4.0435805, "process_in_blocks": "0", "process_kernel_time": 0.353626, "process_mem_max_rss": "207476", "process_out_blocks": "3468", "process_user_time": 3.384114}
+[0m21:21:20.543647 [debug] [MainThread]: Command `dbt run` succeeded at 21:21:20.543581 after 4.04 seconds
+[0m21:21:20.544115 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9f583070>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa0843280>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9afee910>]}
+[0m21:21:20.544440 [debug] [MainThread]: Flushing usage events
+[0m21:21:20.718228 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:41:38.737230 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff82323070>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff816dc280>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff816dc220>]}
+
+
+============================== 21:41:38.740615 | 857c4b0f-aada-4d95-995a-bff5a8948a6b ==============================
+[0m21:41:38.740615 [info ] [MainThread]: Running with dbt=1.9.0
+[0m21:41:38.741266 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/app/.dbt', 'debug': 'False', 'version_check': 'True', 'log_path': '/app/logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'invocation_command': 'dbt run --select square_pipeline_project/models/dev', 'log_format': 'default', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m21:41:39.429920 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '857c4b0f-aada-4d95-995a-bff5a8948a6b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8349ef40>]}
+[0m21:41:39.461252 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '857c4b0f-aada-4d95-995a-bff5a8948a6b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8212e2e0>]}
+[0m21:41:39.461768 [info ] [MainThread]: Registered adapter: bigquery=1.9.0
+[0m21:41:39.686523 [debug] [MainThread]: checksum: c99e828bba267739642b5a3ce85f17518764ea526e0e6c4fdc649171c1a66bff, vars: {}, profile: , target: , version: 1.9.0
+[0m21:41:40.147485 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m21:41:40.147861 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m21:41:40.181407 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '857c4b0f-aada-4d95-995a-bff5a8948a6b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7e0c4130>]}
+[0m21:41:40.256842 [debug] [MainThread]: Wrote artifact WritableManifest to /app/target/manifest.json
+[0m21:41:40.259393 [debug] [MainThread]: Wrote artifact SemanticManifest to /app/target/semantic_manifest.json
+[0m21:41:40.272252 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '857c4b0f-aada-4d95-995a-bff5a8948a6b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7e0b3610>]}
+[0m21:41:40.273090 [info ] [MainThread]: Found 11 models, 21 data tests, 3 sources, 487 macros
+[0m21:41:40.274091 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '857c4b0f-aada-4d95-995a-bff5a8948a6b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7e069850>]}
+[0m21:41:40.277665 [info ] [MainThread]: 
+[0m21:41:40.278895 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m21:41:40.279870 [info ] [MainThread]: 
+[0m21:41:40.281698 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m21:41:40.287303 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_we-analysis'
+[0m21:41:40.288067 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:41:40.786851 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_we-analysis, now list_we-analysis_Sales_Test_prod)
+[0m21:41:40.788435 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_we-analysis_Sales_Test_dev'
+[0m21:41:40.790893 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:41:40.790046 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_we-analysis_Sales_Test_staging'
+[0m21:41:40.789370 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m21:41:40.794099 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:41:41.279811 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '857c4b0f-aada-4d95-995a-bff5a8948a6b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff65977c70>]}
+[0m21:41:41.281359 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m21:41:41.288955 [debug] [Thread-1  ]: Began running node model.square_pipeline_project.dev_order_items
+[0m21:41:41.289309 [debug] [Thread-2  ]: Began running node model.square_pipeline_project.dev_order_payments
+[0m21:41:41.289570 [debug] [Thread-3  ]: Began running node model.square_pipeline_project.dev_sales_summary
+[0m21:41:41.290067 [info ] [Thread-1  ]: 1 of 3 START sql view model Sales_Test_dev.dev_order_items ..................... [RUN]
+[0m21:41:41.290678 [info ] [Thread-2  ]: 2 of 3 START sql view model Sales_Test_dev.dev_order_payments .................. [RUN]
+[0m21:41:41.291387 [info ] [Thread-3  ]: 3 of 3 START sql view model Sales_Test_dev.dev_sales_summary ................... [RUN]
+[0m21:41:41.292297 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_we-analysis_Sales_Test_staging, now model.square_pipeline_project.dev_order_items)
+[0m21:41:41.294794 [debug] [Thread-1  ]: Began compiling node model.square_pipeline_project.dev_order_items
+[0m21:41:41.294075 [debug] [Thread-3  ]: Re-using an available connection from the pool (formerly list_we-analysis_Sales_Test_dev, now model.square_pipeline_project.dev_sales_summary)
+[0m21:41:41.293103 [debug] [Thread-2  ]: Re-using an available connection from the pool (formerly list_we-analysis_Sales_Test_prod, now model.square_pipeline_project.dev_order_payments)
+[0m21:41:41.309918 [debug] [Thread-2  ]: Began compiling node model.square_pipeline_project.dev_order_payments
+[0m21:41:41.309491 [debug] [Thread-3  ]: Began compiling node model.square_pipeline_project.dev_sales_summary
+[0m21:41:41.309012 [debug] [Thread-1  ]: Writing injected SQL for node "model.square_pipeline_project.dev_order_items"
+[0m21:41:41.313917 [debug] [Thread-2  ]: Writing injected SQL for node "model.square_pipeline_project.dev_order_payments"
+[0m21:41:41.318393 [debug] [Thread-3  ]: Writing injected SQL for node "model.square_pipeline_project.dev_sales_summary"
+[0m21:41:41.321668 [debug] [Thread-1  ]: Began executing node model.square_pipeline_project.dev_order_items
+[0m21:41:41.322031 [debug] [Thread-2  ]: Began executing node model.square_pipeline_project.dev_order_payments
+[0m21:41:41.336194 [debug] [Thread-3  ]: Began executing node model.square_pipeline_project.dev_sales_summary
+[0m21:41:41.351194 [debug] [Thread-1  ]: Writing runtime sql for node "model.square_pipeline_project.dev_order_items"
+[0m21:41:41.353460 [debug] [Thread-2  ]: Writing runtime sql for node "model.square_pipeline_project.dev_order_payments"
+[0m21:41:41.355672 [debug] [Thread-3  ]: Writing runtime sql for node "model.square_pipeline_project.dev_sales_summary"
+[0m21:41:41.357737 [debug] [Thread-2  ]: On model.square_pipeline_project.dev_order_payments: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "square_pipeline_project", "target_name": "dev", "node_id": "model.square_pipeline_project.dev_order_payments"} */
+
+
+  create or replace view `we-analysis`.`Sales_Test_dev`.`dev_order_payments`
+  OPTIONS()
+  as 
+
+WITH order_payments AS (
+    SELECT 
+        o.order_id,
+        o.order_created_at,
+        p.payment_id,
+        p.payment_amount,
+        p.payment_status,
+        p.payment_source
+    FROM `we-analysis`.`Sales_Test_staging`.`stg_orders` o
+    JOIN `we-analysis`.`Sales_Test_staging`.`stg_payments` p
+    ON o.order_id = p.order_id
+)
+
+SELECT *
+FROM order_payments;
+
+
+[0m21:41:41.358026 [debug] [Thread-1  ]: On model.square_pipeline_project.dev_order_items: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "square_pipeline_project", "target_name": "dev", "node_id": "model.square_pipeline_project.dev_order_items"} */
+
+
+  create or replace view `we-analysis`.`Sales_Test_dev`.`dev_order_items`
+  OPTIONS()
+  as 
+
+WITH order_items AS (
+    SELECT 
+        o.order_id,
+        o.order_created_at,
+        o.total_amount AS order_total,
+        li.line_item_id,
+        li.item_name,
+        li.quantity,
+        li.gross_sales,
+        li.modifier_name,
+        li.modifier_price
+    FROM `we-analysis`.`Sales_Test_staging`.`stg_orders` o
+    JOIN `we-analysis`.`Sales_Test_staging`.`stg_line_items` li
+    ON o.order_id = li.order_id
+)
+
+SELECT *
+FROM order_items;
+
+
+[0m21:41:41.358391 [debug] [Thread-3  ]: On model.square_pipeline_project.dev_sales_summary: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "square_pipeline_project", "target_name": "dev", "node_id": "model.square_pipeline_project.dev_sales_summary"} */
+
+
+  create or replace view `we-analysis`.`Sales_Test_dev`.`dev_sales_summary`
+  OPTIONS()
+  as 
+
+WITH sales_summary AS (
+    SELECT
+        o.order_id,
+        o.order_created_at AS order_date,
+        SUM(o.total_amount) AS total_sales,
+        SUM(li.gross_sales) AS total_gross_sales,
+        COUNT(DISTINCT o.order_id) AS total_orders,
+        COUNT(DISTINCT p.payment_id) AS total_payments
+    FROM `we-analysis`.`Sales_Test_staging`.`stg_orders` o
+    LEFT JOIN `we-analysis`.`Sales_Test_staging`.`stg_line_items` li
+    ON o.order_id = li.order_id
+    LEFT JOIN `we-analysis`.`Sales_Test_staging`.`stg_payments` p
+    ON o.order_id = p.order_id
+    WHERE p.payment_status = 'COMPLETED'
+    GROUP BY o.order_created_at, o.order_id
+)
+
+SELECT * FROM sales_summary;
+
+
+[0m21:41:41.358645 [debug] [Thread-2  ]: Opening a new connection, currently in state closed
+[0m21:41:41.359016 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m21:41:41.359351 [debug] [Thread-3  ]: Opening a new connection, currently in state closed
+[0m21:41:42.104490 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=we-analysis&j=bq:US:6f129d48-b05b-4e45-ae83-ac0b300587b2&page=queryresults
+[0m21:41:42.112205 [debug] [Thread-2  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=we-analysis&j=bq:US:dec9f921-400c-4243-9566-05f447714e08&page=queryresults
+[0m21:41:42.198518 [debug] [Thread-3  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=we-analysis&j=bq:US:a3bbe22a-4b85-42b9-9f75-ee6695bef0a6&page=queryresults
+[0m21:41:42.502411 [debug] [Thread-2  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '857c4b0f-aada-4d95-995a-bff5a8948a6b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7df71400>]}
+[0m21:41:42.504625 [debug] [Thread-3  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '857c4b0f-aada-4d95-995a-bff5a8948a6b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7defddc0>]}
+[0m21:41:42.505583 [info ] [Thread-2  ]: 2 of 3 OK created sql view model Sales_Test_dev.dev_order_payments ............. [[32mCREATE VIEW (0 processed)[0m in 1.21s]
+[0m21:41:42.507341 [debug] [Thread-2  ]: Finished running node model.square_pipeline_project.dev_order_payments
+[0m21:41:42.506521 [info ] [Thread-3  ]: 3 of 3 OK created sql view model Sales_Test_dev.dev_sales_summary .............. [[32mCREATE VIEW (0 processed)[0m in 1.21s]
+[0m21:41:42.508122 [debug] [Thread-3  ]: Finished running node model.square_pipeline_project.dev_sales_summary
+[0m21:41:42.564332 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '857c4b0f-aada-4d95-995a-bff5a8948a6b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7dedfbe0>]}
+[0m21:41:42.565230 [info ] [Thread-1  ]: 1 of 3 OK created sql view model Sales_Test_dev.dev_order_items ................ [[32mCREATE VIEW (0 processed)[0m in 1.27s]
+[0m21:41:42.565927 [debug] [Thread-1  ]: Finished running node model.square_pipeline_project.dev_order_items
+[0m21:41:42.568027 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m21:41:42.570373 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m21:41:42.570735 [debug] [MainThread]: Connection 'model.square_pipeline_project.dev_order_payments' was properly closed.
+[0m21:41:42.571058 [debug] [MainThread]: Connection 'model.square_pipeline_project.dev_sales_summary' was properly closed.
+[0m21:41:42.571469 [debug] [MainThread]: Connection 'model.square_pipeline_project.dev_order_items' was properly closed.
+[0m21:41:42.571981 [info ] [MainThread]: 
+[0m21:41:42.572399 [info ] [MainThread]: Finished running 3 view models in 0 hours 0 minutes and 2.29 seconds (2.29s).
+[0m21:41:42.573652 [debug] [MainThread]: Command end result
+[0m21:41:42.612559 [debug] [MainThread]: Wrote artifact WritableManifest to /app/target/manifest.json
+[0m21:41:42.615458 [debug] [MainThread]: Wrote artifact SemanticManifest to /app/target/semantic_manifest.json
+[0m21:41:42.622718 [debug] [MainThread]: Wrote artifact RunExecutionResult to /app/target/run_results.json
+[0m21:41:42.623051 [info ] [MainThread]: 
+[0m21:41:42.623479 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m21:41:42.623919 [info ] [MainThread]: 
+[0m21:41:42.624555 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=0 SKIP=0 TOTAL=3
+[0m21:41:42.626421 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 3.9376507, "process_in_blocks": "0", "process_kernel_time": 0.748856, "process_mem_max_rss": "200844", "process_out_blocks": "2378", "process_user_time": 3.03582}
+[0m21:41:42.627191 [debug] [MainThread]: Command `dbt run` succeeded at 21:41:42.627109 after 3.94 seconds
+[0m21:41:42.627607 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff82323070>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff835e3280>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7e0b37c0>]}
+[0m21:41:42.627886 [debug] [MainThread]: Flushing usage events
+[0m21:41:42.784014 [debug] [MainThread]: An error was encountered while trying to flush usage events
