@@ -81,7 +81,7 @@ models:
       - name: order_created_at
         description: "Timestamp when the order was created."
 
-      - name: total_amount
+      - name: total_net_amount
         description: "The total amount for the order in USD."
         tests:
           - not_null

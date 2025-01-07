@@ -1,12 +1,12 @@
 {{ config(materialized='view', enabled=true) }}
 
 SELECT
-    id AS payment_id,
+    TRIM(id) AS payment_id,
     created_at AS payment_created_at,
-    status AS payment_status,
-    source_type AS payment_source,
-    CAST(JSON_EXTRACT_SCALAR(amount_money, '$.amount') AS FLOAT64) / 100 AS payment_amount,
-    JSON_EXTRACT_SCALAR(amount_money, '$.currency') AS CURRENCY,
-    order_id
+    TRIM(status) AS payment_status,
+    TRIM(source_type) AS payment_source,
+    CAST(JSON_EXTRACT_SCALAR(amount_money, '$.amount') AS FLOAT64) / 100 AS payment_net_amount,
+    TRIM(JSON_EXTRACT_SCALAR(amount_money, '$.currency')) AS currency_type,
+    TRIM(order_id) AS order_id
 FROM 
     {{ source('raw', 'payments') }}

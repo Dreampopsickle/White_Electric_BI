@@ -87,3 +87,15 @@ models:
         description: "Status of the payment."
       - name: payment_source
         description: "Source of the payment (e.g., CARD, CASH)."
+  - name: dim_payments
+    description: "Order dimension with payment data."
+    columns:
+      - name: payment_id
+        description: "Unique identifier for the payment."
+        tests:
+          - unique
+          - not_null
+      - name: payment_status
+        description: "Status of the payment."
+      - name: payment_source
+        description: "Source of the payment (e.g., CARD, CASH)."
