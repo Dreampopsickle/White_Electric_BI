@@ -8,8 +8,9 @@ WITH dates_and_times AS (
 
 time_data AS (
     SELECT
-        full_timestamp,
-        DATE(full_timestamp) AS date_key,
+        full_timestamp AS timestamp_utc,
+        DATETIME(full_timestamp, "EST") AS timestamp_est,
+        CAST(FORMAT_TIMESTAMP('%Y%m%d%H%M%S', full_timestamp) AS INT64) AS date_time_key,
         EXTRACT(YEAR FROM full_timestamp) AS year,
         EXTRACT(MONTH FROM full_timestamp) AS month,
         EXTRACT(DAY FROM full_timestamp) AS day,

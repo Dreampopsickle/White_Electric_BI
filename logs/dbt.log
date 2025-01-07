@@ -13998,3 +13998,834 @@ SELECT * FROM payments;
 [0m00:02:38.642810 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff80ec3070>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff80d6b790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7c3c3a90>]}
 [0m00:02:38.643232 [debug] [MainThread]: Flushing usage events
 [0m00:02:38.790951 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m00:14:43.397781 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffac1230a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffab4dd310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffab4dd2b0>]}
+
+
+============================== 00:14:43.401405 | af685c95-51bd-4d6b-819a-ef9ef3fb2e14 ==============================
+[0m00:14:43.401405 [info ] [MainThread]: Running with dbt=1.9.0
+[0m00:14:43.401991 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/app/.dbt', 'version_check': 'True', 'warn_error': 'None', 'log_path': '/app/logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'static_parser': 'True', 'invocation_command': 'dbt run --select square_pipeline_project/models/prod/dim_time.sql', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m00:14:44.186134 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'af685c95-51bd-4d6b-819a-ef9ef3fb2e14', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8f328250>]}
+[0m00:14:44.220814 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'af685c95-51bd-4d6b-819a-ef9ef3fb2e14', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffabed07c0>]}
+[0m00:14:44.221459 [info ] [MainThread]: Registered adapter: bigquery=1.9.0
+[0m00:14:44.311590 [debug] [MainThread]: checksum: c99e828bba267739642b5a3ce85f17518764ea526e0e6c4fdc649171c1a66bff, vars: {}, profile: , target: , version: 1.9.0
+[0m00:14:44.467599 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m00:14:44.468186 [debug] [MainThread]: Partial parsing: updated file: square_pipeline_project://square_pipeline_project/models/prod/dim_time.sql
+[0m00:14:44.726868 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'af685c95-51bd-4d6b-819a-ef9ef3fb2e14', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa7bb0130>]}
+[0m00:14:44.798336 [debug] [MainThread]: Wrote artifact WritableManifest to /app/target/manifest.json
+[0m00:14:44.800685 [debug] [MainThread]: Wrote artifact SemanticManifest to /app/target/semantic_manifest.json
+[0m00:14:44.811550 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'af685c95-51bd-4d6b-819a-ef9ef3fb2e14', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa7f00370>]}
+[0m00:14:44.812002 [info ] [MainThread]: Found 10 models, 22 data tests, 3 sources, 487 macros
+[0m00:14:44.812317 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'af685c95-51bd-4d6b-819a-ef9ef3fb2e14', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa7b117c0>]}
+[0m00:14:44.813789 [info ] [MainThread]: 
+[0m00:14:44.814114 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m00:14:44.814364 [info ] [MainThread]: 
+[0m00:14:44.814851 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m00:14:44.816468 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_we-analysis'
+[0m00:14:44.817342 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m00:14:45.321746 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_we-analysis, now list_we-analysis_Sales_Test_dev)
+[0m00:14:45.323769 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_we-analysis_Sales_Test_prod'
+[0m00:14:45.326441 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m00:14:45.325733 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_we-analysis_Sales_Test_staging'
+[0m00:14:45.324981 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m00:14:45.327805 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m00:14:45.791730 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'af685c95-51bd-4d6b-819a-ef9ef3fb2e14', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa7cc2790>]}
+[0m00:14:45.793186 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m00:14:45.801485 [debug] [Thread-1  ]: Began running node model.square_pipeline_project.dim_time
+[0m00:14:45.802697 [info ] [Thread-1  ]: 1 of 1 START sql view model Sales_Test_prod.dim_time ........................... [RUN]
+[0m00:14:45.804062 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_we-analysis_Sales_Test_staging, now model.square_pipeline_project.dim_time)
+[0m00:14:45.805058 [debug] [Thread-1  ]: Began compiling node model.square_pipeline_project.dim_time
+[0m00:14:45.821812 [debug] [Thread-1  ]: Writing injected SQL for node "model.square_pipeline_project.dim_time"
+[0m00:14:45.824753 [debug] [Thread-1  ]: Began executing node model.square_pipeline_project.dim_time
+[0m00:14:45.862707 [debug] [Thread-1  ]: Writing runtime sql for node "model.square_pipeline_project.dim_time"
+[0m00:14:45.864302 [debug] [Thread-1  ]: On model.square_pipeline_project.dim_time: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "square_pipeline_project", "target_name": "dev", "node_id": "model.square_pipeline_project.dim_time"} */
+
+
+  create or replace view `we-analysis`.`Sales_Test_prod`.`dim_time`
+  OPTIONS()
+  as 
+
+WITH dates_and_times AS (
+    SELECT 
+        DISTINCT TIMESTAMP(order_created_at) AS full_timestamp
+    FROM `we-analysis`.`Sales_Test_dev`.`dev_order_items`
+),
+
+time_data AS (
+    SELECT
+        full_timestamp,
+        CAST(FORMAT_TIMESTAMP('%Y%m%d%H%M%S', full_timestamp)) AS date_time_key,
+        EXTRACT(YEAR FROM full_timestamp) AS year,
+        EXTRACT(MONTH FROM full_timestamp) AS month,
+        EXTRACT(DAY FROM full_timestamp) AS day,
+        EXTRACT(HOUR FROM full_timestamp) AS hour,
+        EXTRACT(MINUTE FROM full_timestamp) AS minute,
+        EXTRACT(SECOND FROM full_timestamp) AS second,
+        EXTRACT(DAYOFWEEK FROM full_timestamp) AS day_of_week,
+        CASE
+            WHEN EXTRACT(DAYOFWEEK FROM full_timestamp) IN (1, 7) THEN TRUE
+            ELSE FALSE
+        END AS is_weekend
+    FROM dates_and_times
+)
+
+SELECT * FROM time_data;
+
+
+[0m00:14:45.864732 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m00:14:46.249499 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=we-analysis&j=bq:US:9b911791-e60c-4802-9ee7-3fa5348d9951&page=queryresults
+[0m00:14:46.251884 [error] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=we-analysis&j=bq:US:9b911791-e60c-4802-9ee7-3fa5348d9951&page=queryresults
+[0m00:14:46.270452 [debug] [Thread-1  ]: Database Error in model dim_time (square_pipeline_project/models/prod/dim_time.sql)
+  Syntax error: Expected keyword AS but got ")" at [17:62]
+  compiled code at target/run/square_pipeline_project/square_pipeline_project/models/prod/dim_time.sql
+[0m00:14:46.277730 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'af685c95-51bd-4d6b-819a-ef9ef3fb2e14', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa7a296a0>]}
+[0m00:14:46.279812 [error] [Thread-1  ]: 1 of 1 ERROR creating sql view model Sales_Test_prod.dim_time .................. [[31mERROR[0m in 0.47s]
+[0m00:14:46.280761 [debug] [Thread-1  ]: Finished running node model.square_pipeline_project.dim_time
+[0m00:14:46.281713 [debug] [Thread-7  ]: Marking all children of 'model.square_pipeline_project.dim_time' to be skipped because of status 'error'.  Reason: Database Error in model dim_time (square_pipeline_project/models/prod/dim_time.sql)
+  Syntax error: Expected keyword AS but got ")" at [17:62]
+  compiled code at target/run/square_pipeline_project/square_pipeline_project/models/prod/dim_time.sql.
+[0m00:14:46.285847 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m00:14:46.289203 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m00:14:46.289715 [debug] [MainThread]: Connection 'list_we-analysis_Sales_Test_dev' was properly closed.
+[0m00:14:46.290125 [debug] [MainThread]: Connection 'list_we-analysis_Sales_Test_prod' was properly closed.
+[0m00:14:46.290439 [debug] [MainThread]: Connection 'model.square_pipeline_project.dim_time' was properly closed.
+[0m00:14:46.291006 [info ] [MainThread]: 
+[0m00:14:46.291747 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 1.48 seconds (1.48s).
+[0m00:14:46.293471 [debug] [MainThread]: Command end result
+[0m00:14:46.346777 [debug] [MainThread]: Wrote artifact WritableManifest to /app/target/manifest.json
+[0m00:14:46.350028 [debug] [MainThread]: Wrote artifact SemanticManifest to /app/target/semantic_manifest.json
+[0m00:14:46.355072 [debug] [MainThread]: Wrote artifact RunExecutionResult to /app/target/run_results.json
+[0m00:14:46.355376 [info ] [MainThread]: 
+[0m00:14:46.355717 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m00:14:46.356119 [info ] [MainThread]: 
+[0m00:14:46.356522 [error] [MainThread]:   Database Error in model dim_time (square_pipeline_project/models/prod/dim_time.sql)
+  Syntax error: Expected keyword AS but got ")" at [17:62]
+  compiled code at target/run/square_pipeline_project/square_pipeline_project/models/prod/dim_time.sql
+[0m00:14:46.356865 [info ] [MainThread]: 
+[0m00:14:46.357352 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 TOTAL=1
+[0m00:14:46.359554 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 3.0044317, "process_in_blocks": "0", "process_kernel_time": 0.886164, "process_mem_max_rss": "202584", "process_out_blocks": "3478", "process_user_time": 2.908729}
+[0m00:14:46.360470 [debug] [MainThread]: Command `dbt run` failed at 00:14:46.360406 after 3.01 seconds
+[0m00:14:46.360889 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffac1230a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffabed07c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffad280340>]}
+[0m00:14:46.361202 [debug] [MainThread]: Flushing usage events
+[0m00:14:46.558576 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m00:16:31.874438 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9e753160>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9db0cca0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9db0cd00>]}
+
+
+============================== 00:16:31.877071 | 08f7b748-f5ec-4c57-9f29-182d29496fd4 ==============================
+[0m00:16:31.877071 [info ] [MainThread]: Running with dbt=1.9.0
+[0m00:16:31.877588 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/app/.dbt', 'debug': 'False', 'version_check': 'True', 'log_path': '/app/logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'log_format': 'default', 'introspect': 'True', 'target_path': 'None', 'invocation_command': 'dbt run --select square_pipeline_project/models/prod/dim_time.sql', 'send_anonymous_usage_stats': 'True'}
+[0m00:16:32.341313 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '08f7b748-f5ec-4c57-9f29-182d29496fd4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9e501280>]}
+[0m00:16:32.374269 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '08f7b748-f5ec-4c57-9f29-182d29496fd4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9e5e0d30>]}
+[0m00:16:32.374956 [info ] [MainThread]: Registered adapter: bigquery=1.9.0
+[0m00:16:32.462044 [debug] [MainThread]: checksum: c99e828bba267739642b5a3ce85f17518764ea526e0e6c4fdc649171c1a66bff, vars: {}, profile: , target: , version: 1.9.0
+[0m00:16:32.604343 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m00:16:32.604939 [debug] [MainThread]: Partial parsing: updated file: square_pipeline_project://square_pipeline_project/models/prod/dim_time.sql
+[0m00:16:32.847650 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '08f7b748-f5ec-4c57-9f29-182d29496fd4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9a1b2f10>]}
+[0m00:16:32.917792 [debug] [MainThread]: Wrote artifact WritableManifest to /app/target/manifest.json
+[0m00:16:32.919988 [debug] [MainThread]: Wrote artifact SemanticManifest to /app/target/semantic_manifest.json
+[0m00:16:32.927881 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '08f7b748-f5ec-4c57-9f29-182d29496fd4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9a504820>]}
+[0m00:16:32.928228 [info ] [MainThread]: Found 10 models, 22 data tests, 3 sources, 487 macros
+[0m00:16:32.928609 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '08f7b748-f5ec-4c57-9f29-182d29496fd4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9a112430>]}
+[0m00:16:32.930163 [info ] [MainThread]: 
+[0m00:16:32.930519 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m00:16:32.930857 [info ] [MainThread]: 
+[0m00:16:32.931572 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m00:16:32.932493 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_we-analysis'
+[0m00:16:32.932888 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m00:16:33.442320 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_we-analysis, now list_we-analysis_Sales_Test_dev)
+[0m00:16:33.444522 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_we-analysis_Sales_Test_prod'
+[0m00:16:33.446984 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m00:16:33.446483 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_we-analysis_Sales_Test_staging'
+[0m00:16:33.445992 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m00:16:33.495834 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m00:16:34.013970 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '08f7b748-f5ec-4c57-9f29-182d29496fd4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9a504a00>]}
+[0m00:16:34.016836 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m00:16:34.026450 [debug] [Thread-1  ]: Began running node model.square_pipeline_project.dim_time
+[0m00:16:34.027721 [info ] [Thread-1  ]: 1 of 1 START sql view model Sales_Test_prod.dim_time ........................... [RUN]
+[0m00:16:34.028820 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_we-analysis_Sales_Test_staging, now model.square_pipeline_project.dim_time)
+[0m00:16:34.029691 [debug] [Thread-1  ]: Began compiling node model.square_pipeline_project.dim_time
+[0m00:16:34.045450 [debug] [Thread-1  ]: Writing injected SQL for node "model.square_pipeline_project.dim_time"
+[0m00:16:34.048839 [debug] [Thread-1  ]: Began executing node model.square_pipeline_project.dim_time
+[0m00:16:34.085860 [debug] [Thread-1  ]: Writing runtime sql for node "model.square_pipeline_project.dim_time"
+[0m00:16:34.088155 [debug] [Thread-1  ]: On model.square_pipeline_project.dim_time: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "square_pipeline_project", "target_name": "dev", "node_id": "model.square_pipeline_project.dim_time"} */
+
+
+  create or replace view `we-analysis`.`Sales_Test_prod`.`dim_time`
+  OPTIONS()
+  as 
+
+WITH dates_and_times AS (
+    SELECT 
+        DISTINCT TIMESTAMP(order_created_at) AS full_timestamp
+    FROM `we-analysis`.`Sales_Test_dev`.`dev_order_items`
+),
+
+time_data AS (
+    SELECT
+        full_timestamp,
+        CAST(FORMAT_TIMESTAMP('%Y%m%d%H%M%S', full_timestamp) AS INT64) AS date_time_key,
+        EXTRACT(YEAR FROM full_timestamp) AS year,
+        EXTRACT(MONTH FROM full_timestamp) AS month,
+        EXTRACT(DAY FROM full_timestamp) AS day,
+        EXTRACT(HOUR FROM full_timestamp) AS hour,
+        EXTRACT(MINUTE FROM full_timestamp) AS minute,
+        EXTRACT(SECOND FROM full_timestamp) AS second,
+        EXTRACT(DAYOFWEEK FROM full_timestamp) AS day_of_week,
+        CASE
+            WHEN EXTRACT(DAYOFWEEK FROM full_timestamp) IN (1, 7) THEN TRUE
+            ELSE FALSE
+        END AS is_weekend
+    FROM dates_and_times
+)
+
+SELECT * FROM time_data;
+
+
+[0m00:16:34.088977 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m00:16:34.805940 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=we-analysis&j=bq:US:c651a541-8064-421f-8a97-27fb4624d861&page=queryresults
+[0m00:16:35.381166 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '08f7b748-f5ec-4c57-9f29-182d29496fd4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9dbecdf0>]}
+[0m00:16:35.382052 [info ] [Thread-1  ]: 1 of 1 OK created sql view model Sales_Test_prod.dim_time ...................... [[32mCREATE VIEW (0 processed)[0m in 1.35s]
+[0m00:16:35.382907 [debug] [Thread-1  ]: Finished running node model.square_pipeline_project.dim_time
+[0m00:16:35.386509 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m00:16:35.388675 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m00:16:35.388985 [debug] [MainThread]: Connection 'list_we-analysis_Sales_Test_dev' was properly closed.
+[0m00:16:35.389282 [debug] [MainThread]: Connection 'list_we-analysis_Sales_Test_prod' was properly closed.
+[0m00:16:35.389545 [debug] [MainThread]: Connection 'model.square_pipeline_project.dim_time' was properly closed.
+[0m00:16:35.389938 [info ] [MainThread]: 
+[0m00:16:35.390302 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 2.46 seconds (2.46s).
+[0m00:16:35.391008 [debug] [MainThread]: Command end result
+[0m00:16:35.514898 [debug] [MainThread]: Wrote artifact WritableManifest to /app/target/manifest.json
+[0m00:16:35.516370 [debug] [MainThread]: Wrote artifact SemanticManifest to /app/target/semantic_manifest.json
+[0m00:16:35.520308 [debug] [MainThread]: Wrote artifact RunExecutionResult to /app/target/run_results.json
+[0m00:16:35.520528 [info ] [MainThread]: 
+[0m00:16:35.520946 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m00:16:35.521267 [info ] [MainThread]: 
+[0m00:16:35.521653 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m00:16:35.522853 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 3.6844785, "process_in_blocks": "0", "process_kernel_time": 0.362985, "process_mem_max_rss": "207152", "process_out_blocks": "3478", "process_user_time": 2.711302}
+[0m00:16:35.523292 [debug] [MainThread]: Command `dbt run` succeeded at 00:16:35.523235 after 3.69 seconds
+[0m00:16:35.523576 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9e753160>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9e5d0a00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff99d96d00>]}
+[0m00:16:35.523820 [debug] [MainThread]: Flushing usage events
+[0m00:16:35.728084 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m00:19:46.027319 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffab203070>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffaa5bd280>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffaa5bd220>]}
+
+
+============================== 00:19:46.031060 | 8f2bce71-854c-4a26-b5f9-f9b0f1794805 ==============================
+[0m00:19:46.031060 [info ] [MainThread]: Running with dbt=1.9.0
+[0m00:19:46.031913 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'version_check': 'True', 'log_path': '/app/logs', 'fail_fast': 'False', 'profiles_dir': '/app/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'log_format': 'default', 'invocation_command': 'dbt run --select square_pipeline_project/models/prod/fact_sales.sql', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m00:19:46.538818 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '8f2bce71-854c-4a26-b5f9-f9b0f1794805', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffac37ff40>]}
+[0m00:19:46.569336 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '8f2bce71-854c-4a26-b5f9-f9b0f1794805', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffaafe6ac0>]}
+[0m00:19:46.569802 [info ] [MainThread]: Registered adapter: bigquery=1.9.0
+[0m00:19:46.637456 [debug] [MainThread]: checksum: c99e828bba267739642b5a3ce85f17518764ea526e0e6c4fdc649171c1a66bff, vars: {}, profile: , target: , version: 1.9.0
+[0m00:19:46.780124 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m00:19:46.780679 [debug] [MainThread]: Partial parsing: updated file: square_pipeline_project://square_pipeline_project/models/prod/fact_sales.sql
+[0m00:19:47.034088 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '8f2bce71-854c-4a26-b5f9-f9b0f1794805', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa6bb0130>]}
+[0m00:19:47.108325 [debug] [MainThread]: Wrote artifact WritableManifest to /app/target/manifest.json
+[0m00:19:47.110532 [debug] [MainThread]: Wrote artifact SemanticManifest to /app/target/semantic_manifest.json
+[0m00:19:47.118708 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '8f2bce71-854c-4a26-b5f9-f9b0f1794805', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffaa63ce20>]}
+[0m00:19:47.119073 [info ] [MainThread]: Found 10 models, 22 data tests, 3 sources, 487 macros
+[0m00:19:47.119514 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '8f2bce71-854c-4a26-b5f9-f9b0f1794805', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa6b6c310>]}
+[0m00:19:47.121471 [info ] [MainThread]: 
+[0m00:19:47.121765 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m00:19:47.122023 [info ] [MainThread]: 
+[0m00:19:47.122440 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m00:19:47.123125 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_we-analysis'
+[0m00:19:47.123491 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m00:19:47.570674 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_we-analysis, now list_we-analysis_Sales_Test_staging)
+[0m00:19:47.571904 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_we-analysis_Sales_Test_dev'
+[0m00:19:47.573216 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m00:19:47.572823 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_we-analysis_Sales_Test_prod'
+[0m00:19:47.572442 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m00:19:47.573883 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m00:19:48.014445 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '8f2bce71-854c-4a26-b5f9-f9b0f1794805', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffab7e6f40>]}
+[0m00:19:48.016195 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m00:19:48.023456 [debug] [Thread-1  ]: Began running node model.square_pipeline_project.fact_sales
+[0m00:19:48.024705 [info ] [Thread-1  ]: 1 of 1 START sql view model Sales_Test_prod.fact_sales ......................... [RUN]
+[0m00:19:48.026039 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_we-analysis_Sales_Test_staging, now model.square_pipeline_project.fact_sales)
+[0m00:19:48.026853 [debug] [Thread-1  ]: Began compiling node model.square_pipeline_project.fact_sales
+[0m00:19:48.042916 [debug] [Thread-1  ]: Writing injected SQL for node "model.square_pipeline_project.fact_sales"
+[0m00:19:48.046140 [debug] [Thread-1  ]: Began executing node model.square_pipeline_project.fact_sales
+[0m00:19:48.080397 [debug] [Thread-1  ]: Writing runtime sql for node "model.square_pipeline_project.fact_sales"
+[0m00:19:48.082095 [debug] [Thread-1  ]: On model.square_pipeline_project.fact_sales: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "square_pipeline_project", "target_name": "dev", "node_id": "model.square_pipeline_project.fact_sales"} */
+
+
+  create or replace view `we-analysis`.`Sales_Test_prod`.`fact_sales`
+  OPTIONS()
+  as 
+
+WITH fact_sales AS (
+    SELECT
+        op.payment_id,
+        op.order_id,
+        oi.line_item_id,
+        CAST(FORMAT_TIMESTAMP('%Y%m%d%H%M%S', oi.full_timestamp) AS INT64) AS date_time_key,
+        oi.item_quantity,
+        oi.item_base_price,
+        oi.item_gross_sales,
+        op.order_tax,
+        op.order_tip,
+        oi.modifier_price,
+        op.payment_net_amount AS payment_total
+    FROM `we-analysis`.`Sales_Test_dev`.`dev_order_payments` op
+    JOIN `we-analysis`.`Sales_Test_dev`.`dev_order_items` oi
+    ON op.order_id = oi.order_id
+)
+
+SELECT * FROM fact_sales;
+
+
+[0m00:19:48.082527 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m00:19:48.837084 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=we-analysis&j=bq:US:694cdd04-36d2-4f76-8029-799075b34166&page=queryresults
+[0m00:19:48.989605 [error] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=we-analysis&j=bq:US:694cdd04-36d2-4f76-8029-799075b34166&page=queryresults
+[0m00:19:48.995627 [debug] [Thread-1  ]: Database Error in model fact_sales (square_pipeline_project/models/prod/fact_sales.sql)
+  Name full_timestamp not found inside oi at [13:50]
+  compiled code at target/run/square_pipeline_project/square_pipeline_project/models/prod/fact_sales.sql
+[0m00:19:49.000467 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8f2bce71-854c-4a26-b5f9-f9b0f1794805', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa6a29940>]}
+[0m00:19:49.002227 [error] [Thread-1  ]: 1 of 1 ERROR creating sql view model Sales_Test_prod.fact_sales ................ [[31mERROR[0m in 0.97s]
+[0m00:19:49.003390 [debug] [Thread-1  ]: Finished running node model.square_pipeline_project.fact_sales
+[0m00:19:49.004563 [debug] [Thread-7  ]: Marking all children of 'model.square_pipeline_project.fact_sales' to be skipped because of status 'error'.  Reason: Database Error in model fact_sales (square_pipeline_project/models/prod/fact_sales.sql)
+  Name full_timestamp not found inside oi at [13:50]
+  compiled code at target/run/square_pipeline_project/square_pipeline_project/models/prod/fact_sales.sql.
+[0m00:19:49.007971 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m00:19:49.011090 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m00:19:49.012381 [debug] [MainThread]: Connection 'model.square_pipeline_project.fact_sales' was properly closed.
+[0m00:19:49.013480 [debug] [MainThread]: Connection 'list_we-analysis_Sales_Test_dev' was properly closed.
+[0m00:19:49.014491 [debug] [MainThread]: Connection 'list_we-analysis_Sales_Test_prod' was properly closed.
+[0m00:19:49.016483 [info ] [MainThread]: 
+[0m00:19:49.018691 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 1.89 seconds (1.89s).
+[0m00:19:49.020222 [debug] [MainThread]: Command end result
+[0m00:19:49.084087 [debug] [MainThread]: Wrote artifact WritableManifest to /app/target/manifest.json
+[0m00:19:49.086668 [debug] [MainThread]: Wrote artifact SemanticManifest to /app/target/semantic_manifest.json
+[0m00:19:49.092590 [debug] [MainThread]: Wrote artifact RunExecutionResult to /app/target/run_results.json
+[0m00:19:49.092850 [info ] [MainThread]: 
+[0m00:19:49.093193 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m00:19:49.093571 [info ] [MainThread]: 
+[0m00:19:49.094082 [error] [MainThread]:   Database Error in model fact_sales (square_pipeline_project/models/prod/fact_sales.sql)
+  Name full_timestamp not found inside oi at [13:50]
+  compiled code at target/run/square_pipeline_project/square_pipeline_project/models/prod/fact_sales.sql
+[0m00:19:49.094491 [info ] [MainThread]: 
+[0m00:19:49.094976 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 TOTAL=1
+[0m00:19:49.097015 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 3.1071763, "process_in_blocks": "0", "process_kernel_time": 0.353229, "process_mem_max_rss": "202728", "process_out_blocks": "3476", "process_user_time": 2.621499}
+[0m00:19:49.097768 [debug] [MainThread]: Command `dbt run` failed at 00:19:49.097706 after 3.11 seconds
+[0m00:19:49.098272 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffab203070>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffac37ff40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8e3751c0>]}
+[0m00:19:49.098580 [debug] [MainThread]: Flushing usage events
+[0m00:19:49.278251 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m00:20:29.118622 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa66530a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa574d280>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa574d220>]}
+
+
+============================== 00:20:29.121598 | fbb5022b-123a-4501-b5e8-716dc8bc8d96 ==============================
+[0m00:20:29.121598 [info ] [MainThread]: Running with dbt=1.9.0
+[0m00:20:29.122288 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/app/logs', 'debug': 'False', 'profiles_dir': '/app/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'invocation_command': 'dbt run --select square_pipeline_project/models/prod/fact_sales.sql', 'send_anonymous_usage_stats': 'True'}
+[0m00:20:29.588452 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'fbb5022b-123a-4501-b5e8-716dc8bc8d96', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff898eba30>]}
+[0m00:20:29.621463 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'fbb5022b-123a-4501-b5e8-716dc8bc8d96', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff89817310>]}
+[0m00:20:29.622037 [info ] [MainThread]: Registered adapter: bigquery=1.9.0
+[0m00:20:29.708346 [debug] [MainThread]: checksum: c99e828bba267739642b5a3ce85f17518764ea526e0e6c4fdc649171c1a66bff, vars: {}, profile: , target: , version: 1.9.0
+[0m00:20:29.850501 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m00:20:29.851033 [debug] [MainThread]: Partial parsing: updated file: square_pipeline_project://square_pipeline_project/models/prod/fact_sales.sql
+[0m00:20:30.093182 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'fbb5022b-123a-4501-b5e8-716dc8bc8d96', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa1faf130>]}
+[0m00:20:30.163672 [debug] [MainThread]: Wrote artifact WritableManifest to /app/target/manifest.json
+[0m00:20:30.165855 [debug] [MainThread]: Wrote artifact SemanticManifest to /app/target/semantic_manifest.json
+[0m00:20:30.174365 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'fbb5022b-123a-4501-b5e8-716dc8bc8d96', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa1fdda30>]}
+[0m00:20:30.174741 [info ] [MainThread]: Found 10 models, 22 data tests, 3 sources, 487 macros
+[0m00:20:30.175024 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'fbb5022b-123a-4501-b5e8-716dc8bc8d96', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa1f10580>]}
+[0m00:20:30.176659 [info ] [MainThread]: 
+[0m00:20:30.177031 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m00:20:30.177530 [info ] [MainThread]: 
+[0m00:20:30.178173 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m00:20:30.179053 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_we-analysis'
+[0m00:20:30.179376 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m00:20:30.707262 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_we-analysis, now list_we-analysis_Sales_Test_staging)
+[0m00:20:30.709920 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_we-analysis_Sales_Test_prod'
+[0m00:20:30.712246 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m00:20:30.711404 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_we-analysis_Sales_Test_dev'
+[0m00:20:30.710609 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m00:20:30.768617 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m00:20:31.157559 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'fbb5022b-123a-4501-b5e8-716dc8bc8d96', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa642fa00>]}
+[0m00:20:31.158764 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m00:20:31.165651 [debug] [Thread-1  ]: Began running node model.square_pipeline_project.fact_sales
+[0m00:20:31.166940 [info ] [Thread-1  ]: 1 of 1 START sql view model Sales_Test_prod.fact_sales ......................... [RUN]
+[0m00:20:31.168413 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_we-analysis_Sales_Test_staging, now model.square_pipeline_project.fact_sales)
+[0m00:20:31.169129 [debug] [Thread-1  ]: Began compiling node model.square_pipeline_project.fact_sales
+[0m00:20:31.182829 [debug] [Thread-1  ]: Writing injected SQL for node "model.square_pipeline_project.fact_sales"
+[0m00:20:31.185235 [debug] [Thread-1  ]: Began executing node model.square_pipeline_project.fact_sales
+[0m00:20:31.215790 [debug] [Thread-1  ]: Writing runtime sql for node "model.square_pipeline_project.fact_sales"
+[0m00:20:31.217486 [debug] [Thread-1  ]: On model.square_pipeline_project.fact_sales: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "square_pipeline_project", "target_name": "dev", "node_id": "model.square_pipeline_project.fact_sales"} */
+
+
+  create or replace view `we-analysis`.`Sales_Test_prod`.`fact_sales`
+  OPTIONS()
+  as 
+
+WITH fact_sales AS (
+    SELECT
+        op.payment_id,
+        op.order_id,
+        oi.line_item_id,
+        CAST(FORMAT_TIMESTAMP('%Y%m%d%H%M%S', oi.order_created_at) AS INT64) AS date_time_key,
+        oi.item_quantity,
+        oi.item_base_price,
+        oi.item_gross_sales,
+        op.order_tax,
+        op.order_tip,
+        oi.modifier_price,
+        op.payment_net_amount AS payment_total
+    FROM `we-analysis`.`Sales_Test_dev`.`dev_order_payments` op
+    JOIN `we-analysis`.`Sales_Test_dev`.`dev_order_items` oi
+    ON op.order_id = oi.order_id
+)
+
+SELECT * FROM fact_sales;
+
+
+[0m00:20:31.217952 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m00:20:31.907554 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=we-analysis&j=bq:US:1e0d8bd8-2291-4740-8c64-d1c1ced43f35&page=queryresults
+[0m00:20:32.426765 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'fbb5022b-123a-4501-b5e8-716dc8bc8d96', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa1e2b730>]}
+[0m00:20:32.427601 [info ] [Thread-1  ]: 1 of 1 OK created sql view model Sales_Test_prod.fact_sales .................... [[32mCREATE VIEW (0 processed)[0m in 1.26s]
+[0m00:20:32.428322 [debug] [Thread-1  ]: Finished running node model.square_pipeline_project.fact_sales
+[0m00:20:32.429783 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m00:20:32.431460 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m00:20:32.431753 [debug] [MainThread]: Connection 'model.square_pipeline_project.fact_sales' was properly closed.
+[0m00:20:32.431969 [debug] [MainThread]: Connection 'list_we-analysis_Sales_Test_prod' was properly closed.
+[0m00:20:32.432181 [debug] [MainThread]: Connection 'list_we-analysis_Sales_Test_dev' was properly closed.
+[0m00:20:32.432455 [info ] [MainThread]: 
+[0m00:20:32.432893 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 2.25 seconds (2.25s).
+[0m00:20:32.434187 [debug] [MainThread]: Command end result
+[0m00:20:32.536313 [debug] [MainThread]: Wrote artifact WritableManifest to /app/target/manifest.json
+[0m00:20:32.538071 [debug] [MainThread]: Wrote artifact SemanticManifest to /app/target/semantic_manifest.json
+[0m00:20:32.542246 [debug] [MainThread]: Wrote artifact RunExecutionResult to /app/target/run_results.json
+[0m00:20:32.542475 [info ] [MainThread]: 
+[0m00:20:32.542968 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m00:20:32.543393 [info ] [MainThread]: 
+[0m00:20:32.543768 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m00:20:32.544772 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 3.4679506, "process_in_blocks": "0", "process_kernel_time": 0.339697, "process_mem_max_rss": "206908", "process_out_blocks": "3474", "process_user_time": 2.678269}
+[0m00:20:32.545248 [debug] [MainThread]: Command `dbt run` succeeded at 00:20:32.545158 after 3.47 seconds
+[0m00:20:32.545586 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa66530a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8986b3a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa234d8b0>]}
+[0m00:20:32.545880 [debug] [MainThread]: Flushing usage events
+[0m00:20:32.689586 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m01:38:20.408920 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb8c830a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb7d8d280>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb7d8d220>]}
+
+
+============================== 01:38:20.413621 | 8b612e71-9529-43ba-9cb4-8f8b09f0d53f ==============================
+[0m01:38:20.413621 [info ] [MainThread]: Running with dbt=1.9.0
+[0m01:38:20.414255 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_path': '/app/logs', 'profiles_dir': '/app/.dbt', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'invocation_command': 'dbt run --select square_pipeline_project/models/prod/dim_time.sql', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m01:38:21.301646 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '8b612e71-9529-43ba-9cb4-8f8b09f0d53f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb9df05b0>]}
+[0m01:38:21.333318 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '8b612e71-9529-43ba-9cb4-8f8b09f0d53f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb8437250>]}
+[0m01:38:21.333862 [info ] [MainThread]: Registered adapter: bigquery=1.9.0
+[0m01:38:21.428037 [debug] [MainThread]: checksum: c99e828bba267739642b5a3ce85f17518764ea526e0e6c4fdc649171c1a66bff, vars: {}, profile: , target: , version: 1.9.0
+[0m01:38:21.583063 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m01:38:21.583609 [debug] [MainThread]: Partial parsing: updated file: square_pipeline_project://square_pipeline_project/models/prod/dim_time.sql
+[0m01:38:21.845143 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '8b612e71-9529-43ba-9cb4-8f8b09f0d53f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb45b3130>]}
+[0m01:38:21.918989 [debug] [MainThread]: Wrote artifact WritableManifest to /app/target/manifest.json
+[0m01:38:21.921318 [debug] [MainThread]: Wrote artifact SemanticManifest to /app/target/semantic_manifest.json
+[0m01:38:21.931658 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '8b612e71-9529-43ba-9cb4-8f8b09f0d53f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb47f2730>]}
+[0m01:38:21.932085 [info ] [MainThread]: Found 10 models, 22 data tests, 3 sources, 487 macros
+[0m01:38:21.932543 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '8b612e71-9529-43ba-9cb4-8f8b09f0d53f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb47f2be0>]}
+[0m01:38:21.934320 [info ] [MainThread]: 
+[0m01:38:21.934659 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m01:38:21.935347 [info ] [MainThread]: 
+[0m01:38:21.935810 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m01:38:21.936708 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_we-analysis'
+[0m01:38:21.937262 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m01:38:22.513916 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_we-analysis, now list_we-analysis_Sales_Test_prod)
+[0m01:38:22.515146 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m01:38:22.516839 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_we-analysis_Sales_Test_dev'
+[0m01:38:22.518003 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_we-analysis_Sales_Test_staging'
+[0m01:38:22.530800 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m01:38:22.595788 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m01:38:23.036419 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '8b612e71-9529-43ba-9cb4-8f8b09f0d53f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb9908610>]}
+[0m01:38:23.038498 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m01:38:23.053379 [debug] [Thread-1  ]: Began running node model.square_pipeline_project.dim_time
+[0m01:38:23.055038 [info ] [Thread-1  ]: 1 of 1 START sql view model Sales_Test_prod.dim_time ........................... [RUN]
+[0m01:38:23.057150 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_we-analysis_Sales_Test_prod, now model.square_pipeline_project.dim_time)
+[0m01:38:23.058273 [debug] [Thread-1  ]: Began compiling node model.square_pipeline_project.dim_time
+[0m01:38:23.074987 [debug] [Thread-1  ]: Writing injected SQL for node "model.square_pipeline_project.dim_time"
+[0m01:38:23.080289 [debug] [Thread-1  ]: Began executing node model.square_pipeline_project.dim_time
+[0m01:38:23.154845 [debug] [Thread-1  ]: Writing runtime sql for node "model.square_pipeline_project.dim_time"
+[0m01:38:23.157970 [debug] [Thread-1  ]: On model.square_pipeline_project.dim_time: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "square_pipeline_project", "target_name": "dev", "node_id": "model.square_pipeline_project.dim_time"} */
+
+
+  create or replace view `we-analysis`.`Sales_Test_prod`.`dim_time`
+  OPTIONS()
+  as 
+
+WITH dates_and_times AS (
+    SELECT 
+        DISTINCT TIMESTAMP(order_created_at) AS full_timestamp
+    FROM `we-analysis`.`Sales_Test_dev`.`dev_order_items`
+),
+
+time_data AS (
+    SELECT
+        full_timestamp AS timestamp_utc,
+        full_timestamp  AT TIME ZONE 'UTC' AT TIME ZONE 'EST' AS timestamp_est,
+        CAST(FORMAT_TIMESTAMP('%Y%m%d%H%M%S', full_timestamp) AS INT64) AS date_time_key,
+        EXTRACT(YEAR FROM full_timestamp) AS year,
+        EXTRACT(MONTH FROM full_timestamp) AS month,
+        EXTRACT(DAY FROM full_timestamp) AS day,
+        EXTRACT(HOUR FROM full_timestamp) AS hour,
+        EXTRACT(MINUTE FROM full_timestamp) AS minute,
+        EXTRACT(SECOND FROM full_timestamp) AS second,
+        EXTRACT(DAYOFWEEK FROM full_timestamp) AS day_of_week,
+        CASE
+            WHEN EXTRACT(DAYOFWEEK FROM full_timestamp) IN (1, 7) THEN TRUE
+            ELSE FALSE
+        END AS is_weekend
+    FROM dates_and_times
+)
+
+SELECT * FROM time_data;
+
+
+[0m01:38:23.158569 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m01:38:23.570233 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=we-analysis&j=bq:US:306d3c9a-4276-4081-ac41-44122808b852&page=queryresults
+[0m01:38:23.572692 [error] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=we-analysis&j=bq:US:306d3c9a-4276-4081-ac41-44122808b852&page=queryresults
+[0m01:38:23.585444 [debug] [Thread-1  ]: Database Error in model dim_time (square_pipeline_project/models/prod/dim_time.sql)
+  Syntax error: Expected ")" but got keyword AT at [17:25]
+  compiled code at target/run/square_pipeline_project/square_pipeline_project/models/prod/dim_time.sql
+[0m01:38:23.590345 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8b612e71-9529-43ba-9cb4-8f8b09f0d53f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb8b1e9a0>]}
+[0m01:38:23.591763 [error] [Thread-1  ]: 1 of 1 ERROR creating sql view model Sales_Test_prod.dim_time .................. [[31mERROR[0m in 0.53s]
+[0m01:38:23.593017 [debug] [Thread-1  ]: Finished running node model.square_pipeline_project.dim_time
+[0m01:38:23.594194 [debug] [Thread-7  ]: Marking all children of 'model.square_pipeline_project.dim_time' to be skipped because of status 'error'.  Reason: Database Error in model dim_time (square_pipeline_project/models/prod/dim_time.sql)
+  Syntax error: Expected ")" but got keyword AT at [17:25]
+  compiled code at target/run/square_pipeline_project/square_pipeline_project/models/prod/dim_time.sql.
+[0m01:38:23.598311 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m01:38:23.601511 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m01:38:23.602036 [debug] [MainThread]: Connection 'model.square_pipeline_project.dim_time' was properly closed.
+[0m01:38:23.602504 [debug] [MainThread]: Connection 'list_we-analysis_Sales_Test_dev' was properly closed.
+[0m01:38:23.602871 [debug] [MainThread]: Connection 'list_we-analysis_Sales_Test_staging' was properly closed.
+[0m01:38:23.603415 [info ] [MainThread]: 
+[0m01:38:23.604014 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 1.67 seconds (1.67s).
+[0m01:38:23.605684 [debug] [MainThread]: Command end result
+[0m01:38:23.652906 [debug] [MainThread]: Wrote artifact WritableManifest to /app/target/manifest.json
+[0m01:38:23.655309 [debug] [MainThread]: Wrote artifact SemanticManifest to /app/target/semantic_manifest.json
+[0m01:38:23.660181 [debug] [MainThread]: Wrote artifact RunExecutionResult to /app/target/run_results.json
+[0m01:38:23.660455 [info ] [MainThread]: 
+[0m01:38:23.660926 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m01:38:23.661290 [info ] [MainThread]: 
+[0m01:38:23.661710 [error] [MainThread]:   Database Error in model dim_time (square_pipeline_project/models/prod/dim_time.sql)
+  Syntax error: Expected ")" but got keyword AT at [17:25]
+  compiled code at target/run/square_pipeline_project/square_pipeline_project/models/prod/dim_time.sql
+[0m01:38:23.661968 [info ] [MainThread]: 
+[0m01:38:23.662296 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 TOTAL=1
+[0m01:38:23.664644 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 3.305048, "process_in_blocks": "0", "process_kernel_time": 1.133591, "process_mem_max_rss": "202696", "process_out_blocks": "3481", "process_user_time": 2.884494}
+[0m01:38:23.665468 [debug] [MainThread]: Command `dbt run` failed at 01:38:23.665389 after 3.31 seconds
+[0m01:38:23.666459 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb8c830a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb47f2730>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb9de0340>]}
+[0m01:38:23.667041 [debug] [MainThread]: Flushing usage events
+[0m01:38:23.855511 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m01:38:39.614264 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff878c3070>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff869cd2e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff869cd280>]}
+
+
+============================== 01:38:39.616945 | 0fb8bc47-ffe7-4e86-9534-9483e992da62 ==============================
+[0m01:38:39.616945 [info ] [MainThread]: Running with dbt=1.9.0
+[0m01:38:39.617415 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/app/logs', 'debug': 'False', 'profiles_dir': '/app/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'invocation_command': 'dbt run --select square_pipeline_project/models/prod/dim_time.sql', 'introspect': 'True', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m01:38:40.056867 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '0fb8bc47-ffe7-4e86-9534-9483e992da62', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff6aa74700>]}
+[0m01:38:40.087417 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '0fb8bc47-ffe7-4e86-9534-9483e992da62', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff6aa0f8b0>]}
+[0m01:38:40.087881 [info ] [MainThread]: Registered adapter: bigquery=1.9.0
+[0m01:38:40.157637 [debug] [MainThread]: checksum: c99e828bba267739642b5a3ce85f17518764ea526e0e6c4fdc649171c1a66bff, vars: {}, profile: , target: , version: 1.9.0
+[0m01:38:40.311174 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m01:38:40.311798 [debug] [MainThread]: Partial parsing: updated file: square_pipeline_project://square_pipeline_project/models/prod/dim_time.sql
+[0m01:38:40.562635 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '0fb8bc47-ffe7-4e86-9534-9483e992da62', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff831b3130>]}
+[0m01:38:40.629808 [debug] [MainThread]: Wrote artifact WritableManifest to /app/target/manifest.json
+[0m01:38:40.631938 [debug] [MainThread]: Wrote artifact SemanticManifest to /app/target/semantic_manifest.json
+[0m01:38:40.639966 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '0fb8bc47-ffe7-4e86-9534-9483e992da62', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff83501970>]}
+[0m01:38:40.640340 [info ] [MainThread]: Found 10 models, 22 data tests, 3 sources, 487 macros
+[0m01:38:40.640743 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '0fb8bc47-ffe7-4e86-9534-9483e992da62', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff83114af0>]}
+[0m01:38:40.642327 [info ] [MainThread]: 
+[0m01:38:40.642649 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m01:38:40.643123 [info ] [MainThread]: 
+[0m01:38:40.643745 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m01:38:40.644452 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_we-analysis'
+[0m01:38:40.644767 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m01:38:41.042397 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_we-analysis, now list_we-analysis_Sales_Test_dev)
+[0m01:38:41.043889 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_we-analysis_Sales_Test_staging'
+[0m01:38:41.044620 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m01:38:41.045339 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_we-analysis_Sales_Test_prod'
+[0m01:38:41.046196 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m01:38:41.049227 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m01:38:41.523550 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '0fb8bc47-ffe7-4e86-9534-9483e992da62', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff86cdc640>]}
+[0m01:38:41.525823 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m01:38:41.534704 [debug] [Thread-1  ]: Began running node model.square_pipeline_project.dim_time
+[0m01:38:41.536422 [info ] [Thread-1  ]: 1 of 1 START sql view model Sales_Test_prod.dim_time ........................... [RUN]
+[0m01:38:41.537418 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_we-analysis_Sales_Test_prod, now model.square_pipeline_project.dim_time)
+[0m01:38:41.538255 [debug] [Thread-1  ]: Began compiling node model.square_pipeline_project.dim_time
+[0m01:38:41.552478 [debug] [Thread-1  ]: Writing injected SQL for node "model.square_pipeline_project.dim_time"
+[0m01:38:41.554261 [debug] [Thread-1  ]: Began executing node model.square_pipeline_project.dim_time
+[0m01:38:41.587152 [debug] [Thread-1  ]: Writing runtime sql for node "model.square_pipeline_project.dim_time"
+[0m01:38:41.588584 [debug] [Thread-1  ]: On model.square_pipeline_project.dim_time: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "square_pipeline_project", "target_name": "dev", "node_id": "model.square_pipeline_project.dim_time"} */
+
+
+  create or replace view `we-analysis`.`Sales_Test_prod`.`dim_time`
+  OPTIONS()
+  as 
+
+WITH dates_and_times AS (
+    SELECT 
+        DISTINCT TIMESTAMP(order_created_at) AS full_timestamp
+    FROM `we-analysis`.`Sales_Test_dev`.`dev_order_items`
+),
+
+time_data AS (
+    SELECT
+        full_timestamp AS timestamp_utc,
+        full_timestamp AT TIME ZONE 'UTC' AT TIME ZONE 'EST' AS timestamp_est,
+        CAST(FORMAT_TIMESTAMP('%Y%m%d%H%M%S', full_timestamp) AS INT64) AS date_time_key,
+        EXTRACT(YEAR FROM full_timestamp) AS year,
+        EXTRACT(MONTH FROM full_timestamp) AS month,
+        EXTRACT(DAY FROM full_timestamp) AS day,
+        EXTRACT(HOUR FROM full_timestamp) AS hour,
+        EXTRACT(MINUTE FROM full_timestamp) AS minute,
+        EXTRACT(SECOND FROM full_timestamp) AS second,
+        EXTRACT(DAYOFWEEK FROM full_timestamp) AS day_of_week,
+        CASE
+            WHEN EXTRACT(DAYOFWEEK FROM full_timestamp) IN (1, 7) THEN TRUE
+            ELSE FALSE
+        END AS is_weekend
+    FROM dates_and_times
+)
+
+SELECT * FROM time_data;
+
+
+[0m01:38:41.589052 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m01:38:41.976829 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=we-analysis&j=bq:US:f36357de-a89a-4281-b71f-d01eb869f888&page=queryresults
+[0m01:38:41.982150 [error] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=we-analysis&j=bq:US:f36357de-a89a-4281-b71f-d01eb869f888&page=queryresults
+[0m01:38:42.009411 [debug] [Thread-1  ]: Database Error in model dim_time (square_pipeline_project/models/prod/dim_time.sql)
+  Syntax error: Expected ")" but got keyword AT at [17:24]
+  compiled code at target/run/square_pipeline_project/square_pipeline_project/models/prod/dim_time.sql
+[0m01:38:42.012838 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '0fb8bc47-ffe7-4e86-9534-9483e992da62', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff87aa3a90>]}
+[0m01:38:42.013891 [error] [Thread-1  ]: 1 of 1 ERROR creating sql view model Sales_Test_prod.dim_time .................. [[31mERROR[0m in 0.47s]
+[0m01:38:42.014794 [debug] [Thread-1  ]: Finished running node model.square_pipeline_project.dim_time
+[0m01:38:42.015495 [debug] [Thread-7  ]: Marking all children of 'model.square_pipeline_project.dim_time' to be skipped because of status 'error'.  Reason: Database Error in model dim_time (square_pipeline_project/models/prod/dim_time.sql)
+  Syntax error: Expected ")" but got keyword AT at [17:24]
+  compiled code at target/run/square_pipeline_project/square_pipeline_project/models/prod/dim_time.sql.
+[0m01:38:42.017041 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m01:38:42.019019 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m01:38:42.019326 [debug] [MainThread]: Connection 'list_we-analysis_Sales_Test_dev' was properly closed.
+[0m01:38:42.019595 [debug] [MainThread]: Connection 'list_we-analysis_Sales_Test_staging' was properly closed.
+[0m01:38:42.019870 [debug] [MainThread]: Connection 'model.square_pipeline_project.dim_time' was properly closed.
+[0m01:38:42.020198 [info ] [MainThread]: 
+[0m01:38:42.020570 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 1.38 seconds (1.38s).
+[0m01:38:42.022010 [debug] [MainThread]: Command end result
+[0m01:38:42.103950 [debug] [MainThread]: Wrote artifact WritableManifest to /app/target/manifest.json
+[0m01:38:42.110819 [debug] [MainThread]: Wrote artifact SemanticManifest to /app/target/semantic_manifest.json
+[0m01:38:42.117291 [debug] [MainThread]: Wrote artifact RunExecutionResult to /app/target/run_results.json
+[0m01:38:42.118061 [info ] [MainThread]: 
+[0m01:38:42.135142 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m01:38:42.136715 [info ] [MainThread]: 
+[0m01:38:42.138587 [error] [MainThread]:   Database Error in model dim_time (square_pipeline_project/models/prod/dim_time.sql)
+  Syntax error: Expected ")" but got keyword AT at [17:24]
+  compiled code at target/run/square_pipeline_project/square_pipeline_project/models/prod/dim_time.sql
+[0m01:38:42.143288 [info ] [MainThread]: 
+[0m01:38:42.183226 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 TOTAL=1
+[0m01:38:42.414464 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 2.833959, "process_in_blocks": "0", "process_kernel_time": 0.350294, "process_mem_max_rss": "202760", "process_out_blocks": "3481", "process_user_time": 2.863041}
+[0m01:38:42.417952 [debug] [MainThread]: Command `dbt run` failed at 01:38:42.417704 after 2.84 seconds
+[0m01:38:42.419226 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff878c3070>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff6aa74700>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8776bfa0>]}
+[0m01:38:42.420020 [debug] [MainThread]: Flushing usage events
+[0m01:38:42.549752 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m01:41:05.996218 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff879d30d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff86d8c2e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff86d8c280>]}
+
+
+============================== 01:41:05.998994 | eea3ef35-27d6-4426-806a-bdeb445b568a ==============================
+[0m01:41:05.998994 [info ] [MainThread]: Running with dbt=1.9.0
+[0m01:41:05.999521 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/app/.dbt', 'debug': 'False', 'warn_error': 'None', 'log_path': '/app/logs', 'version_check': 'True', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt run --select square_pipeline_project/models/prod/dim_time.sql', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m01:41:06.559432 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'eea3ef35-27d6-4426-806a-bdeb445b568a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff88b41760>]}
+[0m01:41:06.590110 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'eea3ef35-27d6-4426-806a-bdeb445b568a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff877b6460>]}
+[0m01:41:06.590625 [info ] [MainThread]: Registered adapter: bigquery=1.9.0
+[0m01:41:06.657340 [debug] [MainThread]: checksum: c99e828bba267739642b5a3ce85f17518764ea526e0e6c4fdc649171c1a66bff, vars: {}, profile: , target: , version: 1.9.0
+[0m01:41:06.806539 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m01:41:06.807052 [debug] [MainThread]: Partial parsing: updated file: square_pipeline_project://square_pipeline_project/models/prod/dim_time.sql
+[0m01:41:07.051058 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'eea3ef35-27d6-4426-806a-bdeb445b568a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff833b2130>]}
+[0m01:41:07.125094 [debug] [MainThread]: Wrote artifact WritableManifest to /app/target/manifest.json
+[0m01:41:07.127310 [debug] [MainThread]: Wrote artifact SemanticManifest to /app/target/semantic_manifest.json
+[0m01:41:07.135840 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'eea3ef35-27d6-4426-806a-bdeb445b568a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff833115e0>]}
+[0m01:41:07.136231 [info ] [MainThread]: Found 10 models, 22 data tests, 3 sources, 487 macros
+[0m01:41:07.136588 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'eea3ef35-27d6-4426-806a-bdeb445b568a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff834cd850>]}
+[0m01:41:07.138275 [info ] [MainThread]: 
+[0m01:41:07.138688 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m01:41:07.139234 [info ] [MainThread]: 
+[0m01:41:07.139781 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m01:41:07.140852 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_we-analysis'
+[0m01:41:07.141185 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m01:41:07.631929 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_we-analysis, now list_we-analysis_Sales_Test_staging)
+[0m01:41:07.633612 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_we-analysis_Sales_Test_prod'
+[0m01:41:07.634624 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m01:41:07.635376 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_we-analysis_Sales_Test_dev'
+[0m01:41:07.636218 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m01:41:07.639363 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m01:41:08.094293 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'eea3ef35-27d6-4426-806a-bdeb445b568a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff87238640>]}
+[0m01:41:08.095663 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m01:41:08.104951 [debug] [Thread-1  ]: Began running node model.square_pipeline_project.dim_time
+[0m01:41:08.106197 [info ] [Thread-1  ]: 1 of 1 START sql view model Sales_Test_prod.dim_time ........................... [RUN]
+[0m01:41:08.107446 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_we-analysis_Sales_Test_staging, now model.square_pipeline_project.dim_time)
+[0m01:41:08.108193 [debug] [Thread-1  ]: Began compiling node model.square_pipeline_project.dim_time
+[0m01:41:08.121833 [debug] [Thread-1  ]: Writing injected SQL for node "model.square_pipeline_project.dim_time"
+[0m01:41:08.132706 [debug] [Thread-1  ]: Began executing node model.square_pipeline_project.dim_time
+[0m01:41:08.167014 [debug] [Thread-1  ]: Writing runtime sql for node "model.square_pipeline_project.dim_time"
+[0m01:41:08.168490 [debug] [Thread-1  ]: On model.square_pipeline_project.dim_time: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "square_pipeline_project", "target_name": "dev", "node_id": "model.square_pipeline_project.dim_time"} */
+
+
+  create or replace view `we-analysis`.`Sales_Test_prod`.`dim_time`
+  OPTIONS()
+  as 
+
+WITH dates_and_times AS (
+    SELECT 
+        DISTINCT TIMESTAMP(order_created_at) AS full_timestamp
+    FROM `we-analysis`.`Sales_Test_dev`.`dev_order_items`
+),
+
+time_data AS (
+    SELECT
+        full_timestamp AS timestamp_utc,
+        full_timestamp AT TIME ZONE 'UTC' AT TIME ZONE 'America/New_York' AS timestamp_est,
+        CAST(FORMAT_TIMESTAMP('%Y%m%d%H%M%S', full_timestamp) AS INT64) AS date_time_key,
+        EXTRACT(YEAR FROM full_timestamp) AS year,
+        EXTRACT(MONTH FROM full_timestamp) AS month,
+        EXTRACT(DAY FROM full_timestamp) AS day,
+        EXTRACT(HOUR FROM full_timestamp) AS hour,
+        EXTRACT(MINUTE FROM full_timestamp) AS minute,
+        EXTRACT(SECOND FROM full_timestamp) AS second,
+        EXTRACT(DAYOFWEEK FROM full_timestamp) AS day_of_week,
+        CASE
+            WHEN EXTRACT(DAYOFWEEK FROM full_timestamp) IN (1, 7) THEN TRUE
+            ELSE FALSE
+        END AS is_weekend
+    FROM dates_and_times
+)
+
+SELECT * FROM time_data;
+
+
+[0m01:41:08.168909 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m01:41:08.571228 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=we-analysis&j=bq:US:36af5131-3f6c-46f3-ac6f-3b747cdfe9ef&page=queryresults
+[0m01:41:08.573438 [error] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=we-analysis&j=bq:US:36af5131-3f6c-46f3-ac6f-3b747cdfe9ef&page=queryresults
+[0m01:41:08.581379 [debug] [Thread-1  ]: Database Error in model dim_time (square_pipeline_project/models/prod/dim_time.sql)
+  Syntax error: Expected ")" but got keyword AT at [17:24]
+  compiled code at target/run/square_pipeline_project/square_pipeline_project/models/prod/dim_time.sql
+[0m01:41:08.587472 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'eea3ef35-27d6-4426-806a-bdeb445b568a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8328f610>]}
+[0m01:41:08.589406 [error] [Thread-1  ]: 1 of 1 ERROR creating sql view model Sales_Test_prod.dim_time .................. [[31mERROR[0m in 0.48s]
+[0m01:41:08.590997 [debug] [Thread-1  ]: Finished running node model.square_pipeline_project.dim_time
+[0m01:41:08.592611 [debug] [Thread-7  ]: Marking all children of 'model.square_pipeline_project.dim_time' to be skipped because of status 'error'.  Reason: Database Error in model dim_time (square_pipeline_project/models/prod/dim_time.sql)
+  Syntax error: Expected ")" but got keyword AT at [17:24]
+  compiled code at target/run/square_pipeline_project/square_pipeline_project/models/prod/dim_time.sql.
+[0m01:41:08.595947 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m01:41:08.599260 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m01:41:08.599861 [debug] [MainThread]: Connection 'model.square_pipeline_project.dim_time' was properly closed.
+[0m01:41:08.600380 [debug] [MainThread]: Connection 'list_we-analysis_Sales_Test_prod' was properly closed.
+[0m01:41:08.600850 [debug] [MainThread]: Connection 'list_we-analysis_Sales_Test_dev' was properly closed.
+[0m01:41:08.601452 [info ] [MainThread]: 
+[0m01:41:08.602139 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 1.46 seconds (1.46s).
+[0m01:41:08.603633 [debug] [MainThread]: Command end result
+[0m01:41:08.647756 [debug] [MainThread]: Wrote artifact WritableManifest to /app/target/manifest.json
+[0m01:41:08.651202 [debug] [MainThread]: Wrote artifact SemanticManifest to /app/target/semantic_manifest.json
+[0m01:41:08.656488 [debug] [MainThread]: Wrote artifact RunExecutionResult to /app/target/run_results.json
+[0m01:41:08.656844 [info ] [MainThread]: 
+[0m01:41:08.657244 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m01:41:08.657662 [info ] [MainThread]: 
+[0m01:41:08.658351 [error] [MainThread]:   Database Error in model dim_time (square_pipeline_project/models/prod/dim_time.sql)
+  Syntax error: Expected ")" but got keyword AT at [17:24]
+  compiled code at target/run/square_pipeline_project/square_pipeline_project/models/prod/dim_time.sql
+[0m01:41:08.658682 [info ] [MainThread]: 
+[0m01:41:08.659163 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 TOTAL=1
+[0m01:41:08.661891 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 2.7045932, "process_in_blocks": "0", "process_kernel_time": 0.366388, "process_mem_max_rss": "202544", "process_out_blocks": "3482", "process_user_time": 2.610642}
+[0m01:41:08.662888 [debug] [MainThread]: Command `dbt run` failed at 01:41:08.662817 after 2.71 seconds
+[0m01:41:08.663384 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff879d30d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff88b41760>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8781b4c0>]}
+[0m01:41:08.663729 [debug] [MainThread]: Flushing usage events
+[0m01:41:08.845046 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m01:42:58.472736 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff977d3100>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff96b992e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff96b99280>]}
+
+
+============================== 01:42:58.475401 | ddb5efa9-9c4d-4a42-8c8c-4dfb4860a5f9 ==============================
+[0m01:42:58.475401 [info ] [MainThread]: Running with dbt=1.9.0
+[0m01:42:58.476089 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/app/.dbt', 'debug': 'False', 'warn_error': 'None', 'log_path': '/app/logs', 'version_check': 'True', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt run --select square_pipeline_project/models/prod/dim_time.sql', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m01:42:59.044090 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'ddb5efa9-9c4d-4a42-8c8c-4dfb4860a5f9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7aa6d6a0>]}
+[0m01:42:59.075835 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'ddb5efa9-9c4d-4a42-8c8c-4dfb4860a5f9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff96bfc2b0>]}
+[0m01:42:59.076438 [info ] [MainThread]: Registered adapter: bigquery=1.9.0
+[0m01:42:59.166623 [debug] [MainThread]: checksum: c99e828bba267739642b5a3ce85f17518764ea526e0e6c4fdc649171c1a66bff, vars: {}, profile: , target: , version: 1.9.0
+[0m01:42:59.319067 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m01:42:59.319723 [debug] [MainThread]: Partial parsing: updated file: square_pipeline_project://square_pipeline_project/models/prod/dim_time.sql
+[0m01:42:59.626563 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'ddb5efa9-9c4d-4a42-8c8c-4dfb4860a5f9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff931b1130>]}
+[0m01:42:59.725408 [debug] [MainThread]: Wrote artifact WritableManifest to /app/target/manifest.json
+[0m01:42:59.731267 [debug] [MainThread]: Wrote artifact SemanticManifest to /app/target/semantic_manifest.json
+[0m01:42:59.743662 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'ddb5efa9-9c4d-4a42-8c8c-4dfb4860a5f9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff934fda60>]}
+[0m01:42:59.744136 [info ] [MainThread]: Found 10 models, 22 data tests, 3 sources, 487 macros
+[0m01:42:59.744546 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'ddb5efa9-9c4d-4a42-8c8c-4dfb4860a5f9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff931732b0>]}
+[0m01:42:59.746464 [info ] [MainThread]: 
+[0m01:42:59.746781 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m01:42:59.747055 [info ] [MainThread]: 
+[0m01:42:59.747511 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m01:42:59.748226 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_we-analysis'
+[0m01:42:59.748591 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m01:43:00.168065 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_we-analysis, now list_we-analysis_Sales_Test_dev)
+[0m01:43:00.169053 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_we-analysis_Sales_Test_staging'
+[0m01:43:00.170704 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m01:43:00.170110 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_we-analysis_Sales_Test_prod'
+[0m01:43:00.169562 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m01:43:00.226376 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m01:43:00.648300 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'ddb5efa9-9c4d-4a42-8c8c-4dfb4860a5f9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff975f94f0>]}
+[0m01:43:00.649541 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m01:43:00.655738 [debug] [Thread-1  ]: Began running node model.square_pipeline_project.dim_time
+[0m01:43:00.656928 [info ] [Thread-1  ]: 1 of 1 START sql view model Sales_Test_prod.dim_time ........................... [RUN]
+[0m01:43:00.658154 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_we-analysis_Sales_Test_dev, now model.square_pipeline_project.dim_time)
+[0m01:43:00.658906 [debug] [Thread-1  ]: Began compiling node model.square_pipeline_project.dim_time
+[0m01:43:00.671259 [debug] [Thread-1  ]: Writing injected SQL for node "model.square_pipeline_project.dim_time"
+[0m01:43:00.672940 [debug] [Thread-1  ]: Began executing node model.square_pipeline_project.dim_time
+[0m01:43:00.705435 [debug] [Thread-1  ]: Writing runtime sql for node "model.square_pipeline_project.dim_time"
+[0m01:43:00.706813 [debug] [Thread-1  ]: On model.square_pipeline_project.dim_time: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "square_pipeline_project", "target_name": "dev", "node_id": "model.square_pipeline_project.dim_time"} */
+
+
+  create or replace view `we-analysis`.`Sales_Test_prod`.`dim_time`
+  OPTIONS()
+  as 
+
+WITH dates_and_times AS (
+    SELECT 
+        DISTINCT TIMESTAMP(order_created_at) AS full_timestamp
+    FROM `we-analysis`.`Sales_Test_dev`.`dev_order_items`
+),
+
+time_data AS (
+    SELECT
+        full_timestamp AS timestamp_utc,
+        DATETIME(full_timestamp, "EST") AS timestamp_est,
+        CAST(FORMAT_TIMESTAMP('%Y%m%d%H%M%S', full_timestamp) AS INT64) AS date_time_key,
+        EXTRACT(YEAR FROM full_timestamp) AS year,
+        EXTRACT(MONTH FROM full_timestamp) AS month,
+        EXTRACT(DAY FROM full_timestamp) AS day,
+        EXTRACT(HOUR FROM full_timestamp) AS hour,
+        EXTRACT(MINUTE FROM full_timestamp) AS minute,
+        EXTRACT(SECOND FROM full_timestamp) AS second,
+        EXTRACT(DAYOFWEEK FROM full_timestamp) AS day_of_week,
+        CASE
+            WHEN EXTRACT(DAYOFWEEK FROM full_timestamp) IN (1, 7) THEN TRUE
+            ELSE FALSE
+        END AS is_weekend
+    FROM dates_and_times
+)
+
+SELECT * FROM time_data;
+
+
+[0m01:43:00.707409 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m01:43:01.391062 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=we-analysis&j=bq:US:6630ed71-af94-4738-8d26-f84730d6613d&page=queryresults
+[0m01:43:01.984586 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ddb5efa9-9c4d-4a42-8c8c-4dfb4860a5f9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9302b9a0>]}
+[0m01:43:01.985859 [info ] [Thread-1  ]: 1 of 1 OK created sql view model Sales_Test_prod.dim_time ...................... [[32mCREATE VIEW (0 processed)[0m in 1.32s]
+[0m01:43:01.986619 [debug] [Thread-1  ]: Finished running node model.square_pipeline_project.dim_time
+[0m01:43:01.988679 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m01:43:01.990427 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m01:43:01.990731 [debug] [MainThread]: Connection 'model.square_pipeline_project.dim_time' was properly closed.
+[0m01:43:01.990955 [debug] [MainThread]: Connection 'list_we-analysis_Sales_Test_staging' was properly closed.
+[0m01:43:01.991159 [debug] [MainThread]: Connection 'list_we-analysis_Sales_Test_prod' was properly closed.
+[0m01:43:01.991579 [info ] [MainThread]: 
+[0m01:43:01.991967 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 2.24 seconds (2.24s).
+[0m01:43:01.993655 [debug] [MainThread]: Command end result
+[0m01:43:02.138579 [debug] [MainThread]: Wrote artifact WritableManifest to /app/target/manifest.json
+[0m01:43:02.140376 [debug] [MainThread]: Wrote artifact SemanticManifest to /app/target/semantic_manifest.json
+[0m01:43:02.145103 [debug] [MainThread]: Wrote artifact RunExecutionResult to /app/target/run_results.json
+[0m01:43:02.145492 [info ] [MainThread]: 
+[0m01:43:02.146074 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m01:43:02.146609 [info ] [MainThread]: 
+[0m01:43:02.147076 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m01:43:02.148502 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 3.7123425, "process_in_blocks": "0", "process_kernel_time": 0.482725, "process_mem_max_rss": "206900", "process_out_blocks": "3479", "process_user_time": 2.904803}
+[0m01:43:02.149042 [debug] [MainThread]: Command `dbt run` succeeded at 01:43:02.148973 after 3.71 seconds
+[0m01:43:02.149364 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff977d3100>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff97650670>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff96ebe0d0>]}
+[0m01:43:02.149714 [debug] [MainThread]: Flushing usage events
+[0m01:43:02.302658 [debug] [MainThread]: An error was encountered while trying to flush usage events

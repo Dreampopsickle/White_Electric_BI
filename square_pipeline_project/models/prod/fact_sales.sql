@@ -5,6 +5,7 @@ WITH fact_sales AS (
         op.payment_id,
         op.order_id,
         oi.line_item_id,
+        CAST(FORMAT_TIMESTAMP('%Y%m%d%H%M%S', oi.order_created_at) AS INT64) AS date_time_key,
         oi.item_quantity,
         oi.item_base_price,
         oi.item_gross_sales,
