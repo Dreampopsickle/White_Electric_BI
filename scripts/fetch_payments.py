@@ -21,6 +21,7 @@ def fetch_payment_data(start_date, end_date):
 
     payments = []
     cursor = None
+    page_number = 0
 
     while True:
         params={
@@ -39,7 +40,14 @@ def fetch_payment_data(start_date, end_date):
         )
         if response.status_code == 200:
             response_data = response.json()
+            page_number += 1
+            current_page_results = len(response_data.get("payments", []))
             payments.extend(response_data.get("payments", [])) #collect results
+            print(
+                f"Collecting results... Page: {page_number}, "
+                f"Results on this page: {current_page_results}, "
+                f"Total results collected: {len(payments)} "
+            )
 
             #Check if there's another page of results
             cursor = response_data.get("cursor")
@@ -48,7 +56,7 @@ def fetch_payment_data(start_date, end_date):
         else:
             print(f"Error: {response.status_code} - {response.text}")
             break
-            
+    print(f"finished collect payment data. Total results collected: {len(payments)}.")        
     return pd.DataFrame(payments)
     
 # start_date = "2024-01-01"

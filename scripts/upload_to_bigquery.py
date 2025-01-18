@@ -2,49 +2,110 @@ from google.cloud import bigquery
 from google.api_core.exceptions import NotFound 
 import os
 import logging
+import csv
+import glob
+import pandas as pd
 
 # Configure Logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-def upload_csv_to_bigquery(file_path, table_id, schema, partition_column=None):
+def infer_schema_from_csv(file_path):
+    """Infer schema from CSV"""
+    df = pd.read_csv(file_path, nrows=10) # Read onlyt the first 10 rows for inference
+    inferred_schema = []
+    
+    for col, dtype in zip(df.columns, df.dtypes):
+        if pd.api.types.is_integer_dtype(dtype):
+            inferred_schema.append((col, "INTEGER"))
+        elif pd.api.types.is_float_dtype(dtype):
+            inferred_schema.append((col, "FLOAT"))
+        elif pd.api.types.is_bool_dtype(dtype):
+            inferred_schema.append((col, "BOOLEAN"))
+        elif pd.api.types.is_datetime64_any_dtype(dtype):
+            inferred_schema.append((col, "TIMESTAMP"))
+        else:
+            inferred_schema.append((col, "STRING"))
+    return inferred_schema
+
+def preprocess_csv(file_path):
+    """Clean and preprocess the CSV file dynamically."""
+    df = pd.read_csv(file_path)
+    # Identify and flatten JSON_like columns
+    for col in df.columns:
+        if df[col].apply(lambda x: isinstance(x, (dict, list))).any():
+            df[col] = df[col].astype(str)
+    # save cleaned file back
+    df.to_csv(file_path, index=False)
+
+def sync_table_schema_with_csv(client, table_id, inferred_schema):
+    """Sync BQ table schema with inferred schema"""
+    try: 
+        table = client.get_table(table_id)
+        existing_fields = {field.name for field in table.schema}
+        new_fields=  [
+            bigquery.SchemaField(name, field_type)
+            for name, field_type in inferred_schema
+            if name not in existing_fields
+        ]
+
+        if new_fields:
+            logger.info(f"Adding missing fields to table {table_id}: {[field.name for field in new_fields]}")
+            table.schema += new_fields
+            client.update_table(table, ["schema"])
+    except Exception as e:
+        logger.error(f"Error syncing schema for table {table_id}: {e}")
+
+def upload_csv_to_bigquery(file_path, table_id):
+    """ Upload a CSV file to a BigQuery table with schema autodetection."""
     # Initialize BQ client
     client = bigquery.Client()
 
-    # Check if table exists
+    # infer schema from CSV
+    # preprocess_csv(file_path)
+    # inferred_schema = infer_schema_from_csv(file_path)
+
+    # Check if table exists and get schema
     try: 
-        table = client.get_table(table_id)
-        logger.info(f"Table {table_id} already exists.")
+        client.get_table(table_id)
+        logger.info(f"Table {table_id} already exists. Syncing schema.")
+        # sync_table_schema_with_csv(client, table_id, inferred_schema)
     except NotFound:
         # Create table with partitioning if it doesn't exist
-        if not schema:
-            raise ValueError("Schema must be provided for creating partitioned tables")
-        table = bigquery.Table(table_id, schema=schema)
-
-        if partition_column:
-            table.time_partitioning = bigquery.TimePartitioning(
-                field=partition_column, #Specifiy partition column
-                type_=bigquery.TimePartitioningType.DAY # Partition by Day
-            )
-            logger.info(f"Creating partition table {table_id} on column {partition_column}. ")
-        table = client.create_table(table) # API request to create table
-        logger.info(f"Table {table_id} created. ")
+        logger.info(f"Table {table_id} does not exist. Creating it.")
+        # schema = [bigquery.SchemaField(name, field_type) for name, field_type in inferred_schema]
+        try: 
+            table = bigquery.Table(table_id)
+            client.create_table(table)
+            logger.info(f"Table {table_id} created successfully.")
+        except Exception as e:
+            logger.error(f"Failed to create table {table_id}: {e}")
+            return
+    # Load job config
+    write_disposition = os.getenv("WRITE_DISPOSITION", bigquery.WriteDisposition.WRITE_APPEND)
+    max_bad_records = int(os.getenv("MAX_BAD_RECORDS", "10"))
 
     # Define job config
     job_config = bigquery.LoadJobConfig(
         source_format=bigquery.SourceFormat.CSV,
         skip_leading_rows=1,
-        autodetect=False, # Autodetect disabled for partitioned tables
-        schema=schema,
-        write_disposition=bigquery.WriteDisposition.WRITE_APPEND, # Append data to existing table
+        autodetect=True,
+        write_disposition=write_disposition, # Append data to existing table
+        ignore_unknown_values=True, # Allow extra columns in CSV
+        max_bad_records=max_bad_records
     )
 
     #Load CSV in BQ
-    with open(file_path, "rb") as file:
-        job = client.load_table_from_file(file, table_id, job_config=job_config)
-        job.result() #wait for job to complete
-
-    logger.info(f"Loaded {job.output_rows} rows into {table_id}.")
+    try:
+        with open(file_path, "rb") as file:
+            job = client.load_table_from_file(file, table_id, job_config=job_config)
+            job.result()
+            logger.info(f"Loaded {job.output_rows} rows into {table_id}.")
+    except Exception as e: 
+        logger.error(f"Error uploading file {file_path} to {table_id}: {e}")
+        if job.errors:
+            for error in job.errors:
+                logger.error(error)
 
     # Delete csv after successful upload
     try:
@@ -60,97 +121,13 @@ if __name__ == "__main__":
 
     if not dataset_id or not project_id:
         raise ValueError("BIGQUERY_DATASET and BIGQUERY_PROJECT_ID must be set.")
-    file_paths = [
-        "./data/payment_data.csv",
-        "./data/orders_data.csv",
-        "./data/line_items_data.csv"
-    ]
+    data_dir = "./data/"
+    file_paths = glob.glob(f"{data_dir}/*.csv")
+    if not file_paths:
+        logger.warning("No CSV files found in the data directory.")
 
-    tables = [
-        {"name": "payments", 
-         "schema": [
-            bigquery.SchemaField("id", "STRING", mode="NULLABLE"),
-            bigquery.SchemaField("created_at", "TIMESTAMP", mode="NULLABLE"),
-            bigquery.SchemaField("updated_at", "TIMESTAMP", mode="NULLABLE"),
-            bigquery.SchemaField("amount_money", "STRING", mode="NULLABLE"),
-            bigquery.SchemaField("status", "STRING", mode="NULLABLE"),
-            bigquery.SchemaField("source_type", "STRING", mode="NULLABLE"),
-            bigquery.SchemaField("location_id", "STRING", mode="NULLABLE"),
-            bigquery.SchemaField("order_id", "STRING", mode="NULLABLE"),
-            bigquery.SchemaField("total_money", "STRING", mode="NULLABLE"),
-            bigquery.SchemaField("employee_id", "STRING", mode="NULLABLE"),
-            bigquery.SchemaField("cash_details", "STRING", mode="NULLABLE"),
-            bigquery.SchemaField("receipt_number", "STRING", mode="NULLABLE"),
-            bigquery.SchemaField("receipt_url", "STRING", mode="NULLABLE"),
-            bigquery.SchemaField("device_details", "STRING", mode="NULLABLE"),
-            bigquery.SchemaField("team_member_id", "STRING", mode="NULLABLE"),
-            bigquery.SchemaField("application_details", "STRING", mode="NULLABLE"),
-            bigquery.SchemaField("version_token", "STRING", mode="NULLABLE"),
-            bigquery.SchemaField("tip_money", "STRING", mode="NULLABLE"),
-            bigquery.SchemaField("card_details", "STRING", mode="NULLABLE"),
-            bigquery.SchemaField("processing_fee", "STRING", mode="NULLABLE"),
-            bigquery.SchemaField("customer_id", "STRING", mode="NULLABLE"),
-            bigquery.SchemaField("approved_money", "STRING", mode="NULLABLE"),
-            bigquery.SchemaField("delay_duration", "STRING", mode="NULLABLE"),
-            bigquery.SchemaField("reference_id", "FLOAT", mode="NULLABLE"),
-            bigquery.SchemaField("risk_evaluation", "STRING", mode="NULLABLE"),
-            bigquery.SchemaField("buyer_email_address", "STRING", mode="NULLABLE"),
-            bigquery.SchemaField("billing_address", "STRING", mode="NULLABLE"),
-            bigquery.SchemaField("shipping_address", "STRING", mode="NULLABLE"),
-            bigquery.SchemaField("delay_action", "STRING", mode="NULLABLE"),
-            bigquery.SchemaField("delayed_until", "STRING", mode="NULLABLE"),
-            bigquery.SchemaField("external_details", "STRING", mode="NULLABLE"),
-         ],
-         "partition_column": "created_at"
-         }, #has timestamp
-        
-        {"name": "orders", 
-         "schema": [
-            bigquery.SchemaField("order_id", "STRING", mode="NULLABLE"),
-            bigquery.SchemaField("location_id", "STRING", mode="NULLABLE"),
-            bigquery.SchemaField("created_at", "TIMESTAMP", mode="NULLABLE"),
-            bigquery.SchemaField("updated_at", "TIMESTAMP", mode="NULLABLE"),
-            bigquery.SchemaField("state", "STRING", mode="NULLABLE"),
-            bigquery.SchemaField("total_money", "FLOAT", mode="NULLABLE"),
-            bigquery.SchemaField("total_tax_money", "FLOAT", mode="NULLABLE"),
-            bigquery.SchemaField("total_tip_money", "FLOAT", mode="NULLABLE"),
-            bigquery.SchemaField("total_discount_money", "FLOAT", mode="NULLABLE"),
-            bigquery.SchemaField("total_service_charge_money", "FLOAT", mode="NULLABLE"),
-         ],
-         "partition_column": "created_at"}, #has timestamp
-        
-        {"name": "line_items", 
-         "schema": [
-            bigquery.SchemaField("order_id", "STRING", mode="NULLABLE"),
-            bigquery.SchemaField("line_item_uid", "STRING", mode="NULLABLE"),
-            bigquery.SchemaField("item_name", "STRING", mode="NULLABLE"),
-            bigquery.SchemaField("quantity", "FLOAT", mode="NULLABLE"),
-            bigquery.SchemaField("base_price", "FLOAT", mode="NULLABLE"),
-            bigquery.SchemaField("gross_sales", "FLOAT", mode="NULLABLE"),
-            bigquery.SchemaField("total_money", "FLOAT", mode="NULLABLE"),
-            bigquery.SchemaField("modifier_name", "STRING", mode="NULLABLE"),
-            bigquery.SchemaField("modifier_price", "FLOAT", mode="NULLABLE")
-         ],
-         "partition_column": None} #no timestamp
-    ]
-
-    for file_path, table in zip(file_paths, tables):
-        table_id = f"{project_id}.{dataset_id}.{table['name']}"
-
-        #Only pass partition_colummn if it's defined
-        if table["partition_column"]: 
-            upload_csv_to_bigquery(
-                file_path=file_path,
-                table_id=table_id,
-                schema=table["schema"],
-                partition_column=table["partition_column"]
-            )
-        else:
-            #skip partitioning for tables without partition column
-            upload_csv_to_bigquery(
-                file_path=file_path,
-                table_id=table_id,
-                schema=table["schema"],
-                partition_column=None
-            )
+    for file_path in file_paths:
+        table_name = os.path.splitext(os.path.basename(file_path))[0]
+        table_id = f"{project_id}.{dataset_id}.{table_name}"
+        upload_csv_to_bigquery(file_path, table_id)
         

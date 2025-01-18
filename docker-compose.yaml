@@ -17,7 +17,7 @@ services:
       - .env
     environment:
       - GOOGLE_APPLICATION_CREDENTIALS=/app/we-service-account.json
-      - BIGQUERY_DATASET=Sales_Test
+      - BIGQUERY_DATASET=Sales_Data
       - BIGQUERY_PROJECT_ID=we-analysis
       - DBT_PROFILES_DIR=/app/.dbt
     command: bash

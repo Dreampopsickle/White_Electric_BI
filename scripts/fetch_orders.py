@@ -17,6 +17,7 @@ headers = {
     "Content-Type": "application/json"
 }
 
+print ("Fetching...")
 def fetch_order_data(order_ids):
     order_details = []
     line_item_details = []
@@ -54,6 +55,8 @@ def fetch_order_data(order_ids):
                         "order_id": order["id"],
                         "line_item_uid": item.get("uid"),
                         "item_name": item.get("name"),
+                        "catalog_id": item.get("catalog_object_id"),
+                        "catalog_version": int(item.get("catalog_version", "0")),
                         "quantity": int(item.get("quantity", "0")),
                         "base_price": item.get("base_price_money", {}).get("amount", 0) / 100,
                         "gross_sales": item.get("gross_sales_money", {}).get("amount", 0) / 100,
@@ -85,8 +88,8 @@ def fetch_order_data(order_ids):
 
 # Test usage ----- TO DO----- may remove
 if __name__ == "__main__":
-    start_date = "2024-02-01"
-    end_date = "2024-02-01"
+    start_date = "2021-05-01"
+    end_date = "2024-12-31"
     output_dir = "./data"
     os.makedirs(output_dir, exist_ok=True)
 
@@ -106,3 +109,5 @@ if __name__ == "__main__":
 
     line_items_df.to_csv(line_items_path, index=False)
     print(f"Line items data saved to: {line_items_path}")
+
+    print("Fetch complete.")
