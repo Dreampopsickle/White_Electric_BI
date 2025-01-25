@@ -7,39 +7,108 @@ sources:
     database: "{{ env_var('BIGQUERY_PROJECT_ID') }}"
     schema: "{{ env_var('BIGQUERY_DATASET') }}"
     tables:
-      - name: payments
+      - name: payment_data
         description: "Raw payments data extracted from Square API."
         columns:
           - name: id
             description: "Unique identifier for the payment."
+            tests:
+              - not_null
+              - unique
           - name: created_at
             description: "Timestamp when the payment was created."
+          - name: updated_at
+            description: "Timestamp when the payment was updated."
           - name: amount_money
-            description: "Payment amount and currency."
+            description: "Payment amount of the order and currency."
           - name: status
             description: "Status of the payment (e.g., COMPLETED)."
+          - name: source_type
+            description: "Source of payment for order (CASH, CARD, etc)."
+          - name: card_details
+            description: "Details of the card used for purchase."
+          - name: location_id
+            description: "Location of the business."
+          - name: order_id
+            description: "Unique ID of the order."
+            tests:
+              - not_null
+              - unique
+          - name: processing_fee
+            description: "Details of process fee if valid."
+          - name: total_amount
+            description: "Total amount paid by customer and currency."
+          - name: approved_money
+            description: "Amount approved for use by Square transaction."
+          - name: receipt_number
+            description: "Reference for receipt."
+          - name: receipt_url
+            description: "URL destination of receipt."
+          - name: device_details
+            description: "Details of the device used for transaction."
+          - name: application_details
+            description: "Details on the application used for details, will help to distinguish online vs. in-store."
+          - name: version_token
+            description: "Token of transaction."
+          - name: tip_money
+            description: "Amount for tip."
 
-      - name: orders
+      - name: orders_data
         description: "Raw orders data extracted from Square API."
         columns:
           - name: order_id
             description: "Unique identifier for the order."
+            tests:
+              - not_null
+              - unique
+          - name: location_id
+            description: "Location of transaction."
+          - name: created_at
+            description: "Timestamp when the payment was created."
+          - name: updated_at
+            description: "Timestamp when the payment was updated."
+          - name: state
+            description: "State of transaction."
           - name: total_money
             description: "Total amount for the order."
-          - name: created_at
-            description: "Timestamp when the order was created."
+          - name: total_tax_money
+            description: "Total tax collected for order."
+          - name: total_tip_money
+            description: "Total tip collected for order."
+          - name: total_discount_money
+            description: "Total discount applied for order."
+          - name: total_service_charge_money
+            description: "Total service charge applied for order."
 
-      - name: line_items
+      - name: line_items_data
         description: "Raw line items data extracted from Square API."
         columns:
           - name: order_id
             description: "Reference to the associated order."
+            tests:
+              - not_null
+          - name: line_item_uid
+            description: "Unique identified of a line item within the order."
+            tests:
+              - not_null
           - name: item_name
-            description: "Name of the purchased item."
+            description: "Either the name of the item or overall 'category' of an item purchased."
+          - name: catalog_id
+            description: "Identified within Square catalog for business."
+          - name: catalog_version
+            description: "Version of catalog."
           - name: quantity
-            description: "Quantity of the item purchased."
+            description: "Quantity of item."
+          - name: base_price
+            description: "Base price amount for the line item."
           - name: gross_sales
-            description: "Gross sales amount for the line item."
+            description: "Gross sales amount for item."
+          - name: total_money
+            description: "Total amount collected for item."
+          - name: modifier_name
+            description: "Modifications made or added to item, can also act as specifiers for item 'category'."
+          - name: modifier_price
+            description: "Price of modification."
 
 # Defining the staging models
 models:
@@ -51,23 +120,75 @@ models:
         tests:
           - unique
           - not_null
+          - relationships:
+              to: source('raw','payment_data')
+              field: id
 
-      - name: payment_created_at
+      - name: payment_datetime
         description: "Timestamp when the payment was created."
-
-      - name: payment_status
-        description: "Status of the payment (e.g., COMPLETED, FAILED)."
-
-      - name: payment_amount
-        description: "The payment amount in USD."
         tests:
-          - not_null
+          - relationships:
+              to: source('raw','payment_data')
+              field: created_at
+
+      - name: order_amount
+        description: "Payment amount of the order and currency."
+        tests:
+          - relationships:
+              to: source('raw','payment_data')
+              field: amount_money
+
+      - name: total_paid_amount
+        description: "Total amount paid by customer."
+        tests:
+          - relationships:
+              to: source('raw','payment_data')
+              field: total_money
+
+      - name: tip_amount
+        description: "Total tip paid by customer."
+        tests:
+          - relationships:
+              to: source('raw','payment_data')
+              field: tip_money
 
       - name: currency
         description: "Currency of the payment (e.g., USD)."
 
+      - name: payment_status
+        description: "Status of the payment (e.g., COMPLETED)."
+        tests:
+          - relationships:
+              to: source('raw','payment_data')
+              field: status
+
+      - name: payment_source
+        description: "Source of payment for order (CASH, CARD, etc)."
+        tests:
+          - relationships:
+              to: source('raw','payment_data')
+              field: source
+
       - name: order_id
         description: "Reference to the associated order."
+        tests:
+          - relationships:
+              to: source('raw','payment_data')
+              field: order_id
+
+      - name: application_detail
+        description: "Details on the application used for details, will help to distinguish online vs. in-store."
+        tests:
+          - relationships:
+              to: source('raw','payment_data')
+              field: application_details
+
+      - name: receipt_url
+        description: "URL destination of receipt."
+        tests:
+          - relationships:
+              to: source('raw','payment_data')
+              field: receipt_url
 
   - name: stg_orders
     description: "Cleaned and normalized orders data from the Square API."
@@ -77,20 +198,44 @@ models:
         tests:
           - unique
           - not_null
+          - relationships:
+              to: source('raw','orders_data')
+              field: orders_id
 
-      - name: order_created_at
+      - name: order_datetime
         description: "Timestamp when the order was created."
+        tests:
+          - relationships:
+              to: source('raw','orders_data')
+              field: created_at
 
-      - name: total_net_amount
+      - name: order_state
+        description: "State of the order transaction."
+        tests:
+          - relationships:
+              to: source('raw','orders_data')
+              field: state
+
+      - name: total_order_amount
         description: "The total amount for the order in USD."
         tests:
-          - not_null
+          - relationships:
+              to: source('raw','orders_data')
+              field: total_money
 
       - name: total_tax
         description: "Total tax applied to the order in USD."
+        tests:
+          - relationships:
+              to: source('raw','orders_data')
+              field: total_tax_money
 
       - name: total_tip
         description: "Total tip amount for the order in USD."
+        tests:
+          - relationships:
+              to: source('raw','orders_data')
+              field: total_tip_money
 
   - name: stg_line_items
     description: "Cleaned and normalized line items data from the Square API."
@@ -99,18 +244,63 @@ models:
         description: "Reference to the associated order."
         tests:
           - not_null
+          - relationships:
+              to: source('raw','line_items_data')
+              field: order_id
 
-      - name: line_item_uid
+      - name: line_item_id
         description: "Unique identifier for the line item."
+        tests:
+          - not_null
+          - relatonships:
+              to: source('raw','line_items_data')
+              field: line_item_uid
 
       - name: item_name
         description: "Name of the purchased item."
+        tests:
+          - relationships:
+              to: source('raw','line_items_data')
+              field: item_name
 
-      - name: quantity
+      - name: item_quantity
         description: "Quantity of the item purchased."
+        tests:
+          - relationships:
+              to: source('raw','line_items_data')
+              field: quantity
 
-      - name: gross_sales
-        description: "Gross sales amount for the line item in USD."
+      - name: item_base_price
+        description: "Base price amount for the line item."
+        tests:
+          - relationships:
+              to: source('raw','line_items_data')
+              field: base_price
+
+      - name: item_gross_sales
+        description: "Gross sales amount for item."
+        tests:
+          - relationships:
+              to: source('raw','line_items_data')
+              field: gross_sales
+
+      - name: item_total_money
+        description: "Total amount collected for item."
+        tests:
+          - relationships:
+              to: source('raw','line_items_data')
+              field: total_money
 
       - name: modifier_name
-        description: "Name of the modifier applied to the item (e.g., Bacon, Garlic)."
+        description: "Modifications made or added to item, can also act as specifiers for item 'category'."
+        tests:
+          - relationships:
+              to: source('raw','line_items_data')
+              field: modifier_name
+
+      - name: modifier_price
+        description: "Price of modification."
+        tests:
+          - relationships:
+              to: source('raw','line_items_data')
+              field: modifier_price

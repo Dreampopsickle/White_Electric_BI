@@ -5,9 +5,10 @@ SELECT
     TRIM(line_item_uid) AS line_item_id,
     TRIM(item_name) AS item_name,
     CAST(quantity AS INT64) AS item_quantity,
-    base_price AS item_base_price,
-    gross_sales AS item_gross_sales,
+    CAST(base_price AS FLOAT64) / 100 AS item_base_price,
+    CAST(gross_sales AS FLOAT64) / 100 AS item_gross_sales,
+    CAST(total_money AS FLOAT64) / 100 AS item_total_amount,
     TRIM(modifier_name) as modifier_name,
-    modifier_price
+    CAST(modifier_price AS FLOAT64) / 100 AS modifier_price
 FROM 
-    {{ source('raw', 'line_items') }}
+    {{ source('raw', 'line_items_data') }}
