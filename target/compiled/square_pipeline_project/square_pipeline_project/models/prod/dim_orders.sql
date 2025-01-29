@@ -2,8 +2,8 @@
 WITH orders AS (
     SELECT 
         DISTINCT order_id,
-        order_state
-    FROM `we-analysis`.`Sales_Test_dev`.`dev_order_payments`
+        transaction_state AS order_state
+    FROM `we-analysis`.`Sales_Data_dev`.`dev_order_payments`
 )
 
 SELECT * FROM orders

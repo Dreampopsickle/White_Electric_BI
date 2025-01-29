@@ -1,1 +1,1 @@
-SELECT * FROM Sales_Test_prod.dim_items
+SELECT * FROM Sales_Data_prod.dim_items

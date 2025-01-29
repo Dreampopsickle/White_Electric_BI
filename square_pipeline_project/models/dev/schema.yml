@@ -7,10 +7,83 @@ models:
       - name: order_id
         description: "Unique identifier for the order."
         tests:
-          - unique
           - not_null
+          - relationships:
+              to: ref('stg_orders')
+              field: order_id
+      - name: order_timestamp
+        description: "Timestamp for order transaction."
+        tests:
+          - relationships:
+              to: ref('stg_orders')
+              field: order_datetime
+      - name: order_total_amt
+        description: "Order-level total amount."
+        tests:
+          - relationships:
+              to: ref('stg_orders')
+              field: total_order_amount
+      - name: order_total_tax
+        description: "Order-level total tax amount."
+        tests:
+          - relationships:
+              to: ref('stg_orders')
+              field: total_tax
+      - name: order_total_tip
+        description: "Order-level total tip amount."
+        tests:
+          - relationships:
+              to: ref('stg_orders')
+              field: total_tip
+      - name: order_total_discount
+        description: "Order-level total discount amount."
+        tests:
+          - relationships:
+              to: ref('stg_orders')
+              field: total_discount
+      - name: line_item_id
+        description: "Unique identifier for items at item-level."
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_line_items')
+              field: line_item_id
       - name: item_name
-        description: "Name of the purchased item."
+        description: "Item-level name for item purchased."
+        tests:
+          - relationships:
+              to: ref('stg_line_items')
+              field: item_name
+      - name: item_quantity
+        description: "Item-level quantity of items purchased."
+        tests:
+          - relationships:
+              to: ref('stg_line_items')
+              field: item_quantity
+      - name: item_base_price
+        description: "Item-level base_price."
+        tests:
+          - relationships:
+              to: ref('stg_line_items')
+              field: item_base_price
+      - name: item_gross_amt
+        description: "Item-level gross amount paid."
+        tests:
+          - relationships:
+              to: ref('stg_line_items')
+              field: item_gross_sales
+      - name: modifier_name
+        description: "Name of item modification."
+        tests:
+          - relationships:
+              to: ref('stg_line_items')
+              field: modifier_name
+      - name: modifier_price
+        description: "Modification-level price."
+        tests:
+          - relationships:
+              to: ref('stg_line_items')
+              field: modifier_price
 
   - name: dev_order_payments
     description: "Denormalized order-payment level data combining orders and payments."
@@ -20,15 +93,81 @@ models:
         tests:
           - unique
           - not_null
-      - name: payment_id
-        description: "Unique identifier for the payment."
-
-  - name: dev_sales_summary
-    description: "Aggregated sales summary data by location and date."
-    columns:
-      - name: order_date
-        description: "Date of the order."
+          - relationships:
+              to: ref('stg_orders')
+              field: order_id
+      - name: transaction_tax_amount
+        description: "The total tax amount applied to the transaction."
         tests:
+          - relationships:
+              to: ref('stg_orders')
+              field: total_tax
+
+      - name: transaction_id
+        description: "The unique identifier for each payment transaction."
+        tests:
+          - unique
           - not_null
-      - name: total_sales
-        description: "Total sales revenue for the date."
+          - relationships:
+              to: ref('stg_payments')
+              field: payment_id
+
+      - name: transaction_timestamp
+        description: "The date and time when the payment transaction occurred."
+        tests:
+          - relationships:
+              to: ref('stg_payments')
+              field: payment_datetime
+
+      - name: transaction_amount
+        description: "The total amount for the transaction, excluding tips."
+        tests:
+          - relationships:
+              to: ref('stg_payments')
+              field: order_amount
+
+      - name: transaction_currency_type
+        description: "The currency type used for the transaction (e.g., USD, EUR)."
+        tests:
+          - relationships:
+              to: ref('stg_payments')
+              field: order_currency_type
+
+      - name: transaction_tip_amount
+        description: "The currency type used for the transaction (e.g., USD, EUR)."
+        tests:
+          - relationships:
+              to: ref('stg_payments')
+              field: tip_amount
+
+      - name: transaction_tip_currency_type
+        description: "The currency type for the tip amount (e.g., USD, EUR)."
+        tests:
+          - relationships:
+              to: ref('stg_payments')
+              field: tip_currency_type
+
+      - name: transaction_state
+        description: "The status of the transaction (e.g., completed, pending, failed)."
+        tests:
+          - relationships:
+              to: ref('stg_payments')
+              field: payment_status
+
+      - name: transaction_source
+        description: "The source of the transaction (e.g., in-store, online, gift card)."
+        tests:
+          - relationships:
+              to: ref('stg_payments')
+              field: payment_source
+
+      - name: transaction_method
+        description: >
+          The method used for the transaction:
+          - `SQUARE_POS`: In-store
+          - `ECOMMERCE_API`: Online
+          - `OTHER`: Gift card or other unspecified methods.
+        tests:
+          - relationships:
+              to: ref('stg_payments')
+              field: application_detail

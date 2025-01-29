@@ -1,4 +1,4 @@
 
 SELECT
     *
-FROM Sales_Test_prod.fact_sales
+FROM Sales_Data_prod.fact_sales

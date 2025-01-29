@@ -1,6 +1,6 @@
 
 
-  create or replace view `we-analysis`.`Sales_Test_prod`.`dim_items`
+  create or replace view `we-analysis`.`Sales_Data_prod`.`dim_items`
   OPTIONS()
   as 
 WITH items AS (
@@ -9,7 +9,7 @@ WITH items AS (
         item_name,
         modifier_name
     FROM 
-        `we-analysis`.`Sales_Test_dev`.`dev_order_items`
+        `we-analysis`.`Sales_Data_dev`.`dev_order_items`
 )
 
 SELECT * FROM items;

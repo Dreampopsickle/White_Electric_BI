@@ -2,7 +2,7 @@
 WITH orders AS (
     SELECT 
         DISTINCT order_id,
-        order_state
+        transaction_state AS order_state
     FROM {{ ref('dev_order_payments') }}
 )
 
