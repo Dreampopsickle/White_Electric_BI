@@ -6,7 +6,7 @@ WITH dates_and_times AS (
     FROM `we-analysis`.`Sales_Data_dev`.`dev_order_items`
 ),
 
-time_data AS (
+dim_time AS (
     SELECT
         full_timestamp AS timestamp_utc,
         DATETIME(full_timestamp, "EST") AS timestamp_est,
@@ -26,4 +26,4 @@ time_data AS (
     FROM dates_and_times
 )
 
-SELECT * FROM time_data
+SELECT * FROM dim_time

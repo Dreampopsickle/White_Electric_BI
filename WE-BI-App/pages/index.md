@@ -1,5 +1,5 @@
 <Image 
-    url="../static/logo.png" 
+    url="../logo.png" 
     description="WE logo"
     height=200
     width=200

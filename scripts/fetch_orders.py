@@ -88,8 +88,8 @@ def fetch_order_data(order_ids):
 
 # Test usage ----- TO DO----- may remove
 if __name__ == "__main__":
-    start_date = "2021-05-01"
-    end_date = "2024-12-31"
+    start_date = "2025-01-01"
+    end_date = "2025-01-31"
     output_dir = "./data"
     os.makedirs(output_dir, exist_ok=True)
 

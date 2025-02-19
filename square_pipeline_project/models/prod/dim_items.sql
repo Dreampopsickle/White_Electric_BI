@@ -1,11 +1,11 @@
 {{ config(materialized='view', enabled=true) }}
-WITH items AS (
+WITH dim_items AS (
     SELECT 
-        DISTINCT line_item_id AS item_id,
+        DISTINCT line_item_id,
         item_name,
         modifier_name
     FROM 
         {{ ref('dev_order_items') }}
 )
 
-SELECT * FROM items
+SELECT * FROM dim_items

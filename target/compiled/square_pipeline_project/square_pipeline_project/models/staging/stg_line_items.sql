@@ -5,10 +5,10 @@ SELECT
     TRIM(line_item_uid) AS line_item_id,
     TRIM(item_name) AS item_name,
     CAST(quantity AS INT64) AS item_quantity,
-    base_price  AS item_base_price,
-    gross_sales AS item_gross_sales,
-    total_money AS item_total_amount,
-    TRIM(modifier_name) as modifier_name,
-    modifier_price AS modifier_price
+    CAST(base_price AS FLOAT64) AS item_base_price,
+    CAST(gross_sales AS FLOAT64) AS item_gross_sales,
+    CAST(total_money AS FLOAT64) AS item_total_amount,
+    TRIM(modifier_name) AS modifier_name,
+    CAST(modifier_price AS FLOAT64) AS modifier_price
 FROM 
     `we-analysis`.`Sales_Data`.`line_items_data`

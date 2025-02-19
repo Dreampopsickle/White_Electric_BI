@@ -1,10 +1,10 @@
 {{ config(materialized='view', enabled=true) }}
-WITH orders AS (
+WITH dim_orders AS (
     SELECT 
         DISTINCT order_id,
-        transaction_state AS order_state
+        order_state
     FROM {{ ref('dev_order_payments') }}
 )
 
-SELECT * FROM orders
+SELECT * FROM dim_orders
 

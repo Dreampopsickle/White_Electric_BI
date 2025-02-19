@@ -1,123 +1,134 @@
 version: 2
 
 models:
-  - name: dim_items
-    description: Dimension table for unique menu items and their modifiers
+  - name: fact_sales
+    description: >
+      Fact table for sales that aggregates payment, order, and item details.
+      It uses keys to join to dimension tables.
     columns:
-      - name: item_id
-        description: Primary key for individual menu items
-        tests:
-          - unique
-          - not_null
-      - name: item_name
-        description: Name of the menu item
+      - name: payment_id
+        description: "Foreign key referencing dim_payments."
         tests:
           - not_null
-      - name: modifier_name
-        description: Customization or modifier applied to the item
-
-  - name: dim_orders
-    description: Dimension table for order status information
-    columns:
+          - relationships:
+              to: ref('dev_order_payments')
+              field: payment_id
       - name: order_id
-        description: Primary key for orders
+        description: "Foreign key referencing dim_orders."
         tests:
-          - unique
           - not_null
           - relationships:
               to: ref('dev_order_payments')
               field: order_id
-      - name: order_state
-        description: Current state of the order (e.g., open, closed, canceled)
-
-  - name: dim_payments
-    description: Dimension table for payment transaction details
-    columns:
-      - name: transaction_id
-        description: Primary key for payment transactions
-        tests:
-          - unique
-          - not_null
-      - name: transaction_state
-        description: Status of the payment transaction
+      - name: line_item_id
+        description: "Foreign key referencing dim_items (alias for line_item_id)."
         tests:
           - not_null
-      - name: transaction_source
-        description: Source of the payment (e.g., online, in-store)
-      - name: transaction_method
-        description: Payment method used (e.g., credit card, cash)
+          - relationships:
+              to: ref('dev_order_payments')
+              field: line_item_id
+      - name: date_time_key
+        description: "Foreign key referencing dim_time (generated from order_timestamp)."
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dev_order_payments')
+              field: order_timestamp
+      - name: payment_amount
+        description: "The amount charged for the payment."
+      - name: total_collected_amount
+        description: "The total amount collected for the payment."
+      - name: approved_amount
+        description: "The approved amount for the payment."
+      - name: payment_tip_amount
+        description: "Tip amount included with the payment."
+      - name: payment_processing_fee
+        description: "Fee charged for processing the payment."
+      - name: order_amount
+        description: "Total order amount as recorded in the payment record."
+      - name: order_tax
+        description: "Tax applied to the order."
+      - name: order_tip
+        description: "Tip applied to the order."
+      - name: order_discount
+        description: "Discount applied to the order."
+      - name: item_base_price
+        description: "The base price of the item."
+      - name: item_gross_amount
+        description: "The gross amount for the item."
+      - name: item_total_amount
+        description: "The final total amount for the item."
+      - name: modifier_price
+        description: "The price for any modifiers applied to the item."
 
   - name: dim_time
-    description: Time dimension table for granular timestamp analysis
+    description: "Dimension table for time attributes derived from order timestamps."
     columns:
       - name: date_time_key
-        description: Surrogate key in YYYYMMDDHHMMSS format
+        description: "Primary key generated from the full timestamp."
         tests:
+          - not_null
           - unique
-          - not_null
       - name: timestamp_utc
-        description: Original UTC timestamp
-        tests:
-          - not_null
+        description: "The original UTC timestamp."
+      - name: timestamp_est
+        description: "The timestamp converted to EST."
+      - name: year
+        description: "Year extracted from the timestamp."
+      - name: month
+        description: "Month extracted from the timestamp."
+      - name: day
+        description: "Day extracted from the timestamp."
+      - name: hour
+        description: "Hour extracted from the EST timestamp."
+      - name: minute
+        description: "Minute extracted from the timestamp."
+      - name: second
+        description: "Second extracted from the timestamp."
+      - name: day_of_week
+        description: "Numeric representation of the day of the week."
       - name: day_name
-        description: Full name of the weekday
-        tests:
-          - accepted_values:
-              values:
-                [
-                  "Sunday",
-                  "Monday",
-                  "Tuesday",
-                  "Wednesday",
-                  "Thursday",
-                  "Friday",
-                  "Saturday"
-                ]
+        description: "Name of the day of the week."
       - name: is_weekend
-        description: Flag indicating weekend days (Saturday/Sunday)
-        tests:
-          - accepted_values:
-              values: [true, false]
-      # Add tests for other columns (year, month, etc) similarly
+        description: "Flag indicating whether the day is a weekend (TRUE/FALSE)."
 
-  - name: fact_sales
-    description: Fact table containing sales transaction details
+  - name: dim_payments
+    description: "Dimension table for payment details."
     columns:
-      - name: transaction_id
-        description: Foreign key to payment dimension
+      - name: payment_id
+        description: "Primary key for payment records."
         tests:
-          - relationships:
-              to: ref('dev_order_payments'
-              field: transaction_id
+          - not_null
+          - unique
+      - name: payment_status
+        description: "The status of the payment (e.g., SUCCESS, FAILED)."
+      - name: payment_source
+        description: "The source through which the payment was made."
+      - name: payment_method
+        description: "Method used for the payment (alias for application_detail)."
+
+  - name: dim_orders
+    description: "Dimension table for order details."
+    columns:
       - name: order_id
-        description: Foreign key to order dimension
+        description: "Primary key for order records."
         tests:
-          - relationships:
-              to: ref('dev_order_payments'
-              field: order_id
+          - not_null
+          - unique
+      - name: order_state
+        description: "The current state of the order."
+
+  - name: dim_items
+    description: "Dimension table for item details, representing products and modifiers."
+    columns:
       - name: line_item_id
-        description: Foreign key to items dimension
-        tests:
-          - relationships:
-              to: ref('dev_order_items'
-              field: item_id
-      - name: date_time_key
-        description: Foreign key to time dimension
-        tests:
-          - relationships:
-              to: ref('dev_order_items'
-              field: date_time_key
-      - name: item_quantity
-        description: Quantity of items sold
+        description: "Primary key for item records (alias for line_item_id)."
         tests:
           - not_null
-          - positive_value:
-              severity: warn
-      - name: item_gross_amt
-        description: Gross amount before taxes and modifiers
+          - unique
+      - name: item_name
+        description: "Name of the item."
         tests:
           - not_null
-      - name: payment_total
-        description: Total amount paid including taxes and tips
-        tests:
-          - not_null
+      - name: modifier_name
+        description: "Name of the modifier applied to the item, if any."

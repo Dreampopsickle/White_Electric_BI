@@ -138,7 +138,7 @@ models:
               to: source('raw','payment_data')
               field: amount_money
 
-      - name: total_paid_amount
+      - name: total_collected_amount
         description: "Total amount paid by customer."
         tests:
           - relationships:
